@@ -1,0 +1,355 @@
+@charset "UTF-8";
+body {
+  /* 공통 */
+  width: 100vw; /* overflow-x:hidden; */
+}
+body section {
+  height: 100vh;
+}
+body h2 {
+  font-family: "Cormorant Infant", serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  font-size: 6.25rem;
+  font-weight: 600;
+  line-height: 160%;
+  letter-spacing: -2%;
+}
+body {
+  /* 개별 */
+}
+body header {
+  width: 100%;
+  height: 80px;
+  padding: 0 80px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #222;
+}
+body header a {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 160%;
+  letter-spacing: -2%;
+}
+body header nav {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 40px;
+  align-items: center;
+}
+body header nav a {
+  font-weight: 400;
+}
+body main section#cover {
+  padding-top: 80px;
+  position: relative;
+  z-index: 997;
+  background: url(../images/portfolio_bg8.png) center/cover no-repeat;
+  border-bottom: 1px solid #222;
+}
+body main section#cover #ellipse_container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(-20deg);
+  z-index: 998;
+  width: 1500px;
+  height: 900px;
+  margin: 50px auto;
+}
+body main section#cover #ellipse_container .ellipse_wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+body main section#cover #ellipse_container .ellipse_wrap .ellipse_outline { /* 타원 윤곽선 */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1000px;
+  height: 500px;
+  border: 1px solid #222;
+  border-radius: 50%;
+}
+body main section#cover #ellipse_container .ellipse_wrap .dot { /* 움직이는 점 */
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background: black;
+  border-radius: 50%;
+}
+body main section#cover .main_contents {
+  height: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+}
+body main section#cover .main_contents #sns {
+  width: 80px;
+  height: 100%;
+  padding: 80px 0;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 40px;
+  justify-content: flex-end;
+  align-items: center;
+  border-right: 1px solid #222;
+}
+body main section#cover .main_contents #sns li {
+  transform: rotate(270deg);
+}
+body main section#cover .main_contents .main_txt {
+  width: 100%;
+  padding: 100px;
+  position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+}
+body main section#cover .main_contents .main_txt h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Cormorant Infant", serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  font-size: 10rem;
+  font-weight: 700;
+  line-height: 160%;
+  letter-spacing: -2%;
+}
+body main section#cover .main_contents .main_txt .desc1 {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 120px;
+  justify-content: right;
+}
+body main section#cover .main_contents .main_txt .desc1 .desc {
+  font-size: 1.5rem;
+  line-height: 160%;
+  letter-spacing: -2%;
+}
+body main section#cover .main_contents .main_txt .desc1 .desc em {
+  font-weight: 700;
+}
+body main section#cover .main_contents .main_txt .desc2 {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+body main section#cover .main_contents .main_txt .desc2 .job_desc {
+  font-size: 2.5rem;
+  font-weight: 500;
+  line-height: 160%;
+  letter-spacing: -2%;
+  font-family: "Cormorant Infant", serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+body main section#cover .main_contents .main_txt .desc2 .scroll_btn {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+body main section#cover .main_contents .main_txt .desc2 .scroll_btn span {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 160%;
+  letter-spacing: -2%;
+  font-family: "Cormorant Infant", serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+body main section#about_me {
+  background: url(../images/portfolio_source.png) center/cover no-repeat;
+}
+body main section#about_me h2 {
+  height: 20%;
+  text-align: center;
+  border-bottom: 1px solid #222;
+}
+body main section#about_me .contents {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: flex-start;
+}
+body main section#about_me .contents .photo_section {
+  width: 25%;
+  height: 100%;
+  border-right: 1px solid #222;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+body main section#about_me .contents .photo_section img {
+  width: 300px;
+  border-top-left-radius: 500px;
+  border-top-right-radius: 500px;
+}
+body main section#about_me .contents .photo_section .profile h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 160%;
+  letter-spacing: -2%;
+}
+body main section#about_me .contents .photo_section .profile h3 span {
+  font-size: 1rem;
+  line-height: 160%;
+  letter-spacing: -2%;
+}
+body main section#about_me .contents .photo_section .profile .about_me_desc {
+  padding-top: 16px;
+  font-size: 1rem;
+  line-height: 160%;
+  letter-spacing: -2%;
+}
+body main section#about_me .contents .desc_section {
+  width: 75%;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+body main section#about_me .contents .desc_section .personal_info {
+  width: 100%;
+  height: 100%;
+  padding: 40px 80px;
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 80px;
+  align-items: flex-start;
+  justify-content: center;
+  border-bottom: 1px solid #222;
+}
+body main section#about_me .contents .desc_section .personal_info .about_me_area {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 16px;
+  align-items: flex-start;
+}
+body main section#about_me .contents .desc_section .personal_info .about_me_area h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 160%;
+  letter-spacing: -2%;
+  font-family: "Cormorant Infant", serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+body main section#about_me .contents .desc_section .personal_info .about_me_area .about_me_desc {
+  font-size: 1.125rem;
+  line-height: 200%;
+  letter-spacing: -2%;
+}
+body main section#about_me .contents .desc_section .skills {
+  width: 100%;
+  height: 100%;
+}
+body main section#about_me .contents .desc_section .skills h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 160%;
+  letter-spacing: -2%;
+  font-family: "Cormorant Infant", serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  border-bottom: 1px solid #222;
+  text-align: center;
+}
+body main section#about_me .contents .desc_section .skills .skills_wrap {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+}
+body main section#about_me .contents .desc_section .skills .skills_wrap .skill_set {
+  padding: 20px 40px;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 24px;
+}
+body main section#about_me .contents .desc_section .skills .skills_wrap .skill_set .each_skill {
+  height: 96px;
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 16px;
+  align-items: center;
+}
+body main section#about_me .contents .desc_section .skills .skills_wrap .skill_set .each_skill .icon {
+  width: 60px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+}
+body main section#about_me .contents .desc_section .skills .skills_wrap .skill_set .each_skill .icon img {
+  width: 40px;
+  height: 40px;
+}
+body main section#about_me .contents .desc_section .skills .skills_wrap .skill_set .each_skill .desc li {
+  font-size: 1rem;
+  line-height: 200%;
+  letter-spacing: -2%;
+}
+body main section#media {
+  background: url(../images/portfolio_bg8.png) center/cover no-repeat;
+}
+body main section#media #media_swiper .swiper-wrapper .swiper-slide {
+  display: flex;
+  flex-flow: row nowrap;
+}
+body main section#media #media_swiper .swiper-wrapper .swiper-slide .txt_section {
+  width: 30%;
+  height: 100%;
+}
+body main section#media #media_swiper .swiper-wrapper .swiper-slide .txt_section h2 {
+  width: 100%;
+  border-bottom: 1px solid #222;
+}
+body main section#media #media_swiper .swiper-wrapper .swiper-slide .txt_section .sns_profile {
+  position: relative;
+}
+body main section#media #media_swiper .swiper-wrapper .swiper-slide .txt_section .sns_profile .channel_info {
+  width: 100%;
+  padding: 40px 0;
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+}
+body main section#media #media_swiper .swiper-wrapper .swiper-slide .txt_section .sns_profile a {
+  position: absolute;
+  right: 10%;
+  bottom: 50%;
+  transform: translate(10%, 50%);
+}
+body main section#media #media_swiper .swiper-wrapper .swiper-slide .txt_section .sns_profile a img {
+  width: 60px;
+  height: 60px;
+}
+body main section#media #media_swiper .swiper-wrapper .swiper-slide .mockup_section {
+  width: 70%;
+}
+
+/*# sourceMappingURL=main.css.map */

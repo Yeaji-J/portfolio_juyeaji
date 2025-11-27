@@ -31,27 +31,29 @@
     </header>
     <main>
         <section id="cover">
-            <ul id="sns"> <!-- about me 까지만 fixed되게, offset 이나 scrollTrigger 사용 -->
-                <li><a href="https://www.instagram.com/jiu__diary/">instagram</a></li>
-                <li><a href="https://www.youtube.com/@jiu3">youtube</li>
-            </ul>
+            <div id="ellipse_container"> <!-- absol -->
+                <div class="ellipse_wrap">
+                    <div class="ellipse_outline"></div>
+                    <div class="dot"></div>
+                </div>
+            </div>
             <div class="main_contents">
-                <div id="ellipse_container"> <!-- absol -->
-                    <div class="ellipse_wrap">
-                        <div class="ellipse_outline"></div>
-                        <div class="dot"></div>
+                <ul id="sns"> <!-- about me 까지만 fixed되게, offset 이나 scrollTrigger 사용 -->
+                    <li><a href="https://www.youtube.com/@jiu3">youtube</li>
+                    <li><a href="https://www.instagram.com/jiu__diary/">instagram</a></li>
+                </ul>
+                <div class="main_txt">
+                    <h1>Portfolio</h1> <!-- absol -->
+                    <div class="desc1">
+                        <p class="desc"><em>감각적인 디자인과<br>사용성 중심</em>의<br>웹 UI를 만듭니다.</p>
+                        <p class="desc">실무 맞춤형<br>퍼블리싱이 가능한<br>웹디자이너 <em>예지</em>입니다.</p>
                     </div>
-                </div>
-                <h1><span>2025</span>Portfolio</h1> <!-- absol -->
-                <div class="desc1">
-                    <p class="desc"><em>감각적인 디자인과<br>사용성 중심</em>의<br>웹 UI를 만듭니다.</p>
-                    <p class="desc">실무 맞춤형<br>퍼블리싱이 가능한<br>웹디자이너 <em>예지</em>입니다.</p>
-                </div>
-                <div class="desc2">
-                    <p>Web Designer<br>&Fronted Publisher</p>
-                    <div class="scroll_btn">
-                        <span>Explore</span>
-                        <a href="#"><img src="#" alt="자동 스크롤"></a> <!-- scrollTrigger -->
+                    <div class="desc2">
+                        <p class="job_desc">Web Designer<br>&Fronted Publisher</p>
+                        <div class="scroll_btn">
+                            <span>Explore</span>
+                            <a href="#"><img src="./images/arrow_icon.png" alt="자동 스크롤"></a> <!-- scrollTrigger -->
+                        </div>
                     </div>
                 </div>
             </div>
@@ -69,19 +71,19 @@
                 </div>
                 <div class="desc_section">
                     <div class="personal_info">
-                        <div class="personal_info">
+                        <div class="about_me_area">
                             <h3>Introduce</h3>
                             <p class="about_me_desc">1998.12.02</p>
                             <p class="about_me_desc">010-2475-2692</p>
                             <address ><a href="mailto:jjuglish@gmail.com" class="about_me_desc">jjuglish@gmail.com</a></address>
                         </div>
-                        <div class="edu_experience">
+                        <div class="about_me_area">
                             <h3>Education / Experience</h3>
                             <p class="about_me_desc">2018.03 - 2022.08 인하대학교 영어교육과</p>
                             <p class="about_me_desc">2023.04 - 2025.03 인하대학교 프런티어학부대학 행정사무 </p>
                             <p class="about_me_desc">2025.07 - 그린컴퓨터아카데미 </p>
                         </div>
-                        <div class="certificate">
+                        <div class="about_me_area">
                             <h3>Certificate</h3>
                             <p class="about_me_desc">2022.01 토익 880점</p>
                             <p class="about_me_desc">2025.0? 컴퓨터활용능력 2급</p>
@@ -90,105 +92,105 @@
                     <div class="skills">
                         <h3>skills</h3>
                         <div class="skills_wrap">
-                            <ul class="skill_set1">
+                            <ul class="skill_set">
                                 <li class="each_skill">
                                     <div class="icon">
-                                    <img src="./images/html_icon.png" alt="html:5">
-                                    <span>html:5</span>
-                                </div>
-                                <ul class="desc">
-                                    <li>웹 표준 마크업 준수</li>
-                                    <li>SEO 최적화 설계</li>
-                                    <li>협업 및 유지보수 고려</li>
-                                </ul>
+                                        <img src="./images/html_icon.png" alt="html:5">
+                                        <span>html:5</span>
+                                    </div>
+                                    <ul class="desc">
+                                        <li>웹 표준 마크업 준수</li>
+                                        <li>SEO 최적화 설계</li>
+                                        <li>협업 및 유지보수 고려</li>
+                                    </ul>
                                 </li>
                                 <li class="each_skill">
                                     <div class="icon">
-                                    <img src="./images/css_icon.png" alt="css:3">
-                                    <span>css:3 / scss</span>
-                                </div>
-                                <ul class="desc">
-                                    <li>반응형 웹 구현 (미디어 쿼리)</li>
-                                    <li>기본 애니메이션 구현</li>
-                                    <li>SCSS @use/@import 및 Mixin으로 스타일 구조화</li>
-                                </ul>
+                                        <img src="./images/css_icon.png" alt="css:3">
+                                        <span>css:3</span>
+                                    </div>
+                                    <ul class="desc">
+                                        <li>반응형 웹 구현 (미디어 쿼리)</li>
+                                        <li>기본 애니메이션 구현</li>
+                                        <li>SCSS @use/@import 및 Mixin으로 스타일 구조화</li>
+                                    </ul>
                                 </li>
                                 <li class="each_skill">
                                     <div class="icon">
-                                    <img src="./images/js_icon.png" alt="자바스크립트">
-                                    <span>javascript</span>
-                                </div>
-                                <ul class="desc">
-                                    <li>Swiper, Scroll-Trigger 활용</li>
-                                    <li>DOM 조작을 통한 동적 기능 구현</li>
-                                    <li>배열, 객체 활용한 데이터 구조화</li>
-                                </ul>
+                                        <img src="./images/js_icon.png" alt="자바스크립트">
+                                        <span>javascript</span>
+                                    </div>
+                                    <ul class="desc">
+                                        <li>Swiper, Scroll-Trigger 활용</li>
+                                        <li>DOM 조작을 통한 동적 기능 구현</li>
+                                        <li>배열, 객체 활용한 데이터 구조화</li>
+                                    </ul>
                                 </li> 
                             </ul>
-                            <ul class="skill_set2">
+                            <ul class="skill_set">
                                 <li class="each_skill">
                                     <div class="icon">
-                                    <img src="./images/photoshop_icon.png" alt="포토샵">
-                                    <span>photoshop</span>
-                                </div>
-                                <ul class="desc">
-                                    <li>배너/상세페이지 디자인 제작 가능</li>
-                                    <li>이미지 최적화 및 사진 편집 가능</li>
-                                </ul>
+                                        <img src="./images/photoshop_icon.png" alt="포토샵">
+                                        <span>photoshop</span>
+                                    </div>
+                                    <ul class="desc">
+                                        <li>배너/상세페이지 디자인 제작 가능</li>
+                                        <li>이미지 최적화 및 사진 편집 가능</li>
+                                    </ul>
                                 </li>
                                 <li class="each_skill">
                                     <div class="icon">
-                                    <img src="./images/illustrator_icon.png" alt="일러스트레이터">
-                                    <span>illustrator</span>
-                                </div>
-                                <ul class="desc">
-                                    <li>로고/아이콘 등 벡터 기반 디자인 제작</li>
-                                    <li>폰트 및 색상 관리로 디자인 통일성 유지</li>
-                                </ul>
+                                        <img src="./images/illustrator_icon.png" alt="일러스트레이터">
+                                        <span>illustrator</span>
+                                    </div>
+                                    <ul class="desc">
+                                        <li>로고/아이콘 등 벡터 기반 디자인 제작</li>
+                                        <li>폰트 및 색상 관리로 디자인 통일성 유지</li>
+                                    </ul>
                                 </li>
                                 <li class="each_skill">
                                     <div class="icon">
-                                    <img src="./images/premiere_icon.png" alt="프리미어프로">
-                                    <span>premiere pro</span>
-                                </div>
-                                <ul class="desc">
-                                    <li>컷편집 및 장면 전환 효과 적용</li>
-                                    <li>자막 및 오디오 편집 가능</li>
-                                    <li>영상 포맷 최적화 및 인코딩 작업</li>
-                                </ul>
+                                        <img src="./images/premiere_icon.png" alt="프리미어프로">
+                                        <span>premiere pro</span>
+                                    </div>
+                                    <ul class="desc">
+                                        <li>컷편집 및 장면 전환 효과 적용</li>
+                                        <li>자막 및 오디오 편집 가능</li>
+                                        <li>영상 포맷 최적화 및 인코딩 작업</li>
+                                    </ul>
                                 </li>
                             </ul>
-                            <ul class="skill_set3">
+                            <ul class="skill_set">
                                 <li class="each_skill">
                                     <div class="icon">
-                                    <img src="./images/notion.png" alt="노션">
-                                    <span>notion</span>
-                                </div>
-                                <ul class="desc">
-                                    <li>협업을 위한 문서 및 작업 기록 관리</li>
-                                    <li>개인 학습/지식 관리 노트 활용</li>
-                                </ul>
+                                        <img src="./images/notion.png" alt="노션">
+                                        <span>notion</span>
+                                    </div>
+                                    <ul class="desc">
+                                        <li>협업을 위한 문서 및 작업 기록 관리</li>
+                                        <li>개인 학습/지식 관리 노트 활용</li>
+                                    </ul>
                                 </li>
                                 <li class="each_skill">
                                     <div class="icon">
-                                    <img src="./images/figma_icon.png" alt="피그마">
-                                    <span>figma</span>
-                                </div>
-                                <ul class="desc">
-                                    <li>오토 레이아웃 활용 및 컴포넌트 관리</li>
-                                    <li>프로토타입 및 상호작용 구현</li>
-                                    <li>사용자 흐름·정보 구조(IA) 기반 설계</li>
-                                </ul>
+                                        <img src="./images/figma_icon.png" alt="피그마">
+                                        <span>figma</span>
+                                    </div>
+                                    <ul class="desc">
+                                        <li>오토 레이아웃 활용 및 컴포넌트 관리</li>
+                                        <li>프로토타입 및 상호작용 구현</li>
+                                        <li>사용자 흐름·정보 구조(IA) 기반 설계</li>
+                                    </ul>
                                 </li>
                                 <li class="each_skill">
                                     <div class="icon">
-                                    <img src="./images/github.png" alt="깃허브">
-                                    <span>github</span>
-                                </div>
-                                <ul class="desc">
-                                    <li>Git 기반 형상 관리 (버전 관리)</li>
-                                    <li>협업 및 코드 리뷰를 위한 저장소 활용</li>
-                                </ul>
+                                        <img src="./images/github.png" alt="깃허브">
+                                        <span>github</span>
+                                    </div>
+                                    <ul class="desc">
+                                        <li>Git 기반 형상 관리 (버전 관리)</li>
+                                        <li>협업 및 코드 리뷰를 위한 저장소 활용</li>
+                                    </ul>
                                 </li>
                             </ul>
                         </div>
@@ -202,7 +204,7 @@
                     <div class="swiper-slide youtube">
                         <div class="txt_section">
                             <h2>Media</h2>
-                            <div class="youtube_profile">
+                            <div class="sns_profile">
                                 <div class="channel_info">
                                     <a href="https://www.youtube.com/@jiu3"><img src="#" alt="유튜브 프로필"></a>
                                     <a href="https://www.youtube.com/@jiu3">지우 Jiu<br>구독자 4.0천명</a>
@@ -230,7 +232,7 @@
                     <div class="swiper-slide instagram">
                         <div class="txt_section">
                             <h2>Media</h2>
-                            <div class="youtube_profile">
+                            <div class="sns_profile">
                                 <div class="channel_info">
                                     <a href="https://www.instagram.com/jiu__diary/"><img src="#" alt="인스타그램 프로필"></a>
                                     <a href="https://www.instagram.com/jiu__diary/">jiu_diary<br>팔로워 6.5천명</a>
@@ -566,5 +568,10 @@
             <button type="button" class="github_id">GitHub @yeaji-J</button>
         </div>
     </footer>
+    <script>
+        const mediaSwiper = new Swiper ('#media_swiper',{
+            
+        })
+    </script>
 </body>
 </html>

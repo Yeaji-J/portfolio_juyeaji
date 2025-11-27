@@ -1,0 +1,171 @@
+@use "./common.scss" as *;
+
+body {
+    /* 공통 */
+    width:100vw; /* overflow-x:hidden; */
+    section {height:100vh;}
+    h2 { @include h2;
+    }
+    /* 개별 */
+    header {
+        width:100%; height:80px; padding:0 80px;
+        position:fixed; top:0; left:0; z-index:999;
+        @include flex-row; justify-content:space-between; align-items:center;
+        border-bottom:$border;
+        a {font-size:$font-size-p-16; font-weight:$font-weight-med; @include basic_txt;}
+        nav {
+            @include flex-row; gap:40px; align-items:center;
+            a {font-weight:400;}
+        }
+    }
+    main {
+        section#cover {
+            padding-top: 80px;
+            position:relative; z-index:997;
+            background:url(../images/portfolio_bg8.png) center/cover no-repeat;
+            border-bottom:$border;
+            #ellipse_container {
+                position:absolute; left:50%; top:50%; transform:translate(-50%,-50%) rotate(-20deg); z-index:998;
+                width:1500px; height:900px;
+                margin: 50px auto;
+                .ellipse_wrap {
+                    position:relative; width:100%; height:100%;
+                    .ellipse_outline { /* 타원 윤곽선 */
+                        position:absolute; top:50%; left:50%; transform:translate(-50%, -50%);
+                        width:1000px; height:500px;
+                        border:$border; border-radius:50%;
+                    }
+                    .dot {/* 움직이는 점 */
+                        position:absolute; width:16px; height:16px;
+                        background:black; border-radius:50%;
+                    }
+                }
+            }
+            .main_contents{
+                height:100%;
+                @include flex-row;
+                #sns {
+                    width:80px; height:100%; padding:80px 0;
+                    @include flex-col; gap:40px; justify-content:flex-end; align-items:center;
+                    border-right:$border;
+                    li {transform: rotate(270deg)}
+                }
+                .main_txt {
+                    width:100%; padding:100px;
+                    position:relative;
+                    @include flex-col; justify-content:space-between;
+                    h1 {
+                        position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
+                        @include h1;
+                    }
+                    .desc1 {
+                        width:100%;
+                        @include flex-row; gap:120px; justify-content:right;
+                        .desc {
+                            font-size:$font-size-p-24; @include basic_txt;
+                            em {font-weight:$font-weight-bold;}
+                        }
+                    }
+                    .desc2 {
+                        width:100%;
+                        @include flex-row; justify-content:space-between;
+                        .job_desc {font-size:$font-size-p-40; font-weight:$font-weight-med; @include basic_txt; @include en-font;}
+                        .scroll_btn {
+                            @include flex-col; align-items:center;
+                            span {font-size:$font-size-p-24; font-weight:$font-weight-sbold; @include basic_txt; @include en-font;}
+                        }
+                    }
+                }
+            }
+        }
+        section#about_me {
+            background:url(../images/portfolio_source.png) center/cover no-repeat;
+            h2 {height:20%; text-align:center; border-bottom:$border;}
+            .contents {
+                width:100%; height:80%;
+                @include flex-row; align-items:flex-start;
+                .photo_section {
+                    width:25%; height:100%; border-right:$border;
+                    @include flex-col; align-items:center; justify-content:center; gap:24px;
+                    img {width:300px; border-top-left-radius:500px; border-top-right-radius:500px;}
+                    .profile {
+                        h3 {
+                            font-size:$font-size-p-24; font-weight:$font-weight-bold; @include basic_txt;
+                            span {font-size:$font-size-p-16; @include basic_txt;}
+                        }
+                        .about_me_desc {
+                            padding-top:16px;
+                            font-size:$font-size-p-16; @include basic_txt;
+                        }
+                    }
+                }
+                .desc_section {
+                    width: 75%;
+                    @include flex-col; align-items:center;
+                    .personal_info {
+                        width:100%; height:100%; padding:40px 80px; @include flex-row; gap:80px; align-items:flex-start; justify-content:center;
+                        border-bottom:$border;
+                        .about_me_area {
+                            @include flex-col; gap:16px; align-items:flex-start;
+                            h3 {font-size:$font-size-p-24; font-weight:$font-weight-bold; @include basic_txt; @include en-font;}
+                            .about_me_desc {font-size:$font-size-p-18; @include basic_wide_txt;}
+                        }
+                    }
+                    .skills {
+                        width:100%; height:100%;
+                        h3{
+                            font-size:$font-size-p-24; font-weight:$font-weight-bold; @include basic_txt; @include en-font;
+                            border-bottom:$border; text-align:center;
+                        }
+                        .skills_wrap {
+                            @include flex-row; align-items:center; justify-content:center;
+                            .skill_set {
+                                padding:20px 40px; @include flex-col; gap:24px;
+                                .each_skill {
+                                    height:96px; @include flex-row; gap:16px; align-items:center;
+                                    .icon {
+                                        width:60px; @include flex-col; justify-content:center; align-items:center; gap:4px;
+                                        img {width:40px; height:40px;}
+                                    }
+                                    .desc {
+                                        li {font-size:$font-size-p-16; @include basic_wide_txt;}
+                                    }
+                                }
+
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+        section#media {
+            background:url(../images/portfolio_bg8.png) center/cover no-repeat;
+            #media_swiper {
+                .swiper-wrapper {
+                    .swiper-slide {
+                        @include flex-row;
+                        .txt_section {
+                            width:30%; height:100%;
+                            h2 {width:100%; border-bottom:$border;}
+                            .sns_profile {
+                                position:relative;
+                                .channel_info {
+                                    width:100%; padding:40px 0;
+                                    @include flex-row; gap:12px; justify-content:center; align-items:center;
+                                }
+                                a {
+                                    position:absolute; right:10%; bottom:50%; transform:translate(10%, 50%);
+                                    img {width:60px; height:60px;}
+                                }
+                            }
+                        }
+                        .mockup_section {
+                            width:70%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
