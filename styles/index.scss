@@ -1,14 +1,16 @@
 @use "./common.scss" as *;
 
 body {
+    scroll-behavior:smooth;
     /* 공통 */
+    height:100vh;
     width:100vw; /* overflow-x:hidden; */
-    section {height:100vh;}
+    * section {min-height:100vh; height:auto;}
     h2 { @include h2;
     }
     /* 개별 */
     header {
-        width:100%; height:80px; padding:0 80px;
+        width:100%; height:60px; padding:0 80px;
         position:fixed; top:0; left:0; z-index:999;
         @include flex-row; justify-content:space-between; align-items:center;
         border-bottom:$border;
@@ -20,7 +22,7 @@ body {
     }
     main {
         section#cover {
-            padding-top: 80px;
+            height:100vh;
             position:relative; z-index:997;
             background:url(../images/portfolio_bg8.png) center/cover no-repeat;
             border-bottom:$border;
@@ -45,7 +47,7 @@ body {
                 height:100%;
                 @include flex-row;
                 #sns {
-                    width:80px; height:100%; padding:80px 0;
+                    width:60px; height:100%; padding:80px 0;
                     @include flex-col; gap:40px; justify-content:flex-end; align-items:center;
                     border-right:$border;
                     li {transform: rotate(270deg)}
@@ -80,14 +82,16 @@ body {
         }
         section#about_me {
             background:url(../images/portfolio_source.png) center/cover no-repeat;
-            h2 {height:20%; text-align:center; border-bottom:$border;}
+            @include flex-col;
+            border-bottom:$border;
+            h2 {height:200px; text-align:center; line-height:2; flex-shrink:0; border-bottom:$border;}
             .contents {
-                width:100%; height:80%;
-                @include flex-row; align-items:flex-start;
+                width:100%; height:auto;
+                @include flex-row; align-items:stretch; flex-grow:1;
                 .photo_section {
-                    width:25%; height:100%; border-right:$border;
+                    width:25%; height:auto; border-right:$border;
                     @include flex-col; align-items:center; justify-content:center; gap:24px;
-                    img {width:300px; border-top-left-radius:500px; border-top-right-radius:500px;}
+                    img {width:250px; border-top-left-radius:500px; border-top-right-radius:500px;}
                     .profile {
                         h3 {
                             font-size:$font-size-p-24; font-weight:$font-weight-bold; @include basic_txt;
@@ -103,69 +107,122 @@ body {
                     width: 75%;
                     @include flex-col; align-items:center;
                     .personal_info {
-                        width:100%; height:100%; padding:40px 80px; @include flex-row; gap:80px; align-items:flex-start; justify-content:center;
+                        width:100%; padding:40px 80px; @include flex-row; gap:120px; align-items:flex-start; justify-content:center;
                         border-bottom:$border;
                         .about_me_area {
                             @include flex-col; gap:16px; align-items:flex-start;
-                            h3 {font-size:$font-size-p-24; font-weight:$font-weight-bold; @include basic_txt; @include en-font;}
-                            .about_me_desc {font-size:$font-size-p-18; @include basic_wide_txt;}
+                            h3 {font-size:$font-size-p-24; font-weight:$font-weight-bold; @include basic_wide_txt; @include en-font;}
+                            .about_me_desc {font-size:$font-size-p-16; @include basic_txt;}
                         }
                     }
                     .skills {
                         width:100%; height:100%;
+                        @include flex-col;
                         h3{
+                            height:32px; flex-shrink:0;
                             font-size:$font-size-p-24; font-weight:$font-weight-bold; @include basic_txt; @include en-font;
                             border-bottom:$border; text-align:center;
                         }
                         .skills_wrap {
+                            flex-grow:1;
                             @include flex-row; align-items:center; justify-content:center;
                             .skill_set {
-                                padding:20px 40px; @include flex-col; gap:24px;
+                                padding:0 40px; @include flex-col; gap:24px;
                                 .each_skill {
                                     height:96px; @include flex-row; gap:16px; align-items:center;
                                     .icon {
                                         width:60px; @include flex-col; justify-content:center; align-items:center; gap:4px;
                                         img {width:40px; height:40px;}
+                                        span {font-size:$font-size-p-12; text-align:center;}
                                     }
                                     .desc {
-                                        li {font-size:$font-size-p-16; @include basic_wide_txt;}
+                                        li {font-size:$font-size-p-14; @include basic_wide_txt;}
                                     }
                                 }
-
                             }
                         }
-
                     }
                 }
             }
         }
         section#media {
             background:url(../images/portfolio_bg8.png) center/cover no-repeat;
+            border-bottom:$border;
             #media_swiper {
                 .swiper-wrapper {
                     .swiper-slide {
-                        @include flex-row;
+                        @include flex-row; flex-grow:1; align-items:stretch;
                         .txt_section {
-                            width:30%; height:100%;
-                            h2 {width:100%; border-bottom:$border;}
+                            @include flex-col;
+                            width:30%; height:100%; text-align:center; border-right:$border;
+                            h2 {width:100%; height:160px; flex-shrink:0; border-bottom:$border;}
                             .sns_profile {
-                                position:relative;
+                                position:relative; height:160px; padding:40px 0; text-align:center;
+                                border-bottom:$border; flex-shrink:0;
                                 .channel_info {
-                                    width:100%; padding:40px 0;
-                                    @include flex-row; gap:12px; justify-content:center; align-items:center;
+                                    height:100%;
+                                    @include flex-row; justify-content:center; align-items:center; gap:12px;
+                                    a > img {width:80px; height:80px; border-radius:50%;}
+                                    .channel_txt {
+                                        @include flex-col; align-items:flex-start;
+                                        .channel_name {font-size:$font-size-p-16; font-weight:$font-weight-med; @include basic_wide_txt;}
+                                        .channel_subscribers {font-size:$font-size-p-12; @include basic_wide_txt }
+                                    }
                                 }
-                                a {
-                                    position:absolute; right:10%; bottom:50%; transform:translate(10%, 50%);
-                                    img {width:60px; height:60px;}
+                                a.explore_more {
+                                    position:absolute; right:5%; top:50%; transform:translate(5%, -50%); z-index:998;
+                                    width:40px; height:40px;
+                                    img {width:100%; height:100%;}
+                                }
+                            }
+                            .channel_desc {
+                                width:100%; flex-grow:1; padding:80px;
+                                @include flex-col; justify-content:center;
+                                p {font-size:$font-size-p-18; @include basic_wide_txt;}
+                                ul {
+                                    li {font-size:$font-size-p-16; @include basic_wide_txt;}
                                 }
                             }
                         }
                         .mockup_section {
                             width:70%;
+                            @include flex-col;
+                            .more_info {
+                                @include flex-row; align-items:center; flex-grow:1;
+                                padding:0 40px;
+                                width:100%; height:130px; border-top:$border;
+                                p {font-size:$font-size-h1-64; font-weight:$font-weight-bold; @include en-font; @include basic_txt;}
+                            }
                         }
                     }
                 }
             }
         }
+        section#projects {
+            @include flex-row; position:relative;
+            h2 {position:absolute; z-index:999; right:5%; top:5%; transform:translate(5%, -5%);
+            }
+            .project_card {background:pink;
+                position:relative;
+                width:25%; border-right:$border;
+                .project_card_wrapper {
+                    position:absolute; left:5%; bottom:5%; transform:translate(-5%, -5%);
+                }
+
+            }
+            /* .card1 {background:url(../images/project_esther.png) top/200% no-repeat;}
+            .card2 {background:url(../images/project_alter.png) top/200% no-repeat;}
+            .card3 {background:url(../images/project_samick.png) top/200% no-repeat;}
+            .card4 {background:url(../images/project_marithe.png) top/200% no-repeat;} */
+        }
+        section.project_section {
+            background:url(../images/portfolio_bg8.png) center/cover no-repeat;
+            border-bottom:$border;
+            .project_button_sets {
+                a {width:140px; height:140px; border-radius:100%; background:$color-white; padding:15px 36px;}
+            }
+        }
     }
 }
+
+// 스크롤
