@@ -1,23 +1,7 @@
-// cover - 타원 윤곽선 & 점
 
-/* #ellipse_container {
-    position:absolute; right:0; top:50%; transform:translateY(-50%) rotate(-20deg); z-index:998;
-    width:1500px; height:900px;
-    margin: 50px auto;
-    .ellipse_wrap {
-        position:relative; width:100%; height:100%;
-        .ellipse_outline {
-            position:absolute; top:50%; left:50%; transform:translate(-50%, -50%);
-            width:1000px; height:500px;
-            border:$border; border-radius:50%;
-        }
-        .dot {
-            position:absolute; width:16px; height:16px;
-            background:black; border-radius:50%;
-        }
-    }
-} */
 
+
+// #cover 타원 애니메이션
 const dot = document.querySelector('.dot')
 const container = document.querySelector('.ellipse_wrap')
 console.log(dot, container);
@@ -43,3 +27,28 @@ requestAnimationFrame(animate);
 }
         
 animate();
+
+// #cover explore 버튼 클릭 시 페이지 이동, 부드럽게
+const exploreBtn = document.querySelector('.scroll_btn > a')
+const aboutMePage = document.querySelector('#about_me')
+console.log ('exploreBtn')
+
+exploreBtn.addEventListener('click', (e)=>{
+    e.preventDefault();
+    window.scrollTo(.0,aboutMePage.offsetTop);
+})
+
+
+// #cover 넘어가면서 header 배경 생기기
+const header = document.querySelector('header')
+const headerBgChangePoint = aboutMePage.offsetTop;
+
+function handleScroll(){
+    const currentScrollY = window.scrollY;
+
+    if(currentScrollY >= headerBgChangePoint) {
+        header.classList.add('bgActive');
+    }else {header.classList.remove('bgActive')};
+
+    handleScroll();
+}

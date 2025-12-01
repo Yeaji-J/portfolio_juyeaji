@@ -1,4 +1,7 @@
+$font-size-h-200:12.5rem;
+$font-size-h-100:6.25rem;
 $font-size-h1-64:4rem;
+$font-size-h1-56:3.5rem;
 $font-size-h2-28:1.75rem;
 $font-size-h3-32:2rem;
 $font-size-p-40:2.5rem;
@@ -15,8 +18,11 @@ $font-weight-med:500;
 $font-weight-sbold:600;
 $font-weight-bold:700;
 $border:1px solid #222;
+$color-black:#000;
 $color-point:#E8F1C7;
 $color-white:#fff;
+$color-gray:#555;
+$color-light-gray:#777;
 
 @mixin basic_txt {
     line-height:160%; letter-spacing:-2%;
@@ -29,6 +35,12 @@ $color-white:#fff;
     font-optical-sizing: auto;
     font-weight: weight;
     font-style: normal;
+}
+@mixin en-font-point {
+        font-family: "Cormorant", serif;
+        font-optical-sizing: auto;
+        font-weight: weight;
+        font-style: normal;
 }
 @mixin h2 {
     @include en-font;

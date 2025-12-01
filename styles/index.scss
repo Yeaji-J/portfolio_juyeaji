@@ -1,8 +1,8 @@
 @use "./common.scss" as *;
 
 body {
-    scroll-behavior:smooth;
     /* 공통 */
+    scroll-behavior:smooth;
     height:100vh;
     width:100vw; /* overflow-x:hidden; */
     * section {min-height:100vh; height:auto;}
@@ -20,6 +20,7 @@ body {
             a {font-weight:400;}
         }
     }
+    header.scrolled {background-color:rgba(255,255,255,0.3);}
     main {
         section#cover {
             height:100vh;
@@ -73,8 +74,14 @@ body {
                         @include flex-row; justify-content:space-between;
                         .job_desc {font-size:$font-size-p-40; font-weight:$font-weight-med; @include basic_txt; @include en-font;}
                         .scroll_btn {
-                            @include flex-col; align-items:center;
+                            @include flex-col; align-items:center; z-index:999;
                             span {font-size:$font-size-p-24; font-weight:$font-weight-sbold; @include basic_txt; @include en-font;}
+                            img {animation: float-up-down 2s ease-in-out infinite alternate;}
+                            @keyframes float-up-down {
+                                0% {transform:translateY(0);}
+                                50% {transform:translateY(-15px);}
+                                100% {transform:translateY(0);}
+                            }
                         }
                     }
                 }
@@ -148,6 +155,7 @@ body {
         section#media {
             background:url(../images/portfolio_bg8.png) center/cover no-repeat;
             border-bottom:$border;
+            position:relative;
             #media_swiper {
                 .swiper-wrapper {
                     .swiper-slide {
@@ -197,29 +205,193 @@ body {
                     }
                 }
             }
+            .swiper-controls-group {
+                position:absolute; right:2%; bottom:0;
+                width:200px; height:130px; padding:20px;
+                @include flex-row; justify-content:center; align-items:center;
+                .swiper-button-prev {
+                    width:40px; height:40px;
+                    color:$color-light-gray;
+                }
+                .swiper-pagination {
+                    position:absolute; left:50%; top:50%; transform:translate(-50%, -50%);
+                    width:auto; height:40px;
+                    @include flex-row; gap:16px; justify-content:center; align-items:center;
+                    color:$color-light-gray;
+                    .swiper-pagination-current, .swiper-pagination-total {
+                        font-size:$font-size-p-40; font-weight:$font-weight-med; @include en-font;
+                        line-height:40px;
+                    }
+                    .swiper-pagination-total {font-size:$font-size-h3-32;}
+                    .swiper-pagination-current {color:$color-black;}
+                }
+                .swiper-button-next {
+                    width:40px; height:40px;
+                    color:$color-black;
+                }
+            }
         }
         section#projects {
-            @include flex-row; position:relative;
+            @include flex-row; position:relative; border-bottom:$border;
             h2 {position:absolute; z-index:999; right:5%; top:5%; transform:translate(5%, -5%);
             }
-            .project_card {background:pink;
+            .project_card {
                 position:relative;
                 width:25%; border-right:$border;
                 .project_card_wrapper {
-                    position:absolute; left:5%; bottom:5%; transform:translate(-5%, -5%);
+                    width:100%;
+                    @include flex-col; gap:20px;
+                    position:absolute; left:0; bottom:0; padding:60px 40px; z-index:10;
+                    .project_num {font-size:$font-size-h-100; font-weight:$font-weight-sbold; @include en-font-point;}
+                    .project_name {font-size:$font-size-h1-56; font-weight:$font-weight-med; @include en-font;}
+                    .hashtag_more {
+                        width:100%;
+                        @include flex-row; justify-content:space-between; align-items:flex-end;
+                        .hashtag_section {
+                            @include flex-col; gap:16px;
+                            .hashtag {font-size:$font-size-p-24;}
+                        }
+                        .move_to_projects_btn {img {display:none;}
+                        }
+                    }
                 }
-
             }
-            /* .card1 {background:url(../images/project_esther.png) top/200% no-repeat;}
-            .card2 {background:url(../images/project_alter.png) top/200% no-repeat;}
-            .card3 {background:url(../images/project_samick.png) top/200% no-repeat;}
-            .card4 {background:url(../images/project_marithe.png) top/200% no-repeat;} */
+            .card1 {
+                position:relative;
+                background:url(../images/eather_bg.jpg) top/cover no-repeat;
+            }
+            .card1::before {
+                content:"";
+                position:absolute; top:0; left:0; width:100%; height:100%;
+                background:url(../images/mockup_001.jpg) top/cover no-repeat;
+                opacity:0; transition:opacity 0.1s ease; z-index:5;
+            }
+            .card1:hover.project_card_wrapper {
+                z-index:10;
+            }
+            .card1:hover::before {opacity:1;}
+
+            .card2 {background:url(../images/alter_bg.png) top/cover no-repeat;}
+            .card3 {background:url(../images/portfolio_bg11.png) top/cover no-repeat;}
+            .card4 {background:url(../images/marithe_bg2.png) top/cover no-repeat;}
         }
         section.project_section {
-            background:url(../images/portfolio_bg8.png) center/cover no-repeat;
+            background:url(../images/portfolio_bg11.png) center/cover no-repeat;
             border-bottom:$border;
-            .project_button_sets {
-                a {width:140px; height:140px; border-radius:100%; background:$color-white; padding:15px 36px;}
+            @include flex-row;
+            .desc_section {
+                position:relative;
+                width:30%; padding:120px 60px; border-right:$border;
+                @include flex-col; justify-content:center; gap:40px;
+                .project_title {
+                    .project_num {
+                        color:rgba(0,0,0,0.2); font-size:$font-size-h-200; @include en-font-point;
+                        position:absolute; top:-2%; left:-2%;
+                    }
+                    .project_name {
+                        font-size:$font-size-h1-56; font-weight:$font-weight-med; @include en-font;
+                    }
+                }
+                .project_desc {
+                    padding-top:40px; border-top:$border;
+                    @include flex-col; gap:40px;
+                    p {
+                        color:$color-gray;
+                        font-size:$font-size-p-18; @include basic_wide_txt;
+                    }
+                    .project_hashtag {
+                        color:$color-black;
+                        font-size:$font-size-p-18
+                    }
+                    .project_tools {
+                        @include flex-col; gap:16px;
+                        p {font-size:$font-size-p-18; font-weight:$font-weight-med; @include basic_wide_txt;}
+                        .tool_icon_sets {
+                            @include flex-row; gap:20px;
+                            li {
+                                width:50px; height:50px;
+                                img {width:100%; height:100%;}
+                            }
+                        }
+                    }
+                }
+            }
+            .mockup_section {
+                position:relative;
+                width:70%; @include flex-col; justify-content:space-between;
+                .projects_index {
+                    padding:40px 0;
+                    @include flex-row; justify-content:center; gap:80px;
+                    li {
+                        a {
+                            @include flex-col; gap:8px;
+                            .project_num_index {
+                                @include en-font-point; font-size:$font-size-p-40; font-weight:$font-weight-sbold;
+                            }
+                            .project_name_index {
+                                @include en-font; font-size:$font-size-h3-32; font-weight:$font-weight-med;
+                            }
+                        }
+                    }
+                }
+                .mockup{
+                    height:80%;
+                    background:url(../images/mockup_test.gif) top -10% left 20% /120% no-repeat;
+                }
+                .project_button_sets {
+                    position:absolute; right:10%; top:50%; transform:translate(10%, -50%);
+                    @include flex-col; justify-content:center; gap:40px;
+                    .project_btn {
+                        width:120px; height:120px; border-radius:100%; background:$color-point;
+                        @include flex-row; gap:16px; justify-content:center; align-items:center;
+                        a {
+                            display:block; width:100%; height:100%;
+                            font-size:$font-size-p-16; @include basic_txt; text-align:center;
+                            @include flex-col; justify-content:center; align-items:center;
+                        }
+                    }
+                }
+            }
+        }
+        #project_04_marithe {
+            .desc_section .project_title .project_name {font-size:$font-size-p-40;}
+        }
+        #project_01_esther {
+            background:url(../images/eather_bg.jpg) center/cover no-repeat;
+        }
+        #project_02_alternativestereo {
+            background:url(../images/alter_bg.png) center/20% repeat;
+        }
+        section#graphics {
+            background:url(../images/portfolio_source.png) center/cover no-repeat;
+            border-bottom:$border;
+            @include flex-col; gap:120px; justify-content:center; align-items: center;
+            #design_swiper {
+                .swiper-wrapper {
+                    .swiper-slide {height:450px;
+                        a {
+                            img {height:100%;}
+                        }
+                    }
+                }
+            }
+        }
+    }
+    footer {
+        padding:120px 0;
+        background:url(../images/portfolio_bg8.png) center/cover no-repeat;
+        @include flex-col; justify-content:center; align-items:center; gap:40px;
+        h3 {font-size:$font-size-h3-32; font-weight:$font-weight-bold; @include en-font;}
+        address {
+            a {font-size:$font-size-p-18; @include basic_wide_txt;}
+        }
+        img {width:150px; height:150px;
+        }
+        p {font-size:$font-size-p-18; @include basic_wide_txt;}
+        .buttons {
+            #github_id {
+                padding:16px; background-color:$color-white; border-radius:10px;
+                font-size:$font-size-p-16;
             }
         }
     }

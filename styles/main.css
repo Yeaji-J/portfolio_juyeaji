@@ -1,7 +1,7 @@
 @charset "UTF-8";
 body {
-  scroll-behavior: smooth;
   /* 공통 */
+  scroll-behavior: smooth;
   height: 100vh;
   width: 100vw; /* overflow-x:hidden; */
 }
@@ -50,6 +50,9 @@ body header nav {
 }
 body header nav a {
   font-weight: 400;
+}
+body header.scrolled {
+  background-color: rgba(255, 255, 255, 0.3);
 }
 body main section#cover {
   height: 100vh;
@@ -166,6 +169,7 @@ body main section#cover .main_contents .main_txt .desc2 .scroll_btn {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
+  z-index: 999;
 }
 body main section#cover .main_contents .main_txt .desc2 .scroll_btn span {
   font-size: 1.5rem;
@@ -176,6 +180,20 @@ body main section#cover .main_contents .main_txt .desc2 .scroll_btn span {
   font-optical-sizing: auto;
   font-weight: weight;
   font-style: normal;
+}
+body main section#cover .main_contents .main_txt .desc2 .scroll_btn img {
+  animation: float-up-down 2s ease-in-out infinite alternate;
+}
+@keyframes float-up-down {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 body main section#about_me {
   background: url(../images/portfolio_source.png) center/cover no-repeat;
@@ -331,6 +349,7 @@ body main section#about_me .contents .desc_section .skills .skills_wrap .skill_s
 body main section#media {
   background: url(../images/portfolio_bg8.png) center/cover no-repeat;
   border-bottom: 1px solid #222;
+  position: relative;
 }
 body main section#media #media_swiper .swiper-wrapper .swiper-slide {
   display: flex;
@@ -445,10 +464,62 @@ body main section#media #media_swiper .swiper-wrapper .swiper-slide .mockup_sect
   line-height: 160%;
   letter-spacing: -2%;
 }
+body main section#media .swiper-controls-group {
+  position: absolute;
+  right: 2%;
+  bottom: 0;
+  width: 200px;
+  height: 130px;
+  padding: 20px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+body main section#media .swiper-controls-group .swiper-button-prev {
+  width: 40px;
+  height: 40px;
+  color: #777;
+}
+body main section#media .swiper-controls-group .swiper-pagination {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: auto;
+  height: 40px;
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+  color: #777;
+}
+body main section#media .swiper-controls-group .swiper-pagination .swiper-pagination-current, body main section#media .swiper-controls-group .swiper-pagination .swiper-pagination-total {
+  font-size: 2.5rem;
+  font-weight: 500;
+  font-family: "Cormorant Infant", serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  line-height: 40px;
+}
+body main section#media .swiper-controls-group .swiper-pagination .swiper-pagination-total {
+  font-size: 2rem;
+}
+body main section#media .swiper-controls-group .swiper-pagination .swiper-pagination-current {
+  color: #000;
+}
+body main section#media .swiper-controls-group .swiper-button-next {
+  width: 40px;
+  height: 40px;
+  color: #000;
+}
 body main section#projects {
   display: flex;
   flex-flow: row nowrap;
   position: relative;
+  border-bottom: 1px solid #222;
 }
 body main section#projects h2 {
   position: absolute;
@@ -458,33 +529,295 @@ body main section#projects h2 {
   transform: translate(5%, -5%);
 }
 body main section#projects .project_card {
-  background: pink;
   position: relative;
   width: 25%;
   border-right: 1px solid #222;
 }
 body main section#projects .project_card .project_card_wrapper {
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 20px;
   position: absolute;
-  left: 5%;
-  bottom: 5%;
-  transform: translate(-5%, -5%);
+  left: 0;
+  bottom: 0;
+  padding: 60px 40px;
+  z-index: 10;
 }
-body main section#projects {
-  /* .card1 {background:url(../images/project_esther.png) top/200% no-repeat;}
-  .card2 {background:url(../images/project_alter.png) top/200% no-repeat;}
-  .card3 {background:url(../images/project_samick.png) top/200% no-repeat;}
-  .card4 {background:url(../images/project_marithe.png) top/200% no-repeat;} */
+body main section#projects .project_card .project_card_wrapper .project_num {
+  font-size: 6.25rem;
+  font-weight: 600;
+  font-family: "Cormorant", serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+body main section#projects .project_card .project_card_wrapper .project_name {
+  font-size: 3.5rem;
+  font-weight: 500;
+  font-family: "Cormorant Infant", serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+body main section#projects .project_card .project_card_wrapper .hashtag_more {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+body main section#projects .project_card .project_card_wrapper .hashtag_more .hashtag_section {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 16px;
+}
+body main section#projects .project_card .project_card_wrapper .hashtag_more .hashtag_section .hashtag {
+  font-size: 1.5rem;
+}
+body main section#projects .project_card .project_card_wrapper .hashtag_more .move_to_projects_btn img {
+  display: none;
+}
+body main section#projects .card1 {
+  position: relative;
+  background: url(../images/eather_bg.jpg) top/cover no-repeat;
+}
+body main section#projects .card1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(../images/mockup_001.jpg) top/cover no-repeat;
+  opacity: 0;
+  transition: opacity 0.1s ease;
+  z-index: 5;
+}
+body main section#projects .card1:hover.project_card_wrapper {
+  z-index: 10;
+}
+body main section#projects .card1:hover::before {
+  opacity: 1;
+}
+body main section#projects .card2 {
+  background: url(../images/alter_bg.png) top/cover no-repeat;
+}
+body main section#projects .card3 {
+  background: url(../images/portfolio_bg11.png) top/cover no-repeat;
+}
+body main section#projects .card4 {
+  background: url(../images/marithe_bg2.png) top/cover no-repeat;
 }
 body main section.project_section {
-  background: url(../images/portfolio_bg8.png) center/cover no-repeat;
+  background: url(../images/portfolio_bg11.png) center/cover no-repeat;
   border-bottom: 1px solid #222;
+  display: flex;
+  flex-flow: row nowrap;
 }
-body main section.project_section .project_button_sets a {
-  width: 140px;
-  height: 140px;
+body main section.project_section .desc_section {
+  position: relative;
+  width: 30%;
+  padding: 120px 60px;
+  border-right: 1px solid #222;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  gap: 40px;
+}
+body main section.project_section .desc_section .project_title .project_num {
+  color: rgba(0, 0, 0, 0.2);
+  font-size: 12.5rem;
+  font-family: "Cormorant", serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  position: absolute;
+  top: -2%;
+  left: -2%;
+}
+body main section.project_section .desc_section .project_title .project_name {
+  font-size: 3.5rem;
+  font-weight: 500;
+  font-family: "Cormorant Infant", serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+body main section.project_section .desc_section .project_desc {
+  padding-top: 40px;
+  border-top: 1px solid #222;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 40px;
+}
+body main section.project_section .desc_section .project_desc p {
+  color: #555;
+  font-size: 1.125rem;
+  line-height: 200%;
+  letter-spacing: -2%;
+}
+body main section.project_section .desc_section .project_desc .project_hashtag {
+  color: #000;
+  font-size: 1.125rem;
+}
+body main section.project_section .desc_section .project_desc .project_tools {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 16px;
+}
+body main section.project_section .desc_section .project_desc .project_tools p {
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 200%;
+  letter-spacing: -2%;
+}
+body main section.project_section .desc_section .project_desc .project_tools .tool_icon_sets {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 20px;
+}
+body main section.project_section .desc_section .project_desc .project_tools .tool_icon_sets li {
+  width: 50px;
+  height: 50px;
+}
+body main section.project_section .desc_section .project_desc .project_tools .tool_icon_sets li img {
+  width: 100%;
+  height: 100%;
+}
+body main section.project_section .mockup_section {
+  position: relative;
+  width: 70%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+}
+body main section.project_section .mockup_section .projects_index {
+  padding: 40px 0;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  gap: 80px;
+}
+body main section.project_section .mockup_section .projects_index li a {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 8px;
+}
+body main section.project_section .mockup_section .projects_index li a .project_num_index {
+  font-family: "Cormorant", serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+body main section.project_section .mockup_section .projects_index li a .project_name_index {
+  font-family: "Cormorant Infant", serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  font-size: 2rem;
+  font-weight: 500;
+}
+body main section.project_section .mockup_section .mockup {
+  height: 80%;
+  background: url(../images/mockup_test.gif) top -10% left 20%/120% no-repeat;
+}
+body main section.project_section .mockup_section .project_button_sets {
+  position: absolute;
+  right: 10%;
+  top: 50%;
+  transform: translate(10%, -50%);
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  gap: 40px;
+}
+body main section.project_section .mockup_section .project_button_sets .project_btn {
+  width: 120px;
+  height: 120px;
   border-radius: 100%;
-  background: #fff;
-  padding: 15px 36px;
+  background: #E8F1C7;
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+}
+body main section.project_section .mockup_section .project_button_sets .project_btn a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  font-size: 1rem;
+  line-height: 160%;
+  letter-spacing: -2%;
+  text-align: center;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+body main #project_04_marithe .desc_section .project_title .project_name {
+  font-size: 2.5rem;
+}
+body main #project_01_esther {
+  background: url(../images/eather_bg.jpg) center/cover no-repeat;
+}
+body main #project_02_alternativestereo {
+  background: url(../images/alter_bg.png) center/20% repeat;
+}
+body main section#graphics {
+  background: url(../images/portfolio_source.png) center/cover no-repeat;
+  border-bottom: 1px solid #222;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 120px;
+  justify-content: center;
+  align-items: center;
+}
+body main section#graphics #design_swiper .swiper-wrapper .swiper-slide {
+  height: 450px;
+}
+body main section#graphics #design_swiper .swiper-wrapper .swiper-slide a img {
+  height: 100%;
+}
+body footer {
+  padding: 120px 0;
+  background: url(../images/portfolio_bg8.png) center/cover no-repeat;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+body footer h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: "Cormorant Infant", serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+body footer address a {
+  font-size: 1.125rem;
+  line-height: 200%;
+  letter-spacing: -2%;
+}
+body footer img {
+  width: 150px;
+  height: 150px;
+}
+body footer p {
+  font-size: 1.125rem;
+  line-height: 200%;
+  letter-spacing: -2%;
+}
+body footer .buttons #github_id {
+  padding: 16px;
+  background-color: #fff;
+  border-radius: 10px;
+  font-size: 1rem;
 }
 
 /*# sourceMappingURL=main.css.map */

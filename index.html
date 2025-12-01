@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="./styles/reset.css">
     <!-- cormorant-infant 구글웹폰트 -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital,wght@0,300..700;1,300..700&family=Cormorant:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
     <!--플러그인 필수 css cdn 연결-->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
@@ -23,10 +23,10 @@
     <header>
         <a href="#cover">JU YEA-JI</a>
         <nav>
-            <a href="#">About Me</a>
-            <a href="#">Projects</a>
-            <a href="#">Graphics</a>
-            <a href="#">Contact</a>
+            <a href="#about_me">About Me</a>
+            <a href="#projects">Projects</a>
+            <a href="#graphics">Graphics</a>
+            <a href="#contact">Contact</a>
         </nav>
     </header>
     <main>
@@ -39,8 +39,8 @@
             </div>
             <div class="main_contents">
                 <ul id="sns"> <!-- about me 까지만 fixed되게, offset 이나 scrollTrigger 사용 -->
-                    <li><a href="https://www.youtube.com/@jiu3">youtube</li>
-                    <li><a href="https://www.instagram.com/jiu__diary/">instagram</a></li>
+                    <li><a href="https://www.youtube.com/@jiu3" target="_blank">youtube</li>
+                    <li><a href="https://www.instagram.com/jiu__diary/" target="_blank">instagram</a></li>
                 </ul>
                 <div class="main_txt">
                     <h1>Portfolio</h1> <!-- absol -->
@@ -52,7 +52,7 @@
                         <p class="job_desc">Web Designer<br>&Fronted Publisher</p>
                         <div class="scroll_btn">
                             <span>Explore</span>
-                            <a href="#"><img src="./images/arrow_icon.png" alt="자동 스크롤"></a> <!-- scrollTrigger -->
+                            <a href="#about_me"><img src="./images/arrow_icon.png" alt="자동 스크롤"></a> <!-- scrollTrigger -->
                         </div>
                     </div>
                 </div>
@@ -263,99 +263,107 @@
                     </div>
                 </div>
             </div>
-            <div class="swiper-pagination"></div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
+            <div class="swiper-controls-group">
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+            </div>
         </section>
+        <!-- project 목차 부분 -->
         <section id="projects">
             <h2>Projects</h2>
             <div class="project_card card1">
                 <div class="project_card_wrapper">
                     <p class="project_num">01</p>
-                    <p class="Project_name">Esther Formula</p>
-                    <div class="hashtag_section">
-                        <p class="hastag">#반응형</p>
-                        <p class="hastag">#메인페이지</p>
+                    <p class="project_name">Esther Formula</p>
+                    <div class="hashtag_more">
+                        <div class="hashtag_section">
+                            <p class="hashtag">#반응형</p>
+                            <p class="hashtag">#메인페이지</p>
+                        </div>
+                        <a href="#project_01_esther" class="move_to_projects_btn" ><img src="./images/more_icon.png" alt="project1_에스더몰 바로가기"></a>
                     </div>
-                    <a href="#"><img src="#" alt="바로가기"></a>
                 </div>
             </div>
             <div class="project_card card2">
                 <div class="project_card_wrapper">
                     <p class="project_num">02</p>
-                    <p class="Project_name">AlternativeStereo</p>
-                    <div class="hashtag_section">
-                        <p class="hastag">#반응형</p>
-                        <p class="hastag">#메인페이지</p>
+                    <p class="project_name">Alternativestereo</p>
+                    <div class="hashtag_more">
+                        <div class="hashtag_section">
+                            <p class="hashtag">#반응형</p>
+                            <p class="hashtag">#메인페이지</p>
+                        </div>
+                        <a href="#project_02_alternativestereo"><img src="./images/more_icon.png" alt="project2_얼터너티브스테레오 바로가기"></a>
                     </div>
-                    <a href="#"><img src="#" alt="바로가기"></a>
                 </div>
             </div>
             <div class="project_card card3">
                 <div class="project_card_wrapper">
                     <p class="project_num">03</p>
-                    <p class="Project_name">Samick Furniture</p>
-                    <div class="hashtag_section">
-                        <p class="hastag">#반응형</p>
-                        <p class="hastag">#메인페이지</p>
+                    <p class="project_name">Samick Furniture</p>
+                    <div class="hashtag_more">
+                        <div class="hashtag_section">
+                            <p class="hashtag">#반응형</p>
+                            <p class="hashtag">#메인페이지</p>
+                        </div>
+                        <a href="#project_03_samick"><img src="./images/more_icon.png" alt="project3_삼익가구 바로가기"></a>
                     </div>
-                    <a href="#"><img src="#" alt="바로가기"></a>
                 </div>
             </div>
             <div class="project_card card4">
                 <div class="project_card_wrapper">
                     <p class="project_num">04</p>
-                    <p class="Project_name">MARITHÉ</p>
-                    <div class="hashtag_section">
-                        <p class="hastag">#반응형</p>
-                        <p class="hastag">#메인페이지</p>
+                    <p class="project_name">MARITHÉ</p>
+                    <div class="hashtag_more">
+                        <div class="hashtag_section">
+                            <p class="hashtag">#반응형</p>
+                            <p class="hashtag">#메인페이지</p>
+                        </div>
+                        <a href="#project_04_marithe"><img src="./images/more_icon.png" alt="project4_마리떼프랑소와저버 바로가기"></a>
                     </div>
-                    <a href="#"><img src="#" alt="바로가기"></a>
                 </div>
             </div>
         </section>
+        <!-- 메인 프로젝트 설명 시작 01 에스더몰 -->
         <section id="project_01_esther" class="project_section">
             <div class="desc_section">
                 <div class="project_title">
-                    <span class="project_num">01</span> <!-- position:absol -->
+                    <span class="project_num">01</span>
                     <span class="project_name">Esther Formula</span>
                 </div>
-                <p class="project_desc">
-                    Fashion E-Commerce Renewal<br>트렌디한 감성을 강조한 의류 쇼핑몰 리디자인 프로젝트입니다.<br>
-                    상품 탐색 편의성을 높이기 위해 UX 동선을 재구성하고 메인 비주얼을 개선했습니다.
-                </p>
-                <p class="project_hashtag">#반응형  #메인페이지</p>
-                <div class="project_tools">
-                    <p> Tools</p>
-                    <ul class="tool_icon_sets">
-                        <li><img src="#" alt=""></li>
-                        <li><img src="#" alt=""></li>
-                        <li><img src="#" alt=""></li>
-                        <li><img src="#" alt=""></li>
-                    </ul>
-                </div>
-                <div class="project_button_sets">
-                    <a href="yeaji-j.github.io/project_esther/">Prototype(github)</a>
-                    <a href="#">planning</a>
-                    <a href="#">Original Website</a>
+                <div class="project_desc">
+                    <p>Fashion E-Commerce Renewal<br>트렌디한 감성을 강조한 의류 쇼핑몰 리디자인 프로젝트입니다.<br>
+                        상품 탐색 편의성을 높이기 위해 UX 동선을 재구성하고 메인 비주얼을 개선했습니다.
+                    </p>
+                    <p class="project_hashtag">#반응형  #메인페이지</p>
+                    <div class="project_tools">
+                        <p> Tools</p>
+                        <ul class="tool_icon_sets">
+                            <li><img src="./images/illustrator_icon.png" alt="일러스트레이터"></li>
+                            <li><img src="./images/illustrator_icon.png" alt="일러스트레이터"></li>
+                            <li><img src="./images/illustrator_icon.png" alt="일러스트레이터"></li>
+                            <li><img src="./images/illustrator_icon.png" alt="일러스트레이터"></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
             <div class="mockup_section">
                 <ul class="projects_index">
                     <li>
-                        <a href="#">
+                        <a href="#project_01_esther">
                             <span class="project_num_index current">01</span>
                             <span class="project_name_index current">Esther Formula</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="#project_02_alternativestereo">
                             <span class="project_num_index">02</span>
                             <span class="project_name_index">AlternativeStereo</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="#project_03_samick">
                             <span class="project_num_index">03</span>
                             <span class="project_name_index">Samick Furniture</span>
                         </a>
@@ -369,56 +377,64 @@
                 </ul>
                 <div class="mockup">
                 </div>
+                <div class="project_button_sets">
+                    <div class="project_btn" id="prototype_btn">
+                        <a href="https://yeaji-j.github.io/project_esther/" target="_blank">Prototype<br>(github)</a>
+                    </div>
+                    <div class="project_btn" id="planning_btn">
+                        <a href="#" target="_blank">Planning</a>
+                    </div>
+                    <div class="project_btn" id="original_web_btn">
+                        <a href="https://www.esthermall.co.kr/?utm_source=google_sa&utm_medium=cpc&utm_campaign=brand&utm_content=ALL&utm_term=00_%EB%B8%8C%EB%9E%9C%EB%93%9C_%EC%9D%BC%EC%B9%98_PC-00___%EB%B8%8C%EB%9E%9C%EB%93%9C-%EC%97%90%EC%8A%A4%EB%8D%94%EB%AA%B0&gad_source=1&gad_campaignid=13835841994&gbraid=0AAAAADZNKj9-WGPozuvOO_Gvon2EhNa8Z&gclid=CjwKCAiA86_JBhAIEiwA4i9Juy1O612TNz9NvRPA1YFsraCdS0zH2H3qFo0ENezEw2b9IbTIdYJIshoCnTAQAvD_BwE" target="_blank">Original<br>Website</a>
+                    </div>
+                </div>
             </div>
         </section>
+        <!-- 프로젝트 02 얼터 -->
         <section id="project_02_alternativestereo" class="project_section">
             <div class="desc_section">
                 <div class="project_title">
                     <span class="project_num">02</span> <!-- position:absol -->
                     <span class="project_name">Alternativestereo</span>
                 </div>
-                <p class="project_desc">
-                    Fashion E-Commerce Renewal<br>트렌디한 감성을 강조한 의류 쇼핑몰 리디자인 프로젝트입니다.<br>
-                    상품 탐색 편의성을 높이기 위해 UX 동선을 재구성하고 메인 비주얼을 개선했습니다.
-                </p>
-                <p class="project_hashtag">#반응형  #메인페이지</p>
-                <div class="project_tools">
-                    <p> Tools</p>
-                    <ul class="tool_icon_sets">
-                        <li><img src="#" alt=""></li>
-                        <li><img src="#" alt=""></li>
-                        <li><img src="#" alt=""></li>
-                        <li><img src="#" alt=""></li>
-                    </ul>
-                </div>
-                <div class="project_button_sets">
-                    <a href="https://yeaji-j.github.io/project_alternativestereo/">Prototype(github)</a>
-                    <a href="#">planning</a>
-                    <a href="#">Original Website</a>
+                <div class="project_desc">
+                    <p>Fashion E-Commerce Renewal<br>트렌디한 감성을 강조한 의류 쇼핑몰 리디자인 프로젝트입니다.<br>
+                        상품 탐색 편의성을 높이기 위해 UX 동선을 재구성하고 메인 비주얼을 개선했습니다.
+                    </p>
+                    <p class="project_hashtag">#반응형  #메인페이지</p>
+                    <div class="project_tools">
+                        <p> Tools</p>
+                        <ul class="tool_icon_sets">
+                            <li><img src="./images/illustrator_icon.png" alt="일러스트레이터"></li>
+                            <li><img src="./images/illustrator_icon.png" alt="일러스트레이터"></li>
+                            <li><img src="./images/illustrator_icon.png" alt="일러스트레이터"></li>
+                            <li><img src="./images/illustrator_icon.png" alt="일러스트레이터"></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
             <div class="mockup_section">
                 <ul class="projects_index">
                     <li>
-                        <a href="#">
-                            <span class="project_num_index current">01</span>
-                            <span class="project_name_index current">Esther Formula</span>
+                        <a href="#project_01_esther">
+                            <span class="project_num_index">01</span>
+                            <span class="project_name_index">Esther Formula</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#">
-                            <span class="project_num_index">02</span>
-                            <span class="project_name_index">AlternativeStereo</span>
+                        <a href="#project_02_alternativestereo">
+                            <span class="project_num_index current">02</span>
+                            <span class="project_name_index current">AlternativeStereo</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="#project_03_samick">
                             <span class="project_num_index">03</span>
                             <span class="project_name_index">Samick Furniture</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="project_04_marithe">
                             <span class="project_num_index">04</span>
                             <span class="project_name_index">MARITHÉ</span>
                         </a>
@@ -426,56 +442,64 @@
                 </ul>
                 <div class="mockup">
                 </div>
+                <div class="project_button_sets">
+                    <div class="project_btn" id="prototype_btn">
+                        <a href="https://yeaji-j.github.io/project_alternativestereo/" target="_blank">Prototype<br>(github)</a>
+                    </div>
+                    <div class="project_btn" id="planning_btn">
+                        <a href="#" target="_blank">Planning</a>
+                    </div>
+                    <div class="project_btn" id="original_web_btn">
+                        <a href="https://alternativestereo.com/" target="_blank">Original<br>Website</a>
+                    </div>
+                </div>
             </div>
         </section>
+        <!-- 프로젝트 02 삼익 -->
         <section id="project_03_samick" class="project_section">
             <div class="desc_section">
                 <div class="project_title">
                     <span class="project_num">03</span> <!-- position:absol -->
                     <span class="project_name">Samick Furniture</span>
                 </div>
-                <p class="project_desc">
-                    Fashion E-Commerce Renewal<br>트렌디한 감성을 강조한 의류 쇼핑몰 리디자인 프로젝트입니다.<br>
-                    상품 탐색 편의성을 높이기 위해 UX 동선을 재구성하고 메인 비주얼을 개선했습니다.
-                </p>
-                <p class="project_hashtag">#반응형  #메인페이지</p>
-                <div class="project_tools">
-                    <p> Tools</p>
-                    <ul class="tool_icon_sets">
-                        <li><img src="#" alt=""></li>
-                        <li><img src="#" alt=""></li>
-                        <li><img src="#" alt=""></li>
-                        <li><img src="#" alt=""></li>
-                    </ul>
-                </div>
-                <div class="project_button_sets">
-                    <a href="#">Prototype(github)</a>
-                    <a href="#">planning</a>
-                    <a href="#">Original Website</a>
+                <div class="project_desc">
+                    <p>Fashion E-Commerce Renewal<br>트렌디한 감성을 강조한 의류 쇼핑몰 리디자인 프로젝트입니다.<br>
+                        상품 탐색 편의성을 높이기 위해 UX 동선을 재구성하고 메인 비주얼을 개선했습니다.
+                    </p>
+                    <p class="project_hashtag">#반응형  #메인페이지</p>
+                    <div class="project_tools">
+                        <p> Tools</p>
+                        <ul class="tool_icon_sets">
+                            <li><img src="./images/illustrator_icon.png" alt="일러스트레이터"></li>
+                            <li><img src="./images/illustrator_icon.png" alt="일러스트레이터"></li>
+                            <li><img src="./images/illustrator_icon.png" alt="일러스트레이터"></li>
+                            <li><img src="./images/illustrator_icon.png" alt="일러스트레이터"></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
             <div class="mockup_section">
                 <ul class="projects_index">
                     <li>
-                        <a href="#">
-                            <span class="project_num_index current">01</span>
-                            <span class="project_name_index current">Esther Formula</span>
+                        <a href="#project_01_esther">
+                            <span class="project_num_index">01</span>
+                            <span class="project_name_index">Esther Formula</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="#project_02_alternativestereo">
                             <span class="project_num_index">02</span>
                             <span class="project_name_index">AlternativeStereo</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#">
-                            <span class="project_num_index">03</span>
-                            <span class="project_name_index">Samick Furniture</span>
+                        <a href="#project_03_samick">
+                            <span class="project_num_index current">03</span>
+                            <span class="project_name_index current">Samick Furniture</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="project_04_marithe">
                             <span class="project_num_index">04</span>
                             <span class="project_name_index">MARITHÉ</span>
                         </a>
@@ -483,62 +507,81 @@
                 </ul>
                 <div class="mockup">
                 </div>
+                <div class="project_button_sets">
+                    <div class="project_btn" id="prototype_btn">
+                        <a href="#" target="_blank">Prototype<br>(github)</a>
+                    </div>
+                    <div class="project_btn" id="planning_btn">
+                        <a href="#" target="_blank">Planning</a>
+                    </div>
+                    <div class="project_btn" id="original_web_btn">
+                        <a href="https://www.samickmall.com/?srsltid=AfmBOoo3XJXL5by8mWMbgPpqdQHWZwpkR3b92Nq-58dWk4Vj-hULKrls" target="_blank">Original<br>Website</a>
+                    </div>
+                </div>
             </div>
         </section>
+        <!-- 프로젝트 02 마리떼 -->
         <section id="project_04_marithe" class="project_section">
             <div class="desc_section">
                 <div class="project_title">
                     <span class="project_num">04</span> <!-- position:absol -->
-                    <span class="project_name">MARITHÉ</span>
+                    <span class="project_name">MARITHÉ FRANÇOIS GIRBAUD</span>
                 </div>
-                <p class="project_desc">
-                    Fashion E-Commerce Renewal<br>트렌디한 감성을 강조한 의류 쇼핑몰 리디자인 프로젝트입니다.<br>
-                    상품 탐색 편의성을 높이기 위해 UX 동선을 재구성하고 메인 비주얼을 개선했습니다.
-                </p>
-                <p class="project_hashtag">#반응형  #메인페이지</p>
-                <div class="project_tools">
-                    <p> Tools</p>
-                    <ul class="tool_icon_sets">
-                        <li><img src="#" alt=""></li>
-                        <li><img src="#" alt=""></li>
-                        <li><img src="#" alt=""></li>
-                        <li><img src="#" alt=""></li>
-                    </ul>
-                </div>
-                <div class="project_button_sets">
-                    <a href="#">Prototype(github)</a>
-                    <a href="#">planning</a>
-                    <a href="#">Original Website</a>
+                <div class="project_desc">
+                    <p>Fashion E-Commerce Renewal<br>트렌디한 감성을 강조한 의류 쇼핑몰 리디자인 프로젝트입니다.<br>
+                        상품 탐색 편의성을 높이기 위해 UX 동선을 재구성하고 메인 비주얼을 개선했습니다.
+                    </p>
+                    <p class="project_hashtag">#반응형  #메인페이지</p>
+                    <div class="project_tools">
+                        <p> Tools</p>
+                        <ul class="tool_icon_sets">
+                            <li><img src="./images/illustrator_icon.png" alt="일러스트레이터"></li>
+                            <li><img src="./images/illustrator_icon.png" alt="일러스트레이터"></li>
+                            <li><img src="./images/illustrator_icon.png" alt="일러스트레이터"></li>
+                            <li><img src="./images/illustrator_icon.png" alt="일러스트레이터"></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
             <div class="mockup_section">
                 <ul class="projects_index">
                     <li>
-                        <a href="#">
-                            <span class="project_num_index current">01</span>
-                            <span class="project_name_index current">Esther Formula</span>
+                        <a href="#project_01_esther">
+                            <span class="project_num_index">01</span>
+                            <span class="project_name_index">Esther Formula</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="#project_02_alternativestereo">
                             <span class="project_num_index">02</span>
                             <span class="project_name_index">AlternativeStereo</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="#project_03_samick">
                             <span class="project_num_index">03</span>
                             <span class="project_name_index">Samick Furniture</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#">
-                            <span class="project_num_index">04</span>
-                            <span class="project_name_index">MARITHÉ</span>
+                        <a href="#project_04_marithe">
+                            <span class="project_num_index current">04</span>
+                            <span class="project_name_index current">MARITHÉ</span>
                         </a>
                     </li>
                 </ul>
                 <div class="mockup">
+                </div>
+                <div class="project_button_sets">
+                    <div class="project_btn" id="prototype_btn">
+                        <a href="yeaji-j.github.io/project_esther/" target="_blank">Prototype<br>(github)</a>
+                    </div>
+                    <div class="project_btn" id="planning_btn">
+                        <a href="yeaji-j.github.io/project_esther/" target="_blank">Planning</a>
+                    </div>
+                    <div class="project_btn" id="original_web_btn">
+                        <a href="https://marithe-official.com/?srsltid=AfmBOoqgF4nSTy01RrwQnlSVO-3nC7zR_LqBezRzpNhTuQ-ZaloVpMGL" target="_blank">Original<br>Website</a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -547,25 +590,28 @@
             <div class="swiper" id="design_swiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <a href="#"><img src="#" alt="디자인"></a>
+                        <a href="#"><img src="./images/graphic_test.png" alt="디자인"></a>
                     </div>
                     <div class="swiper-slide">
-                        <a href="#"><img src="#" alt="디자인"></a>
+                        <a href="#"><img src="./images/graphic_test.png" alt="디자인"></a>
                     </div>
                     <div class="swiper-slide">
-                        <a href="#"><img src="#" alt="디자인"></a>
+                        <a href="#"><img src="./images/graphic_test.png" alt="디자인"></a>
                     </div>
                     <div class="swiper-slide">
-                        <a href="#"><img src="#" alt="디자인"></a>
+                        <a href="#"><img src="./images/graphic_test.png" alt="디자인"></a>
                     </div>
                     <div class="swiper-slide">
-                        <a href="#"><img src="#" alt="디자인"></a>
+                        <a href="#"><img src="./images/graphic_test.png" alt="디자인"></a>
                     </div>
                     <div class="swiper-slide">
-                        <a href="#"><img src="#" alt="디자인"></a>
+                        <a href="#"><img src="./images/graphic_test.png" alt="디자인"></a>
                     </div>
                     <div class="swiper-slide">
-                        <a href="#"><img src="#" alt="디자인"></a>
+                        <a href="#"><img src="./images/graphic_test.png" alt="디자인"></a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#"><img src="./images/graphic_test.png" alt="디자인"></a>
                     </div>
                 </div>
             </div>
@@ -574,15 +620,29 @@
     <footer id="contact">
         <h3>Let's Work Together !</h3>
         <address><a href="mailto:jjuglish@gmail.com">jjuglish@gmail.com</a></address>
-        <a href="#"><img src="#" alt="카카오톡 QR 코드"></a>
+        <img src="./images/kakao_qr.jpg" alt="카카오톡 QR 코드">
         <p>제 포트폴리오와 프로젝트를 봐주셔서 감사합니다!</p>
         <div class="buttons">
-            <button type="button" class="github_id">GitHub @yeaji-J</button>
+            <a href="https://github.com/Yeaji-J" id="github_id" target="_blank">GitHub @yeaji-J</a>
         </div>
     </footer>
     <script>
         const mediaSwiper = new Swiper ('#media_swiper',{
-            
+            navigation:{
+                prevEl:'.swiper-button-prev',
+                nextEl:'.swiper-button-next'
+            },
+            pagination:{
+                el:".swiper-pagination",
+                clickable:false,
+                type:'fraction',
+            }
+        })
+        const designSwiper = new Swiper ('#design_swiper', {
+            slidesPerView:6,
+            spaceBetween:40,
+            autoplay:false,
+            loop:true,
         })
     </script>
 </body>
