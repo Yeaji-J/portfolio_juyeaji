@@ -1,7 +1,10 @@
 @charset "UTF-8";
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   /* 공통 */
-  scroll-behavior: smooth;
   height: 100vh;
   width: 100vw; /* overflow-x:hidden; */
   /* 개별 */
@@ -21,6 +24,7 @@ body h2 {
   letter-spacing: -2%;
 }
 body header {
+  background: pink;
   width: 100%;
   height: 60px;
   padding: 0 80px;
@@ -439,6 +443,7 @@ body main section#media #media_swiper .swiper-wrapper .swiper-slide .txt_section
 }
 body main section#media #media_swiper .swiper-wrapper .swiper-slide .mockup_section {
   width: 70%;
+  height: 100%;
   display: flex;
   flex-flow: column nowrap;
 }

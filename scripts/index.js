@@ -2,30 +2,23 @@
 
 
 // #cover 타원 애니메이션
-const dot = document.querySelector('#elipse_container .dot')
-const container = document.querySelector('#elipse_container .ellipse_wrap')
+const dot = document.querySelector('#ellipse_container .dot')
+const container = document.querySelector('#ellipse_container .ellipse_wrap')
 console.log(dot, container);
 
 const cx = container.clientWidth / 2;
 const cy = container.clientHeight / 2;
-        
 const a = 500; // 타원 가로 반지름
 const b = 250; // 타원 세로 반지름
-        
 let theta = 0;
-        
 function animate() {
 theta += 0.008; //속도
-        
 const x = cx + a * Math.cos(theta) - dot.clientWidth / 2;
 const y = cy + b * Math.sin(theta) - dot.clientHeight / 2;
-        
 dot.style.left = x + "px";
 dot.style.top = y + "px";
-        
 requestAnimationFrame(animate);
 }
-        
 animate();
 
 // #cover explore 버튼 클릭 시 페이지 이동, 부드럽게
@@ -49,6 +42,6 @@ function handleScroll(){
     if(currentScrollY >= headerBgChangePoint) {
         header.style.backgroundColor = "rgba(255,255,255,0.3"
     }else {header.style.backgroundColor = 'transparent'};
-
     handleScroll();
+    
 }
