@@ -2,8 +2,8 @@
 
 
 // #cover 타원 애니메이션
-const dot = document.querySelector('.dot')
-const container = document.querySelector('.ellipse_wrap')
+const dot = document.querySelector('#elipse_container .dot')
+const container = document.querySelector('#elipse_container .ellipse_wrap')
 console.log(dot, container);
 
 const cx = container.clientWidth / 2;
@@ -40,15 +40,15 @@ exploreBtn.addEventListener('click', (e)=>{
 
 
 // #cover 넘어가면서 header 배경 생기기
-const header = document.querySelector('header')
+const header = document.querySelector('#header')
 const headerBgChangePoint = aboutMePage.offsetTop;
 
 function handleScroll(){
     const currentScrollY = window.scrollY;
 
     if(currentScrollY >= headerBgChangePoint) {
-        header.classList.add('bgActive');
-    }else {header.classList.remove('bgActive')};
+        header.style.backgroundColor = "rgba(255,255,255,0.3"
+    }else {header.style.backgroundColor = 'transparent'};
 
     handleScroll();
 }
