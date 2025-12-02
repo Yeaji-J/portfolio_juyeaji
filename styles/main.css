@@ -6,8 +6,8 @@ html {
 body {
   /* 공통 */
   height: 100vh;
-  width: 100vw; /* overflow-x:hidden; */
-  /* 개별 */
+  width: 100vw;
+  overflow-x: hidden;
 }
 body * section {
   min-height: 100vh;
@@ -22,6 +22,9 @@ body h2 {
   font-weight: 600;
   line-height: 160%;
   letter-spacing: -2%;
+}
+body {
+  /* 개별 */
 }
 body header {
   width: 100%;
@@ -61,8 +64,8 @@ body main section#cover {
 body main section#cover #ellipse_container {
   position: absolute;
   left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%) rotate(-20deg);
+  top: 48%;
+  transform: translate(-48%, -50%) rotate(-20deg);
   z-index: 998;
   width: 1500px;
   height: 900px;
@@ -91,7 +94,7 @@ body main section#cover #ellipse_container .ellipse_wrap .dot { /* 움직이는 
   border-radius: 50%;
 }
 body main section#cover .main_contents {
-  height: 100%;
+  height: 100vh;
   display: flex;
   flex-flow: row nowrap;
 }
@@ -349,7 +352,6 @@ body main section#media {
   position: relative;
 }
 body main section#media #media_swiper .swiper-wrapper .swiper-slide {
-  padding-top: 60px;
   display: flex;
   flex-flow: row nowrap;
   flex-grow: 1;
@@ -443,6 +445,9 @@ body main section#media #media_swiper .swiper-wrapper .swiper-slide .mockup_sect
   display: flex;
   flex-flow: column nowrap;
 }
+body main section#media #media_swiper .swiper-wrapper .swiper-slide .mockup_section iframe {
+  flex-shrink: 0;
+}
 body main section#media #media_swiper .swiper-wrapper .swiper-slide .mockup_section .more_info {
   display: flex;
   flex-flow: row nowrap;
@@ -526,6 +531,7 @@ body main section#projects h2 {
   right: 5%;
   top: 5%;
   transform: translate(5%, -5%);
+  color: #fff;
 }
 body main section#projects .project_card {
   position: relative;
@@ -577,9 +583,16 @@ body main section#projects .project_card .project_card_wrapper .hashtag_more .ha
 body main section#projects .project_card .project_card_wrapper .hashtag_more .move_to_projects_btn img {
   display: none;
 }
+body main section#projects .project_card:hover.move_to_projects_btn img {
+  display: inline;
+}
+body main section#projects {
+  /* card1-hover */
+}
 body main section#projects .card1 {
   position: relative;
-  background: url(../images/eather_bg.jpg) top/cover no-repeat;
+  background: #E1EDD9;
+  /* background:url(../images/eather_bg.jpg) top/cover no-repeat; */
 }
 body main section#projects .card1::before {
   content: "";
@@ -599,14 +612,26 @@ body main section#projects .card1:hover.project_card_wrapper {
 body main section#projects .card1:hover::before {
   opacity: 1;
 }
+body main section#projects {
+  /* card2-hover */
+}
 body main section#projects .card2 {
   background: url(../images/alter_bg.png) top/cover no-repeat;
+  color: #C70612;
 }
 body main section#projects .card3 {
-  background: url(../images/portfolio_bg11.png) top/cover no-repeat;
+  background: rgb(245, 243, 228);
 }
 body main section#projects .card4 {
-  background: url(../images/marithe_bg.png) top/cover no-repeat;
+  background: #3f3f3f;
+}
+body main section#projects .card4 .project_card_wrapper {
+  color: #fff;
+}
+body main section#projects {
+  /* .card2 {background:url(../images/alter_bg.png) top/cover no-repeat;}
+  .card3 {background:url(../images/portfolio_bg11.png) top/cover no-repeat;}
+  .card4 {background:url(../images/marithe_bg.png) top/cover no-repeat;} */
 }
 body main section.project_section {
   background: url(../images/portfolio_bg11.png) center/cover no-repeat;
@@ -719,6 +744,9 @@ body main section.project_section .mockup_section .projects_index li a .project_
   font-size: 2rem;
   font-weight: 500;
 }
+body main section.project_section .mockup_section .projects_index li a .current {
+  color: #d9d9d9;
+}
 body main section.project_section .mockup_section .mockup {
   height: 80%;
   background: url(../images/mockup_test.gif) top -10% left 20%/120% no-repeat;
@@ -817,4 +845,6 @@ body footer .buttons #github_id {
   background-color: #fff;
   border-radius: 10px;
   font-size: 1rem;
-}/*# sourceMappingURL=main.css.map */
+}
+
+/*# sourceMappingURL=main.css.map */

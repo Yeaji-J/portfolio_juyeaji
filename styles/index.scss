@@ -27,7 +27,7 @@ body {
             background:url(../images/portfolio_bg8.png) center/cover no-repeat;
             border-bottom:$border;
             #ellipse_container {
-                position:absolute; left:50%; top:50%; transform:translate(-50%,-50%) rotate(-20deg); z-index:998;
+                position:absolute; left:50%; top:48%; transform:translate(-48%,-50%) rotate(-20deg); z-index:998;
                 width:1500px; height:900px;
                 margin: 50px auto;
                 .ellipse_wrap {
@@ -44,7 +44,7 @@ body {
                 }
             }
             .main_contents{
-                height:100%;
+                height:100vh;
                 @include flex-row;
                 #sns {
                     width:60px; height:100%; padding:80px 0;
@@ -233,7 +233,9 @@ body {
         }
         section#projects {
             @include flex-row; position:relative; border-bottom:$border;
-            h2 {position:absolute; z-index:999; right:5%; top:5%; transform:translate(5%, -5%);
+            h2 {
+                position:absolute; z-index:999; right:5%; top:5%; transform:translate(5%, -5%);
+                color:$color-white;
             }
             .project_card { //공통
                 position:relative;
@@ -256,11 +258,12 @@ body {
                     }
                 }
             }
-            .project_card:hover.move_to_projects_btn>img{display:inline;}
+            .project_card:hover.move_to_projects_btn img{display:inline;}
             /* card1-hover */
             .card1 {
                 position:relative;
-                background:url(../images/eather_bg.jpg) top/cover no-repeat;
+                background:$color-esther-point;
+                /* background:url(../images/eather_bg.jpg) top/cover no-repeat; */
             }
             .card1::before {
                 content:"";
@@ -273,9 +276,20 @@ body {
             }
             .card1:hover::before {opacity:1;}
             /* card2-hover */
-            .card2 {background:url(../images/alter_bg.png) top/cover no-repeat;}
+            .card2 {
+                background:url(../images/alter_bg.png) top/cover no-repeat;
+                color:$color-alter-point;
+            }
+            .card3 {background:$color-samick-point;}
+            .card4 {
+                background:$color-marithe-point;
+                .project_card_wrapper {
+                    color:$color-white;
+                }
+            }
+            /* .card2 {background:url(../images/alter_bg.png) top/cover no-repeat;}
             .card3 {background:url(../images/portfolio_bg11.png) top/cover no-repeat;}
-            .card4 {background:url(../images/marithe_bg.png) top/cover no-repeat;}
+            .card4 {background:url(../images/marithe_bg.png) top/cover no-repeat;} */
         }
         section.project_section {
             background:url(../images/portfolio_bg11.png) center/cover no-repeat;
@@ -333,7 +347,7 @@ body {
                             .project_name_index {
                                 @include en-font; font-size:$font-size-h3-32; font-weight:$font-weight-med;
                             }
-                            .cuurent {color:$color-light-gray;}
+                            .current {color:$color-super-light-gray;}
                         }
                     }
                 }
