@@ -6,7 +6,8 @@ html {
 body {
   /* 공통 */
   height: 100vh;
-  width: 100vw; /* overflow-x:hidden; */
+  width: 100vw;
+  overflow-x: hidden;
   /* 개별 */
 }
 body * section {
@@ -349,7 +350,6 @@ body main section#media {
   position: relative;
 }
 body main section#media #media_swiper .swiper-wrapper .swiper-slide {
-  padding-top: 60px;
   display: flex;
   flex-flow: row nowrap;
   flex-grow: 1;
@@ -443,6 +443,9 @@ body main section#media #media_swiper .swiper-wrapper .swiper-slide .mockup_sect
   display: flex;
   flex-flow: column nowrap;
 }
+body main section#media #media_swiper .swiper-wrapper .swiper-slide .mockup_section iframe {
+  flex-shrink: 0;
+}
 body main section#media #media_swiper .swiper-wrapper .swiper-slide .mockup_section .more_info {
   display: flex;
   flex-flow: row nowrap;
@@ -519,6 +522,8 @@ body main section#projects {
   flex-flow: row nowrap;
   position: relative;
   border-bottom: 1px solid #222;
+  /* card1-hover */
+  /* card2-hover */
 }
 body main section#projects h2 {
   position: absolute;
@@ -576,6 +581,9 @@ body main section#projects .project_card .project_card_wrapper .hashtag_more .ha
 }
 body main section#projects .project_card .project_card_wrapper .hashtag_more .move_to_projects_btn img {
   display: none;
+}
+body main section#projects .project_card:hover.move_to_projects_btn > img {
+  display: inline;
 }
 body main section#projects .card1 {
   position: relative;
@@ -718,6 +726,9 @@ body main section.project_section .mockup_section .projects_index li a .project_
   font-style: normal;
   font-size: 2rem;
   font-weight: 500;
+}
+body main section.project_section .mockup_section .projects_index li a .cuurent {
+  color: #777;
 }
 body main section.project_section .mockup_section .mockup {
   height: 80%;
