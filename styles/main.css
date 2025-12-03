@@ -360,8 +360,7 @@ body main section#media #media_swiper .swiper-wrapper .swiper-slide {
 body main section#media #media_swiper .swiper-wrapper .swiper-slide .txt_section {
   display: flex;
   flex-flow: column nowrap;
-  width: 30%;
-  height: 100%;
+  width: auto;
   text-align: center;
   border-right: 1px solid #222;
 }
@@ -423,27 +422,109 @@ body main section#media #media_swiper .swiper-wrapper .swiper-slide .txt_section
 }
 body main section#media #media_swiper .swiper-wrapper .swiper-slide .txt_section .channel_desc {
   width: 100%;
-  flex-grow: 1;
-  padding: 80px;
+  height: auto;
+  padding: 60px;
+  flex-shrink: 0;
+  border-bottom: 1px solid #222;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
+  gap: 16px;
+  align-items: center;
 }
-body main section#media #media_swiper .swiper-wrapper .swiper-slide .txt_section .channel_desc p {
+body main section#media #media_swiper .swiper-wrapper .swiper-slide .txt_section .channel_desc ul {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 24px;
+}
+body main section#media #media_swiper .swiper-wrapper .swiper-slide .txt_section .channel_desc ul li {
   font-size: 1.125rem;
   line-height: 200%;
   letter-spacing: -2%;
 }
-body main section#media #media_swiper .swiper-wrapper .swiper-slide .txt_section .channel_desc ul li {
+body main section#media #media_swiper .swiper-wrapper .swiper-slide .txt_section .channel_desc p {
   font-size: 1rem;
   line-height: 200%;
   letter-spacing: -2%;
 }
-body main section#media #media_swiper .swiper-wrapper .swiper-slide .mockup_section {
-  width: 70%;
-  height: 100%;
+body main section#media #media_swiper .swiper-wrapper .swiper-slide .txt_section .accomplishment_tools {
+  flex-grow: 1;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+}
+body main section#media #media_swiper .swiper-wrapper .swiper-slide .txt_section .accomplishment_tools .accomplishment {
+  width: 50%;
   display: flex;
   flex-flow: column nowrap;
+  justify-content: center;
+  padding: 40px;
+  align-items: flex-start;
+}
+body main section#media #media_swiper .swiper-wrapper .swiper-slide .txt_section .accomplishment_tools .accomplishment li {
+  font-size: 1.125rem;
+  line-height: 200%;
+  letter-spacing: -2%;
+}
+body main section#media #media_swiper .swiper-wrapper .swiper-slide .txt_section .accomplishment_tools .accomplishment li.accom_title {
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 160%;
+  letter-spacing: -2%;
+  margin-bottom: 16px;
+}
+body main section#media #media_swiper .swiper-wrapper .swiper-slide .txt_section .accomplishment_tools .accomplishment {
+  border-right: 1px solid #222;
+}
+body main section#media #media_swiper .swiper-wrapper .swiper-slide .txt_section .accomplishment_tools .tools {
+  width: 50%;
+  align-items: flex-start;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  padding: 40px;
+  flex-grow: 1;
+}
+body main section#media #media_swiper .swiper-wrapper .swiper-slide .txt_section .accomplishment_tools .tools li {
+  font-size: 1.125rem;
+  line-height: 200%;
+  letter-spacing: -2%;
+}
+body main section#media #media_swiper .swiper-wrapper .swiper-slide .txt_section .accomplishment_tools .tools li.tools_title {
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 160%;
+  letter-spacing: -2%;
+  margin-bottom: 16px;
+}
+body main section#media #media_swiper .swiper-wrapper .swiper-slide .mockup_section {
+  width: auto;
+  display: flex;
+  flex-flow: column nowrap;
+}
+body main section#media #media_swiper .swiper-wrapper .swiper-slide .mockup_section .small_thumbnails {
+  display: flex;
+  flex-flow: row nowrap;
+  border-bottom: 1px solid #222;
+}
+body main section#media #media_swiper .swiper-wrapper .swiper-slide .mockup_section .small_thumbnails a {
+  height: 300px;
+}
+body main section#media #media_swiper .swiper-wrapper .swiper-slide .mockup_section .small_thumbnails a img {
+  width: 100%;
+  height: 100%;
+}
+body main section#media #media_swiper .swiper-wrapper .swiper-slide .mockup_section .small_thumbnails a {
+  border-right: 1px solid #222;
+}
+body main section#media #media_swiper .swiper-wrapper .swiper-slide .mockup_section .small_thumbnails a:hover a::after {
+  background: rgba(0, 0, 0, 0.3);
+}
+body main section#media #media_swiper .swiper-wrapper .swiper-slide .mockup_section .small_thumbnails.instagram {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  border: 1px solid #222;
 }
 body main section#media #media_swiper .swiper-wrapper .swiper-slide .mockup_section iframe {
   flex-shrink: 0;
@@ -601,7 +682,7 @@ body main section#projects .card1::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url(../images/mockup_001.jpg) top/cover no-repeat;
+  background: url(../images/mockup_001.jpg;) center/cover no-repeat;
   opacity: 0;
   transition: opacity 0.1s ease;
   z-index: 5;
@@ -616,8 +697,30 @@ body main section#projects {
   /* card2-hover */
 }
 body main section#projects .card2 {
+  position: relative;
   background: url(../images/alter_bg.png) top/cover no-repeat;
   color: #C70612;
+}
+body main section#projects .card2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(../images/mockup_002.jpg;) center/cover no-repeat;
+  opacity: 0;
+  transition: opacity 0.1s ease;
+  z-index: 5;
+}
+body main section#projects .card2:hover.project_card_wrapper {
+  z-index: 10;
+}
+body main section#projects .card2:hover::before {
+  opacity: 1;
+}
+body main section#projects {
+  /* card3-hover */
 }
 body main section#projects .card3 {
   background: rgb(245, 243, 228);
@@ -649,6 +752,11 @@ body main section.project_section .desc_section {
   justify-content: center;
   gap: 40px;
 }
+body main section.project_section .desc_section .project_title {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 16px;
+}
 body main section.project_section .desc_section .project_title .project_num {
   color: rgba(0, 0, 0, 0.2);
   font-size: 12.5rem;
@@ -676,10 +784,17 @@ body main section.project_section .desc_section .project_desc {
   gap: 40px;
 }
 body main section.project_section .desc_section .project_desc p {
-  color: #555;
+  color: #000;
   font-size: 1.125rem;
   line-height: 200%;
   letter-spacing: -2%;
+}
+body main section.project_section .desc_section .project_desc p strong {
+  font-size: 1.25rem;
+  font-style: italic;
+}
+body main section.project_section .desc_section .project_desc p em {
+  font-weight: 700;
 }
 body main section.project_section .desc_section .project_desc .project_hashtag {
   color: #000;

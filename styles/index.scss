@@ -161,7 +161,7 @@ body {
                         @include flex-row; flex-grow:1; align-items:stretch;
                         .txt_section {
                             @include flex-col;
-                            width:30%; height:100%; text-align:center; border-right:$border;
+                            width:auto; text-align:center; border-right:$border;
                             h2 {width:100%; height:160px; flex-shrink:0; border-bottom:$border;}
                             .sns_profile {
                                 position:relative; height:160px; padding:40px 0; text-align:center;
@@ -183,17 +183,47 @@ body {
                                 }
                             }
                             .channel_desc {
-                                width:100%; flex-grow:1; padding:80px;
-                                @include flex-col; justify-content:center;
-                                p {font-size:$font-size-p-18; @include basic_wide_txt;}
+                                width:100%; height:auto; padding:60px; flex-shrink:0; border-bottom:$border;
+                                @include flex-col; justify-content:center; gap:16px; align-items:center;
                                 ul {
-                                    li {font-size:$font-size-p-16; @include basic_wide_txt;}
+                                    @include flex-row; gap:24px;
+                                    li {font-size:$font-size-p-18; @include basic_wide_txt;}
+                                }
+                                p {font-size:$font-size-p-16; @include basic_wide_txt;}
+                            }
+                            .accomplishment_tools {
+                                flex-grow:1; @include flex-row; justify-content:center;
+                                .accomplishment {
+                                    width:50%;
+                                    @include flex-col; justify-content:center; padding:40px; align-items:flex-start;
+                                    li {font-size:$font-size-p-18; @include basic_wide_txt;}
+                                    li.accom_title {font-size:$font-size-p-20; font-weight:$font-weight-med; @include basic_txt; margin-bottom:16px;}
+                                    border-right:$border;
+                                }
+                                .tools {
+                                    width:50%; align-items:flex-start;
+                                    @include flex-col; justify-content:center; padding:40px; flex-grow:1;
+                                    li {font-size:$font-size-p-18; @include basic_wide_txt;}
+                                    li.tools_title {font-size:$font-size-p-20; font-weight:$font-weight-med; @include basic_txt;  margin-bottom:16px;}
                                 }
                             }
                         }
                         .mockup_section {
-                            width:70%; height:100%;
+                            width:auto;
                             @include flex-col;
+                            .small_thumbnails {
+                                @include flex-row;
+                                border-bottom:$border;
+                                a {
+                                    height:300px;
+                                    img {width:100%; height:100%;}
+                                    border-right:$border;
+                                }
+                                a:hover a::after{background:rgba(0,0,0,0.3);}
+                            }
+                            .small_thumbnails.instagram {
+                                display:grid; grid-template-columns:1fr 1fr 1fr; grid-template-rows:1fr 1fr 1fr; border:$border;
+                            }
                             iframe {flex-shrink:0;}
                             .more_info {
                                 @include flex-row; align-items:center; flex-grow:1;
@@ -209,7 +239,7 @@ body {
                 position:absolute; right:2%; bottom:0;
                 width:200px; height:130px; padding:20px;
                 @include flex-row; justify-content:center; align-items:center;
-                .swiper-button-prev {
+                .swiper-button-prev { 
                     width:40px; height:40px;
                     color:$color-light-gray;
                 }
@@ -268,7 +298,7 @@ body {
             .card1::before {
                 content:"";
                 position:absolute; top:0; left:0; width:100%; height:100%;
-                background:url(../images/mockup_001.jpg) top/cover no-repeat;
+                background:url(../images/mockup_001.jpg;) center/cover no-repeat;
                 opacity:0; transition:opacity 0.1s ease; z-index:5;
             }
             .card1:hover.project_card_wrapper {
@@ -277,9 +307,21 @@ body {
             .card1:hover::before {opacity:1;}
             /* card2-hover */
             .card2 {
+                position:relative;
                 background:url(../images/alter_bg.png) top/cover no-repeat;
                 color:$color-alter-point;
             }
+            .card2::before {
+                content:"";
+                position:absolute; top:0; left:0; width:100%; height:100%;
+                background:url(../images/mockup_002.jpg;) center/cover no-repeat;
+                opacity:0; transition:opacity 0.1s ease; z-index:5;
+            }
+            .card2:hover.project_card_wrapper {
+                z-index:10;
+            }
+            .card2:hover::before {opacity:1;}
+            /* card3-hover */
             .card3 {background:$color-samick-point;}
             .card4 {
                 background:$color-marithe-point;
@@ -300,6 +342,7 @@ body {
                 width:30%; padding:120px 60px; border-right:$border;
                 @include flex-col; justify-content:center; gap:40px;
                 .project_title {
+                    @include flex-col; gap:16px;
                     .project_num {
                         color:rgba(0,0,0,0.2); font-size:$font-size-h-200; @include en-font-point;
                         position:absolute; top:-2%; left:-2%;
@@ -312,8 +355,10 @@ body {
                     padding-top:40px; border-top:$border;
                     @include flex-col; gap:40px;
                     p {
-                        color:$color-gray;
+                        color:$color-black;
                         font-size:$font-size-p-18; @include basic_wide_txt;
+                        strong {font-size:$font-size-p-20; font-style:italic;}
+                        em {font-weight: $font-weight-bold;}
                     }
                     .project_hashtag {
                         color:$color-black;
