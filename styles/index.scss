@@ -426,14 +426,13 @@ body {
         }
         section#graphics {
             background:url(../images/portfolio_source.png) center/cover no-repeat;
-            border-bottom:$border;
+            border-bottom:$border; padding:0 120px;
             @include flex-col; gap:120px; justify-content:center; align-items: center;
-            #design_swiper {
+            #design_swiper { width:100%;
                 .swiper-wrapper {
-                    .swiper-slide {height:450px;
-                        a {
-                            img {height:100%;}
-                        }
+                    .swiper-slide { width:250px; height:450px;
+                            img {width:100%; height:100%; object-fit:cover;}
+                        
                     }
                 }
             }

@@ -635,28 +635,28 @@
             <div class="swiper" id="design_swiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <a href="#"><img src="./images/graphic_test.png" alt="디자인"></a>
+                        <a href="#"><img src="./images/poster_001.png" alt="디자인"></a>
                     </div>
                     <div class="swiper-slide">
-                        <a href="#"><img src="./images/graphic_test.png" alt="디자인"></a>
+                        <a href="#"><img src="./images/poster_002.png" alt="디자인"></a>
                     </div>
                     <div class="swiper-slide">
-                        <a href="#"><img src="./images/graphic_test.png" alt="디자인"></a>
+                        <a href="#"><img src="./images/poster_003.png" alt="디자인"></a>
                     </div>
                     <div class="swiper-slide">
-                        <a href="#"><img src="./images/graphic_test.png" alt="디자인"></a>
+                        <a href="#"><img src="./images/poster_004.png" alt="디자인"></a>
                     </div>
                     <div class="swiper-slide">
-                        <a href="#"><img src="./images/graphic_test.png" alt="디자인"></a>
+                        <a href="#"><img src="./images/poster_001.png" alt="디자인"></a>
                     </div>
                     <div class="swiper-slide">
-                        <a href="#"><img src="./images/graphic_test.png" alt="디자인"></a>
+                        <a href="#"><img src="./images/poster_002.png" alt="디자인"></a>
                     </div>
                     <div class="swiper-slide">
-                        <a href="#"><img src="./images/graphic_test.png" alt="디자인"></a>
+                        <a href="#"><img src="./images/poster_003.png" alt="디자인"></a>
                     </div>
                     <div class="swiper-slide">
-                        <a href="#"><img src="./images/graphic_test.png" alt="디자인"></a>
+                        <a href="#"><img src="./images/poster_004.png" alt="디자인"></a>
                     </div>
                 </div>
             </div>
@@ -686,7 +686,10 @@
         const designSwiper = new Swiper ('#design_swiper', {
             slidesPerView:6,
             spaceBetween:40,
-            autoplay:false,
+            autoplay:{
+                delay: 2000,
+                disableOnInteraction: false,
+            },
             loop:true,
         })
     </script>
