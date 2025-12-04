@@ -75,7 +75,7 @@ body {
                         .scroll_btn {
                             @include flex-col; align-items:center; z-index:999;
                             span {font-size:$font-size-p-24; font-weight:$font-weight-sbold; @include basic_txt; @include en-font;}
-                            img {animation: float-up-down 2s ease-in-out infinite alternate;}
+                            img {width:80px; height:80px; animation: float-up-down 2s ease-in-out infinite alternate;}
                             @keyframes float-up-down {
                                 0% {transform:translateY(0);}
                                 50% {transform:translateY(-15px);}
@@ -84,6 +84,19 @@ body {
                         }
                     }
                 }
+            }
+            .shape_effect {
+                position:absolute; top:20%; left:10%; transform:translate(-10%,-20%);
+                width:200px; height:100px;
+                img {
+                    width:100%; height:100%;
+                    animation: float-left-right 2s ease-in-out infinite alternate;
+                }
+                @keyframes float-left-right {
+                                0% {transform:translateX(0);}
+                                50% {transform:translateX(-20px);}
+                                100% {transform:translateX(0);}
+                            }
             }
         }
         section#about_me {
@@ -94,9 +107,25 @@ body {
             .contents {
                 width:100%; height:auto;
                 @include flex-row; align-items:stretch; flex-grow:1;
-                .photo_section {
+                .photo_section { z-index:998;
                     width:25%; height:auto; border-right:$border;
                     @include flex-col; align-items:center; justify-content:center; gap:24px;
+                    position:relative; z-index:998;
+                    .shape_effect {
+                            position:absolute; top:-15%; right:-20%; z-index:999;
+                            width:60px; height:90px;
+                            img {
+                                widtH:100%; height:100%;
+                                animation: float-left-right 2.5s ease-in-out infinite alternate;}
+                    }
+                    .shape_effect_copy {
+                            position:absolute; top:-25%; right:-30%; z-index:999;
+                            width:40px; height:60px;
+                            img {
+                                widtH:100%; height:100%;
+                                animation: float-left-right 4s ease-in-out infinite alternate;
+                            }
+                    }
                     img {width:250px; border-top-left-radius:500px; border-top-right-radius:500px;}
                     .profile {
                         h3 {
@@ -125,12 +154,12 @@ body {
                         width:100%; height:100%;
                         @include flex-col;
                         h3{
-                            height:32px; flex-shrink:0;
+                            height:32px; flex-shrink:0; padding:4px 0;
                             font-size:$font-size-p-24; font-weight:$font-weight-bold; @include basic_txt; @include en-font;
-                            border-bottom:$border; text-align:center;
+                            border-bottom:$border; text-align:center; @include flex-col; justify-content:center;
                         }
-                        .skills_wrap {
-                            flex-grow:1;
+                        .skills_wrap { 
+                            flex-grow:1; padding:20px 0;
                             @include flex-row; align-items:center; justify-content:center;
                             .skill_set {
                                 padding:0 40px; @include flex-col; gap:24px;
@@ -156,8 +185,9 @@ body {
             border-bottom:$border;
             position:relative;
             #media_swiper {
+                height:100vh;
                 .swiper-wrapper {
-                    .swiper-slide {
+                    .swiper-slide {height:100%;
                         @include flex-row; flex-grow:1; align-items:stretch;
                         .txt_section {
                             @include flex-col;
@@ -170,6 +200,7 @@ body {
                                     height:100%;
                                     @include flex-row; justify-content:center; align-items:center; gap:12px;
                                     a > img {width:80px; height:80px; border-radius:50%;}
+                                    a > img:hover {animation: scale 1s ease forwards;}
                                     .channel_txt {
                                         @include flex-col; align-items:flex-start;
                                         .channel_name {font-size:$font-size-p-16; font-weight:$font-weight-med; @include basic_wide_txt;}
@@ -181,11 +212,16 @@ body {
                                     width:40px; height:40px;
                                     img {width:100%; height:100%;}
                                 }
+                                a.explore_more:hover img{animation: scale 1s ease forwards;}
+                                @keyframes scale {
+                                    0% {transform:scale(1);}
+                                    100% {transform:scale(1.2);}
+                                }
                             }
                             .channel_desc {
                                 width:100%; height:auto; padding:60px; flex-shrink:0; border-bottom:$border;
                                 @include flex-col; justify-content:center; gap:16px; align-items:center;
-                                ul {
+                                ul { background-color:$color-white; padding:0 16px;
                                     @include flex-row; gap:24px;
                                     li {font-size:$font-size-p-18; @include basic_wide_txt;}
                                 }
@@ -197,34 +233,46 @@ body {
                                     width:50%;
                                     @include flex-col; justify-content:center; padding:40px; align-items:flex-start;
                                     li {font-size:$font-size-p-18; @include basic_wide_txt;}
-                                    li.accom_title {font-size:$font-size-p-20; font-weight:$font-weight-med; @include basic_txt; margin-bottom:16px;}
+                                    li.accom_title {
+                                        background-color:$color-white; padding:0 16px;
+                                        font-size:$font-size-p-20; font-weight:$font-weight-med; @include basic_txt; margin-bottom:16px;
+                                    }
                                     border-right:$border;
                                 }
                                 .tools {
                                     width:50%; align-items:flex-start;
                                     @include flex-col; justify-content:center; padding:40px; flex-grow:1;
                                     li {font-size:$font-size-p-18; @include basic_wide_txt;}
-                                    li.tools_title {font-size:$font-size-p-20; font-weight:$font-weight-med; @include basic_txt;  margin-bottom:16px;}
+                                    li.tools_title {
+                                        background-color:$color-white; padding:0 16px;
+                                        font-size:$font-size-p-20; font-weight:$font-weight-med; @include basic_txt;  margin-bottom:16px;
+                                    }
                                 }
                             }
                         }
                         .mockup_section {
-                            width:auto;
+                            flex-basis:50%;
                             @include flex-col;
-                            .small_thumbnails {
+                            /* .small_thumbnails {
                                 @include flex-row;
-                                border-bottom:$border;
+                                border-bottom:$border; justify-content:space-between;
+                                a:hover a::before{background:rgba(0,0,0,0.3);}
+                            } */
+                            .small_thumbnails.instagram {
+                                display:grid; grid-template-columns:1fr 1fr 1fr 1fr; grid-template-rows:1fr 1fr;
                                 a {
-                                    height:300px;
-                                    img {width:100%; height:100%;}
+                                    img {width:100%; height:100%; object-fit:cover;}
                                     border-right:$border;
                                 }
-                                a:hover a::after{background:rgba(0,0,0,0.3);}
                             }
-                            .small_thumbnails.instagram {
-                                display:grid; grid-template-columns:1fr 1fr 1fr; grid-template-rows:1fr 1fr 1fr; border:$border;
+                            .video-container {
+                                width:100%;
+                                position: relative; height:0; padding-top: 56.25%; /* 16:9 비율 유지 */
+                                iframe {
+                                    position: absolute; top: 0; left: 0;
+                                    width: 100%; height: 100%;
+                                }
                             }
-                            iframe {flex-shrink:0;}
                             .more_info {
                                 @include flex-row; align-items:center; flex-grow:1;
                                 padding:0 40px;
@@ -240,17 +288,17 @@ body {
                 width:200px; height:130px; padding:20px;
                 @include flex-row; justify-content:center; align-items:center;
                 .swiper-button-prev { 
-                    width:40px; height:40px;
+                    width:32px; height:32px;
                     color:$color-light-gray;
                 }
                 .swiper-pagination {
-                    position:absolute; left:50%; top:50%; transform:translate(-50%, -50%);
+                    position:absolute; left:50%; top:48%; transform:translate(-50%, -50%);
                     width:auto; height:40px;
                     @include flex-row; gap:16px; justify-content:center; align-items:center;
                     color:$color-light-gray;
                     .swiper-pagination-current, .swiper-pagination-total {
                         font-size:$font-size-p-40; font-weight:$font-weight-med; @include en-font;
-                        line-height:40px;
+                        line-height:32px;
                     }
                     .swiper-pagination-total {font-size:$font-size-h3-32;}
                     .swiper-pagination-current {color:$color-black;}
@@ -362,7 +410,8 @@ body {
                     }
                     .project_hashtag {
                         color:$color-black;
-                        font-size:$font-size-p-18
+                        font-size:$font-size-p-18;
+                        background-color:$color-white; padding:0 16px; display:inline;
                     }
                     .project_tools {
                         @include flex-col; gap:16px;
@@ -381,7 +430,7 @@ body {
                 position:relative;
                 width:70%; @include flex-col; justify-content:space-between;
                 .projects_index {
-                    padding:40px 0;
+                    padding:80px 0 40px;
                     @include flex-row; justify-content:center; gap:80px;
                     li {
                         a {
@@ -423,6 +472,18 @@ body {
         }
         #project_02_alternativestereo {
             background:url(../images/alter_bg.png) center/20% repeat;
+        }
+        #project_03_samick {
+            background:$color-samick-point;
+        }
+        #project_04_marithe {
+            background:$color-marithe-point;
+            .project_desc {border-top:1px solid $color-gray;}
+            .project_desc > p {color:$color-super-light-gray; em{color:$color-white; font-weight:500;};}
+            .project_desc > .project_hashtag {background:$color-light-gray; color:$color-white;}
+            .project_name, .project_page_type, .mockup_section>.projects_index>li>a>span, .project_tools > p{color:$color-white}
+            .project_num, .projects_index>li>a>.project_name_index.current, .projects_index>li>a>.project_num_index.current {color:$color-gray;}
+            
         }
         section#graphics {
             background:url(../images/portfolio_source.png) center/cover no-repeat;

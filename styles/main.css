@@ -182,6 +182,8 @@ body main section#cover .main_contents .main_txt .desc2 .scroll_btn span {
   font-style: normal;
 }
 body main section#cover .main_contents .main_txt .desc2 .scroll_btn img {
+  width: 80px;
+  height: 80px;
   animation: float-up-down 2s ease-in-out infinite alternate;
 }
 @keyframes float-up-down {
@@ -193,6 +195,30 @@ body main section#cover .main_contents .main_txt .desc2 .scroll_btn img {
   }
   100% {
     transform: translateY(0);
+  }
+}
+body main section#cover .shape_effect {
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  transform: translate(-10%, -20%);
+  width: 200px;
+  height: 100px;
+}
+body main section#cover .shape_effect img {
+  width: 100%;
+  height: 100%;
+  animation: float-left-right 2s ease-in-out infinite alternate;
+}
+@keyframes float-left-right {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-20px);
+  }
+  100% {
+    transform: translateX(0);
   }
 }
 body main section#about_me {
@@ -217,6 +243,7 @@ body main section#about_me .contents {
   flex-grow: 1;
 }
 body main section#about_me .contents .photo_section {
+  z-index: 998;
   width: 25%;
   height: auto;
   border-right: 1px solid #222;
@@ -225,6 +252,34 @@ body main section#about_me .contents .photo_section {
   align-items: center;
   justify-content: center;
   gap: 24px;
+  position: relative;
+  z-index: 998;
+}
+body main section#about_me .contents .photo_section .shape_effect {
+  position: absolute;
+  top: -15%;
+  right: -20%;
+  z-index: 999;
+  width: 60px;
+  height: 90px;
+}
+body main section#about_me .contents .photo_section .shape_effect img {
+  widtH: 100%;
+  height: 100%;
+  animation: float-left-right 2.5s ease-in-out infinite alternate;
+}
+body main section#about_me .contents .photo_section .shape_effect_copy {
+  position: absolute;
+  top: -25%;
+  right: -30%;
+  z-index: 999;
+  width: 40px;
+  height: 60px;
+}
+body main section#about_me .contents .photo_section .shape_effect_copy img {
+  widtH: 100%;
+  height: 100%;
+  animation: float-left-right 4s ease-in-out infinite alternate;
 }
 body main section#about_me .contents .photo_section img {
   width: 250px;
@@ -294,6 +349,7 @@ body main section#about_me .contents .desc_section .skills {
 body main section#about_me .contents .desc_section .skills h3 {
   height: 32px;
   flex-shrink: 0;
+  padding: 4px 0;
   font-size: 1.5rem;
   font-weight: 700;
   line-height: 160%;
@@ -304,9 +360,13 @@ body main section#about_me .contents .desc_section .skills h3 {
   font-style: normal;
   border-bottom: 1px solid #222;
   text-align: center;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
 }
 body main section#about_me .contents .desc_section .skills .skills_wrap {
   flex-grow: 1;
+  padding: 20px 0;
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
@@ -351,7 +411,11 @@ body main section#media {
   border-bottom: 1px solid #222;
   position: relative;
 }
+body main section#media #media_swiper {
+  height: 100vh;
+}
 body main section#media #media_swiper .swiper-wrapper .swiper-slide {
+  height: 100%;
   display: flex;
   flex-flow: row nowrap;
   flex-grow: 1;
@@ -391,6 +455,9 @@ body main section#media #media_swiper .swiper-wrapper .swiper-slide .txt_section
   height: 80px;
   border-radius: 50%;
 }
+body main section#media #media_swiper .swiper-wrapper .swiper-slide .txt_section .sns_profile .channel_info a > img:hover {
+  animation: scale 1s ease forwards;
+}
 body main section#media #media_swiper .swiper-wrapper .swiper-slide .txt_section .sns_profile .channel_info .channel_txt {
   display: flex;
   flex-flow: column nowrap;
@@ -420,6 +487,17 @@ body main section#media #media_swiper .swiper-wrapper .swiper-slide .txt_section
   width: 100%;
   height: 100%;
 }
+body main section#media #media_swiper .swiper-wrapper .swiper-slide .txt_section .sns_profile a.explore_more:hover img {
+  animation: scale 1s ease forwards;
+}
+@keyframes scale {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}
 body main section#media #media_swiper .swiper-wrapper .swiper-slide .txt_section .channel_desc {
   width: 100%;
   height: auto;
@@ -433,6 +511,8 @@ body main section#media #media_swiper .swiper-wrapper .swiper-slide .txt_section
   align-items: center;
 }
 body main section#media #media_swiper .swiper-wrapper .swiper-slide .txt_section .channel_desc ul {
+  background-color: #fff;
+  padding: 0 16px;
   display: flex;
   flex-flow: row nowrap;
   gap: 24px;
@@ -467,6 +547,8 @@ body main section#media #media_swiper .swiper-wrapper .swiper-slide .txt_section
   letter-spacing: -2%;
 }
 body main section#media #media_swiper .swiper-wrapper .swiper-slide .txt_section .accomplishment_tools .accomplishment li.accom_title {
+  background-color: #fff;
+  padding: 0 16px;
   font-size: 1.25rem;
   font-weight: 500;
   line-height: 160%;
@@ -491,6 +573,8 @@ body main section#media #media_swiper .swiper-wrapper .swiper-slide .txt_section
   letter-spacing: -2%;
 }
 body main section#media #media_swiper .swiper-wrapper .swiper-slide .txt_section .accomplishment_tools .tools li.tools_title {
+  background-color: #fff;
+  padding: 0 16px;
   font-size: 1.25rem;
   font-weight: 500;
   line-height: 160%;
@@ -498,36 +582,40 @@ body main section#media #media_swiper .swiper-wrapper .swiper-slide .txt_section
   margin-bottom: 16px;
 }
 body main section#media #media_swiper .swiper-wrapper .swiper-slide .mockup_section {
-  width: auto;
+  flex-basis: 50%;
   display: flex;
   flex-flow: column nowrap;
-}
-body main section#media #media_swiper .swiper-wrapper .swiper-slide .mockup_section .small_thumbnails {
-  display: flex;
-  flex-flow: row nowrap;
-  border-bottom: 1px solid #222;
-}
-body main section#media #media_swiper .swiper-wrapper .swiper-slide .mockup_section .small_thumbnails a {
-  height: 300px;
-}
-body main section#media #media_swiper .swiper-wrapper .swiper-slide .mockup_section .small_thumbnails a img {
-  width: 100%;
-  height: 100%;
-}
-body main section#media #media_swiper .swiper-wrapper .swiper-slide .mockup_section .small_thumbnails a {
-  border-right: 1px solid #222;
-}
-body main section#media #media_swiper .swiper-wrapper .swiper-slide .mockup_section .small_thumbnails a:hover a::after {
-  background: rgba(0, 0, 0, 0.3);
+  /* .small_thumbnails {
+      @include flex-row;
+      border-bottom:$border; justify-content:space-between;
+      a:hover a::before{background:rgba(0,0,0,0.3);}
+  } */
 }
 body main section#media #media_swiper .swiper-wrapper .swiper-slide .mockup_section .small_thumbnails.instagram {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  border: 1px solid #222;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
 }
-body main section#media #media_swiper .swiper-wrapper .swiper-slide .mockup_section iframe {
-  flex-shrink: 0;
+body main section#media #media_swiper .swiper-wrapper .swiper-slide .mockup_section .small_thumbnails.instagram a img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+body main section#media #media_swiper .swiper-wrapper .swiper-slide .mockup_section .small_thumbnails.instagram a {
+  border-right: 1px solid #222;
+}
+body main section#media #media_swiper .swiper-wrapper .swiper-slide .mockup_section .video-container {
+  width: 100%;
+  position: relative;
+  height: 0;
+  padding-top: 56.25%; /* 16:9 비율 유지 */
+}
+body main section#media #media_swiper .swiper-wrapper .swiper-slide .mockup_section .video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 body main section#media #media_swiper .swiper-wrapper .swiper-slide .mockup_section .more_info {
   display: flex;
@@ -562,14 +650,14 @@ body main section#media .swiper-controls-group {
   align-items: center;
 }
 body main section#media .swiper-controls-group .swiper-button-prev {
-  width: 40px;
-  height: 40px;
+  width: 32px;
+  height: 32px;
   color: #777;
 }
 body main section#media .swiper-controls-group .swiper-pagination {
   position: absolute;
   left: 50%;
-  top: 50%;
+  top: 48%;
   transform: translate(-50%, -50%);
   width: auto;
   height: 40px;
@@ -587,7 +675,7 @@ body main section#media .swiper-controls-group .swiper-pagination .swiper-pagina
   font-optical-sizing: auto;
   font-weight: weight;
   font-style: normal;
-  line-height: 40px;
+  line-height: 32px;
 }
 body main section#media .swiper-controls-group .swiper-pagination .swiper-pagination-total {
   font-size: 2rem;
@@ -799,6 +887,9 @@ body main section.project_section .desc_section .project_desc p em {
 body main section.project_section .desc_section .project_desc .project_hashtag {
   color: #000;
   font-size: 1.125rem;
+  background-color: #fff;
+  padding: 0 16px;
+  display: inline;
 }
 body main section.project_section .desc_section .project_desc .project_tools {
   display: flex;
@@ -832,7 +923,7 @@ body main section.project_section .mockup_section {
   justify-content: space-between;
 }
 body main section.project_section .mockup_section .projects_index {
-  padding: 40px 0;
+  padding: 80px 0 40px;
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
@@ -908,6 +999,32 @@ body main #project_01_esther {
 }
 body main #project_02_alternativestereo {
   background: url(../images/alter_bg.png) center/20% repeat;
+}
+body main #project_03_samick {
+  background: rgb(245, 243, 228);
+}
+body main #project_04_marithe {
+  background: #3f3f3f;
+}
+body main #project_04_marithe .project_desc {
+  border-top: 1px solid #555;
+}
+body main #project_04_marithe .project_desc > p {
+  color: #d9d9d9;
+}
+body main #project_04_marithe .project_desc > p em {
+  color: #fff;
+  font-weight: 500;
+}
+body main #project_04_marithe .project_desc > .project_hashtag {
+  background: #777;
+  color: #fff;
+}
+body main #project_04_marithe .project_name, body main #project_04_marithe .project_page_type, body main #project_04_marithe .mockup_section > .projects_index > li > a > span, body main #project_04_marithe .project_tools > p {
+  color: #fff;
+}
+body main #project_04_marithe .project_num, body main #project_04_marithe .projects_index > li > a > .project_name_index.current, body main #project_04_marithe .projects_index > li > a > .project_num_index.current {
+  color: #555;
 }
 body main section#graphics {
   background: url(../images/portfolio_source.png) center/cover no-repeat;
