@@ -1,11 +1,12 @@
 @use "./common.scss" as *;
 
-html {scroll-behavior:smooth;}
-
+html,body {
+    margin:0; padding:0;
+}
 body {
     /* 공통 */
     height:100vh;
-    width:100vw; overflow-x:hidden;
+    width:100vw; overflow-x:hidden; overflow-y:hidden;
     * section {min-height:100vh; height:auto;}
     h2 { @include h2;
     }
@@ -22,6 +23,14 @@ body {
         }
     }
     main {
+        scroll-behavior:smooth;
+        overflow-y:scroll; height:100%;
+        scroll-snap-type:y mandatory;
+        padding-top:60px;
+        /* section 공통 */
+        section {
+            scroll-snap-align:start; width:100%; height:100vh;
+        }
         section#cover {
             position:relative; z-index:997;
             background:url(../images/portfolio_bg8.png) center/cover no-repeat;
@@ -192,7 +201,7 @@ body {
                         .txt_section {
                             @include flex-col;
                             width:auto; text-align:center; border-right:$border;
-                            h2 {width:100%; height:160px; flex-shrink:0; border-bottom:$border;}
+                            h2 {width:100%; height:220px; flex-shrink:0; border-bottom:$border; padding-top:60px;}
                             .sns_profile {
                                 position:relative; height:160px; padding:40px 0; text-align:center;
                                 border-bottom:$border; flex-shrink:0;
@@ -232,26 +241,26 @@ body {
                                 .accomplishment {
                                     width:50%;
                                     @include flex-col; justify-content:center; padding:40px; align-items:flex-start;
-                                    li {font-size:$font-size-p-18; @include basic_wide_txt;}
+                                    li {font-size:$font-size-p-16; @include basic_wide_txt;}
                                     li.accom_title {
                                         background-color:$color-white; padding:0 16px;
-                                        font-size:$font-size-p-20; font-weight:$font-weight-med; @include basic_txt; margin-bottom:16px;
+                                        font-size:$font-size-p-18; font-weight:$font-weight-med; @include basic_txt; margin-bottom:16px;
                                     }
                                     border-right:$border;
                                 }
                                 .tools {
                                     width:50%; align-items:flex-start;
                                     @include flex-col; justify-content:center; padding:40px; flex-grow:1;
-                                    li {font-size:$font-size-p-18; @include basic_wide_txt;}
+                                    li {font-size:$font-size-p-16; @include basic_wide_txt;}
                                     li.tools_title {
                                         background-color:$color-white; padding:0 16px;
-                                        font-size:$font-size-p-20; font-weight:$font-weight-med; @include basic_txt;  margin-bottom:16px;
+                                        font-size:$font-size-p-18; font-weight:$font-weight-med; @include basic_txt;  margin-bottom:16px;
                                     }
                                 }
                             }
                         }
                         .mockup_section {
-                            flex-basis:50%;
+                            flex-basis:50%; padding-top:60px;
                             @include flex-col;
                             /* .small_thumbnails {
                                 @include flex-row;
@@ -321,7 +330,7 @@ body {
                 .project_card_wrapper {
                     width:100%;
                     @include flex-col; gap:20px;
-                    position:absolute; left:0; bottom:0; padding:60px 40px; z-index:10;
+                    position:absolute; left:0; bottom:0; padding:120px 40px; z-index:10;
                     .project_num {font-size:$font-size-h-100; font-weight:$font-weight-sbold; @include en-font-point;}
                     .project_name {font-size:$font-size-h1-56; font-weight:$font-weight-med; @include en-font;}
                     .hashtag_more {
@@ -331,25 +340,24 @@ body {
                             @include flex-col; gap:16px;
                             .hashtag {font-size:$font-size-p-24;}
                         }
-                        .move_to_projects_btn {img {display:none;}
-                        }
+                        .move_to_projects_btn {display:none;}
                     }
                 }
             }
-            .project_card:hover.move_to_projects_btn img{display:inline;}
+            .project_card:hover .project_card_wrapper>.hashtag_more>.move_to_projects_btn {display:block;}
+            
             /* card1-hover */
             .card1 {
-                position:relative;
-                background:$color-esther-point;
+                position:relative; background:$color-esther-point;
                 /* background:url(../images/eather_bg.jpg) top/cover no-repeat; */
             }
             .card1::before {
                 content:"";
                 position:absolute; top:0; left:0; width:100%; height:100%;
-                background:url(../images/mockup_001.jpg;) center/cover no-repeat;
+                background:url(../images/mockup_001.png) center/contain no-repeat;
                 opacity:0; transition:opacity 0.1s ease; z-index:5;
             }
-            .card1:hover.project_card_wrapper {
+            .card1:hover .project_card_wrapper {
                 z-index:10;
             }
             .card1:hover::before {opacity:1;}
@@ -362,41 +370,67 @@ body {
             .card2::before {
                 content:"";
                 position:absolute; top:0; left:0; width:100%; height:100%;
-                background:url(../images/mockup_002.jpg;) center/cover no-repeat;
+                background:url(../images/mockup_002.png) center/contain no-repeat;
                 opacity:0; transition:opacity 0.1s ease; z-index:5;
             }
-            .card2:hover.project_card_wrapper {
+            .card2:hover .project_card_wrapper {
                 z-index:10;
             }
             .card2:hover::before {opacity:1;}
             /* card3-hover */
-            .card3 {background:$color-samick-point;}
+            .card3 {
+                position:relative;
+                background:$color-samick-point;
+                p {color:$color-samick-point-brown;}
+            }
+            .card3::before {
+                content:"";
+                position:absolute; top:0; left:0; width:100%; height:100%;
+                background:url(../images/mockup_003.png) center/contain no-repeat;
+                opacity:0; transition:opacity 0.1s ease; z-index:5;
+            }
+            .card3:hover .project_card_wrapper {
+                z-index:10;
+            }
+            .card3:hover::before {opacity:1;}
+            /* card4-hover */
             .card4 {
+                position:relative;
                 background:$color-marithe-point;
                 .project_card_wrapper {
                     color:$color-white;
+                    .move_to_projects_btn {filter:invert(100%);}
                 }
             }
+            .card4::before {
+                content:"";
+                position:absolute; top:0; left:0; width:100%; height:100%;
+                background:url(../images/mockup_004.png) center/contain no-repeat;
+                opacity:0; transition:opacity 0.1s ease; z-index:5;
+            }
+            .card4:hover .project_card_wrapper {
+                z-index:10;
+            }
+            .card4:hover::before {opacity:1;}
             /* .card2 {background:url(../images/alter_bg.png) top/cover no-repeat;}
             .card3 {background:url(../images/portfolio_bg11.png) top/cover no-repeat;}
             .card4 {background:url(../images/marithe_bg.png) top/cover no-repeat;} */
         }
         section.project_section {
-            background:url(../images/portfolio_bg11.png) center/cover no-repeat;
             border-bottom:$border;
             @include flex-row;
             .desc_section {
                 position:relative;
-                width:30%; padding:120px 60px; border-right:$border;
+                width:30%; padding:140px 60px 100px; border-right:$border;
                 @include flex-col; justify-content:center; gap:40px;
                 .project_title {
                     @include flex-col; gap:16px;
                     .project_num {
-                        color:rgba(0,0,0,0.2); font-size:$font-size-h-200; @include en-font-point;
-                        position:absolute; top:-2%; left:-2%;
+                        color:$color-gray-low-opacity; font-size:$font-size-h-200; @include en-font-point;
+                        position:absolute; top:5%; left:-2%; z-index:990;
                     }
                     .project_name {
-                        font-size:$font-size-h1-56; font-weight:$font-weight-med; @include en-font;
+                        font-size:$font-size-h1-56; font-weight:$font-weight-med; @include en-font; z-index:995;
                     }
                 }
                 .project_desc {
@@ -430,7 +464,7 @@ body {
                 position:relative;
                 width:70%; @include flex-col; justify-content:space-between;
                 .projects_index {
-                    padding:80px 0 40px;
+                    padding:100px 0 70px;
                     @include flex-row; justify-content:center; gap:80px;
                     li {
                         a {
@@ -446,19 +480,40 @@ body {
                     }
                 }
                 .mockup{
-                    height:80%;
-                    background:url(../images/mockup_test.gif) top -10% left 20% /120% no-repeat;
+                    width:100%; height:100%;
                 }
                 .project_button_sets {
                     position:absolute; right:10%; top:50%; transform:translate(10%, -50%);
                     @include flex-col; justify-content:center; gap:40px;
                     .project_btn {
-                        width:120px; height:120px; border-radius:100%; background:$color-point;
+                        width:120px; height:120px; border-radius:100%; background:linear-gradient(120deg, $color-point 0%, $color-portfolio-bg 100%);
+                        background-size: 300% 300%; background-position:0 0%;
                         @include flex-row; gap:16px; justify-content:center; align-items:center;
                         a {
                             display:block; width:100%; height:100%;
                             font-size:$font-size-p-16; @include basic_txt; text-align:center;
                             @include flex-col; justify-content:center; align-items:center;
+                        }
+                    }
+                    .project_btn:hover {animation: gradient 2s ease infinite alternate;}
+                    @keyframes gradient {
+                        0% {
+                            background-position: 0% 0%;
+                        }
+                        20% {
+                            background-position: 0% 25%;
+                        }
+                        40% {
+                            background-position: 25% 50%;
+                        }
+                        60% {
+                            background-position: 50% 75%;
+                        }
+                        80% {
+                            background-position: 75% 100%;
+                        }
+                        100% {
+                            background-position: 100% 100%;
                         }
                     }
                 }
@@ -468,13 +523,40 @@ body {
             .desc_section .project_title .project_name {font-size:$font-size-p-40;}
         }
         #project_01_esther {
-            background:url(../images/eather_bg.jpg) center/cover no-repeat;
+            /* background:url(../images/eather_bg.jpg) center/cover no-repeat; */
+            background:$color-esther-point;
+            .projects_index>li>a>.project_name_index.current, .projects_index>li>a>.project_num_index.current {color:$color-gray-low-opacity;}
+            .mockup_section {
+                .mockup {
+                background:url(../images/mockup_001.png) -120px center /cover no-repeat;
+                }
+            }
         }
         #project_02_alternativestereo {
             background:url(../images/alter_bg.png) center/20% repeat;
+            .project_desc {border-top:1px solid $color-alter-point;}
+            .project_desc > p {color:$color-alter-point; em{font-weight:500;};}
+            .project_desc > .project_hashtag {color:$color-alter-point;}
+            .project_name, .project_page_type, .mockup_section>.projects_index>li>a>span, .project_tools > p{color:$color-alter-point;}
+            .projects_index>li>a>.project_name_index.current, .projects_index>li>a>.project_num_index.current {color:$color-gray-low-opacity;}
+            .mockup_section {
+                .mockup {
+                    background:url(../images/mockup_002.png) -120px center /cover no-repeat;
+                }
+            }
         }
         #project_03_samick {
             background:$color-samick-point;
+            .project_desc {border-top:1px solid $color-samick-point-brown;}
+            .project_desc > p {color:$color-samick-point-brown; em{font-weight:500;};}
+            .project_desc > .project_hashtag {color:$color-samick-point-brown;}
+            .project_name, .project_page_type, .mockup_section>.projects_index>li>a>span, .project_tools > p{color:$color-samick-point-brown;}
+            .projects_index>li>a>.project_name_index.current, .projects_index>li>a>.project_num_index.current {color:$color-gray-low-opacity;}
+            .mockup_section {
+                .mockup {
+                    background:url(../images/mockup_003.png) -120px center /cover no-repeat;
+                }
+            }
         }
         #project_04_marithe {
             background:$color-marithe-point;
@@ -483,7 +565,11 @@ body {
             .project_desc > .project_hashtag {background:$color-light-gray; color:$color-white;}
             .project_name, .project_page_type, .mockup_section>.projects_index>li>a>span, .project_tools > p{color:$color-white}
             .project_num, .projects_index>li>a>.project_name_index.current, .projects_index>li>a>.project_num_index.current {color:$color-gray;}
-            
+            .mockup_section {
+                .mockup {
+                    background:url(../images/mockup_004.png) -120px center /cover no-repeat;
+                }
+            }
         }
         section#graphics {
             background:url(../images/portfolio_source.png) center/cover no-repeat;
@@ -498,25 +584,23 @@ body {
                 }
             }
         }
-    }
-    footer {
-        padding:120px 0;
-        background:url(../images/portfolio_bg8.png) center/cover no-repeat;
-        @include flex-col; justify-content:center; align-items:center; gap:40px;
-        h3 {font-size:$font-size-h3-32; font-weight:$font-weight-bold; @include en-font;}
-        address {
-            a {font-size:$font-size-p-18; @include basic_wide_txt;}
-        }
-        img {width:150px; height:150px;
-        }
-        p {font-size:$font-size-p-18; @include basic_wide_txt;}
-        .buttons {
-            #github_id {
-                padding:16px; background-color:$color-white; border-radius:10px;
-                font-size:$font-size-p-16;
+        section#contact {
+            padding:120px 0;
+            background:url(../images/portfolio_bg9.png) center/cover no-repeat;
+            @include flex-col; justify-content:center; align-items:center; gap:40px;
+            h3 {font-size:$font-size-h3-32; font-weight:$font-weight-bold; @include en-font;}
+            address {
+                a {font-size:$font-size-p-18; @include basic_wide_txt;}
+            }
+            img {width:150px; height:150px;
+            }
+            p {font-size:$font-size-p-18; @include basic_wide_txt;}
+            .buttons {
+                #github_id {
+                    padding:16px; background-color:$color-white; border-radius:10px;
+                    font-size:$font-size-p-16;
+                }
             }
         }
     }
 }
-
-// 스크롤

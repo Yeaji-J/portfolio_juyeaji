@@ -27,7 +27,10 @@ $color-super-light-gray:#d9d9d9;
 $color-alter-point:#C70612;
 $color-marithe-point:#3f3f3f;
 $color-esther-point:#E1EDD9;
+$color-samick-point-brown:#6c3c0c;
 $color-samick-point:rgb(245, 243, 228);
+$color-gray-low-opacity:rgba(0,0,0,0.2);
+$color-portfolio-bg:#f5959f;
 
 @mixin basic_txt {
     line-height:160%; letter-spacing:-2%;

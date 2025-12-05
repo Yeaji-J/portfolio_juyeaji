@@ -1,6 +1,7 @@
 @charset "UTF-8";
-html {
-  scroll-behavior: smooth;
+html, body {
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -8,6 +9,7 @@ body {
   height: 100vh;
   width: 100vw;
   overflow-x: hidden;
+  overflow-y: hidden;
 }
 body * section {
   min-height: 100vh;
@@ -54,6 +56,19 @@ body header nav {
 }
 body header nav a {
   font-weight: 400;
+}
+body main {
+  scroll-behavior: smooth;
+  overflow-y: scroll;
+  height: 100%;
+  scroll-snap-type: y mandatory;
+  padding-top: 60px;
+  /* section 공통 */
+}
+body main section {
+  scroll-snap-align: start;
+  width: 100%;
+  height: 100vh;
 }
 body main section#cover {
   position: relative;
@@ -430,9 +445,10 @@ body main section#media #media_swiper .swiper-wrapper .swiper-slide .txt_section
 }
 body main section#media #media_swiper .swiper-wrapper .swiper-slide .txt_section h2 {
   width: 100%;
-  height: 160px;
+  height: 220px;
   flex-shrink: 0;
   border-bottom: 1px solid #222;
+  padding-top: 60px;
 }
 body main section#media #media_swiper .swiper-wrapper .swiper-slide .txt_section .sns_profile {
   position: relative;
@@ -542,14 +558,14 @@ body main section#media #media_swiper .swiper-wrapper .swiper-slide .txt_section
   align-items: flex-start;
 }
 body main section#media #media_swiper .swiper-wrapper .swiper-slide .txt_section .accomplishment_tools .accomplishment li {
-  font-size: 1.125rem;
+  font-size: 1rem;
   line-height: 200%;
   letter-spacing: -2%;
 }
 body main section#media #media_swiper .swiper-wrapper .swiper-slide .txt_section .accomplishment_tools .accomplishment li.accom_title {
   background-color: #fff;
   padding: 0 16px;
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   font-weight: 500;
   line-height: 160%;
   letter-spacing: -2%;
@@ -568,14 +584,14 @@ body main section#media #media_swiper .swiper-wrapper .swiper-slide .txt_section
   flex-grow: 1;
 }
 body main section#media #media_swiper .swiper-wrapper .swiper-slide .txt_section .accomplishment_tools .tools li {
-  font-size: 1.125rem;
+  font-size: 1rem;
   line-height: 200%;
   letter-spacing: -2%;
 }
 body main section#media #media_swiper .swiper-wrapper .swiper-slide .txt_section .accomplishment_tools .tools li.tools_title {
   background-color: #fff;
   padding: 0 16px;
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   font-weight: 500;
   line-height: 160%;
   letter-spacing: -2%;
@@ -583,6 +599,7 @@ body main section#media #media_swiper .swiper-wrapper .swiper-slide .txt_section
 }
 body main section#media #media_swiper .swiper-wrapper .swiper-slide .mockup_section {
   flex-basis: 50%;
+  padding-top: 60px;
   display: flex;
   flex-flow: column nowrap;
   /* .small_thumbnails {
@@ -715,7 +732,7 @@ body main section#projects .project_card .project_card_wrapper {
   position: absolute;
   left: 0;
   bottom: 0;
-  padding: 60px 40px;
+  padding: 120px 40px;
   z-index: 10;
 }
 body main section#projects .project_card .project_card_wrapper .project_num {
@@ -749,11 +766,11 @@ body main section#projects .project_card .project_card_wrapper .hashtag_more .ha
 body main section#projects .project_card .project_card_wrapper .hashtag_more .hashtag_section .hashtag {
   font-size: 1.5rem;
 }
-body main section#projects .project_card .project_card_wrapper .hashtag_more .move_to_projects_btn img {
+body main section#projects .project_card .project_card_wrapper .hashtag_more .move_to_projects_btn {
   display: none;
 }
-body main section#projects .project_card:hover.move_to_projects_btn img {
-  display: inline;
+body main section#projects .project_card:hover .project_card_wrapper > .hashtag_more > .move_to_projects_btn {
+  display: block;
 }
 body main section#projects {
   /* card1-hover */
@@ -770,12 +787,12 @@ body main section#projects .card1::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url(../images/mockup_001.jpg;) center/cover no-repeat;
+  background: url(../images/mockup_001.png) center/contain no-repeat;
   opacity: 0;
   transition: opacity 0.1s ease;
   z-index: 5;
 }
-body main section#projects .card1:hover.project_card_wrapper {
+body main section#projects .card1:hover .project_card_wrapper {
   z-index: 10;
 }
 body main section#projects .card1:hover::before {
@@ -796,12 +813,12 @@ body main section#projects .card2::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url(../images/mockup_002.jpg;) center/cover no-repeat;
+  background: url(../images/mockup_002.png) center/contain no-repeat;
   opacity: 0;
   transition: opacity 0.1s ease;
   z-index: 5;
 }
-body main section#projects .card2:hover.project_card_wrapper {
+body main section#projects .card2:hover .project_card_wrapper {
   z-index: 10;
 }
 body main section#projects .card2:hover::before {
@@ -811,13 +828,60 @@ body main section#projects {
   /* card3-hover */
 }
 body main section#projects .card3 {
+  position: relative;
   background: rgb(245, 243, 228);
 }
+body main section#projects .card3 p {
+  color: #6c3c0c;
+}
+body main section#projects .card3::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(../images/mockup_003.png) center/contain no-repeat;
+  opacity: 0;
+  transition: opacity 0.1s ease;
+  z-index: 5;
+}
+body main section#projects .card3:hover .project_card_wrapper {
+  z-index: 10;
+}
+body main section#projects .card3:hover::before {
+  opacity: 1;
+}
+body main section#projects {
+  /* card4-hover */
+}
 body main section#projects .card4 {
+  position: relative;
   background: #3f3f3f;
 }
 body main section#projects .card4 .project_card_wrapper {
   color: #fff;
+}
+body main section#projects .card4 .project_card_wrapper .move_to_projects_btn {
+  filter: invert(100%);
+}
+body main section#projects .card4::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(../images/mockup_004.png) center/contain no-repeat;
+  opacity: 0;
+  transition: opacity 0.1s ease;
+  z-index: 5;
+}
+body main section#projects .card4:hover .project_card_wrapper {
+  z-index: 10;
+}
+body main section#projects .card4:hover::before {
+  opacity: 1;
 }
 body main section#projects {
   /* .card2 {background:url(../images/alter_bg.png) top/cover no-repeat;}
@@ -825,7 +889,6 @@ body main section#projects {
   .card4 {background:url(../images/marithe_bg.png) top/cover no-repeat;} */
 }
 body main section.project_section {
-  background: url(../images/portfolio_bg11.png) center/cover no-repeat;
   border-bottom: 1px solid #222;
   display: flex;
   flex-flow: row nowrap;
@@ -833,7 +896,7 @@ body main section.project_section {
 body main section.project_section .desc_section {
   position: relative;
   width: 30%;
-  padding: 120px 60px;
+  padding: 140px 60px 100px;
   border-right: 1px solid #222;
   display: flex;
   flex-flow: column nowrap;
@@ -853,8 +916,9 @@ body main section.project_section .desc_section .project_title .project_num {
   font-weight: weight;
   font-style: normal;
   position: absolute;
-  top: -2%;
+  top: 5%;
   left: -2%;
+  z-index: 990;
 }
 body main section.project_section .desc_section .project_title .project_name {
   font-size: 3.5rem;
@@ -863,6 +927,7 @@ body main section.project_section .desc_section .project_title .project_name {
   font-optical-sizing: auto;
   font-weight: weight;
   font-style: normal;
+  z-index: 995;
 }
 body main section.project_section .desc_section .project_desc {
   padding-top: 40px;
@@ -923,7 +988,7 @@ body main section.project_section .mockup_section {
   justify-content: space-between;
 }
 body main section.project_section .mockup_section .projects_index {
-  padding: 80px 0 40px;
+  padding: 100px 0 70px;
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
@@ -954,8 +1019,8 @@ body main section.project_section .mockup_section .projects_index li a .current 
   color: #d9d9d9;
 }
 body main section.project_section .mockup_section .mockup {
-  height: 80%;
-  background: url(../images/mockup_test.gif) top -10% left 20%/120% no-repeat;
+  width: 100%;
+  height: 100%;
 }
 body main section.project_section .mockup_section .project_button_sets {
   position: absolute;
@@ -971,7 +1036,9 @@ body main section.project_section .mockup_section .project_button_sets .project_
   width: 120px;
   height: 120px;
   border-radius: 100%;
-  background: #E8F1C7;
+  background: linear-gradient(120deg, #E8F1C7 0%, #f5959f 100%);
+  background-size: 300% 300%;
+  background-position: 0 0%;
   display: flex;
   flex-flow: row nowrap;
   gap: 16px;
@@ -991,17 +1058,89 @@ body main section.project_section .mockup_section .project_button_sets .project_
   justify-content: center;
   align-items: center;
 }
+body main section.project_section .mockup_section .project_button_sets .project_btn:hover {
+  animation: gradient 2s ease infinite alternate;
+}
+@keyframes gradient {
+  0% {
+    background-position: 0% 0%;
+  }
+  20% {
+    background-position: 0% 25%;
+  }
+  40% {
+    background-position: 25% 50%;
+  }
+  60% {
+    background-position: 50% 75%;
+  }
+  80% {
+    background-position: 75% 100%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
 body main #project_04_marithe .desc_section .project_title .project_name {
   font-size: 2.5rem;
 }
 body main #project_01_esther {
-  background: url(../images/eather_bg.jpg) center/cover no-repeat;
+  /* background:url(../images/eather_bg.jpg) center/cover no-repeat; */
+  background: #E1EDD9;
+}
+body main #project_01_esther .projects_index > li > a > .project_name_index.current, body main #project_01_esther .projects_index > li > a > .project_num_index.current {
+  color: rgba(0, 0, 0, 0.2);
+}
+body main #project_01_esther .mockup_section .mockup {
+  background: url(../images/mockup_001.png) -120px center/cover no-repeat;
 }
 body main #project_02_alternativestereo {
   background: url(../images/alter_bg.png) center/20% repeat;
 }
+body main #project_02_alternativestereo .project_desc {
+  border-top: 1px solid #C70612;
+}
+body main #project_02_alternativestereo .project_desc > p {
+  color: #C70612;
+}
+body main #project_02_alternativestereo .project_desc > p em {
+  font-weight: 500;
+}
+body main #project_02_alternativestereo .project_desc > .project_hashtag {
+  color: #C70612;
+}
+body main #project_02_alternativestereo .project_name, body main #project_02_alternativestereo .project_page_type, body main #project_02_alternativestereo .mockup_section > .projects_index > li > a > span, body main #project_02_alternativestereo .project_tools > p {
+  color: #C70612;
+}
+body main #project_02_alternativestereo .projects_index > li > a > .project_name_index.current, body main #project_02_alternativestereo .projects_index > li > a > .project_num_index.current {
+  color: rgba(0, 0, 0, 0.2);
+}
+body main #project_02_alternativestereo .mockup_section .mockup {
+  background: url(../images/mockup_002.png) -120px center/cover no-repeat;
+}
 body main #project_03_samick {
   background: rgb(245, 243, 228);
+}
+body main #project_03_samick .project_desc {
+  border-top: 1px solid #6c3c0c;
+}
+body main #project_03_samick .project_desc > p {
+  color: #6c3c0c;
+}
+body main #project_03_samick .project_desc > p em {
+  font-weight: 500;
+}
+body main #project_03_samick .project_desc > .project_hashtag {
+  color: #6c3c0c;
+}
+body main #project_03_samick .project_name, body main #project_03_samick .project_page_type, body main #project_03_samick .mockup_section > .projects_index > li > a > span, body main #project_03_samick .project_tools > p {
+  color: #6c3c0c;
+}
+body main #project_03_samick .projects_index > li > a > .project_name_index.current, body main #project_03_samick .projects_index > li > a > .project_num_index.current {
+  color: rgba(0, 0, 0, 0.2);
+}
+body main #project_03_samick .mockup_section .mockup {
+  background: url(../images/mockup_003.png) -120px center/cover no-repeat;
 }
 body main #project_04_marithe {
   background: #3f3f3f;
@@ -1026,6 +1165,9 @@ body main #project_04_marithe .project_name, body main #project_04_marithe .proj
 body main #project_04_marithe .project_num, body main #project_04_marithe .projects_index > li > a > .project_name_index.current, body main #project_04_marithe .projects_index > li > a > .project_num_index.current {
   color: #555;
 }
+body main #project_04_marithe .mockup_section .mockup {
+  background: url(../images/mockup_004.png) -120px center/cover no-repeat;
+}
 body main section#graphics {
   background: url(../images/portfolio_source.png) center/cover no-repeat;
   border-bottom: 1px solid #222;
@@ -1048,16 +1190,16 @@ body main section#graphics #design_swiper .swiper-wrapper .swiper-slide img {
   height: 100%;
   object-fit: cover;
 }
-body footer {
+body main section#contact {
   padding: 120px 0;
-  background: url(../images/portfolio_bg8.png) center/cover no-repeat;
+  background: url(../images/portfolio_bg9.png) center/cover no-repeat;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
   gap: 40px;
 }
-body footer h3 {
+body main section#contact h3 {
   font-size: 2rem;
   font-weight: 700;
   font-family: "Cormorant Infant", serif;
@@ -1065,21 +1207,21 @@ body footer h3 {
   font-weight: weight;
   font-style: normal;
 }
-body footer address a {
+body main section#contact address a {
   font-size: 1.125rem;
   line-height: 200%;
   letter-spacing: -2%;
 }
-body footer img {
+body main section#contact img {
   width: 150px;
   height: 150px;
 }
-body footer p {
+body main section#contact p {
   font-size: 1.125rem;
   line-height: 200%;
   letter-spacing: -2%;
 }
-body footer .buttons #github_id {
+body main section#contact .buttons #github_id {
   padding: 16px;
   background-color: #fff;
   border-radius: 10px;

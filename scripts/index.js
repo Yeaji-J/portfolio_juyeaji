@@ -23,31 +23,32 @@ animate();
 
 // #cover explore 버튼 클릭 시 페이지 이동, 부드럽게
 const exploreBtn = document.querySelector('.scroll_btn > a')
-console.log ('exploreBtn')
+const aboutMePage = document.querySelector('#about_me')
+const main = document.querySelector('main')
 
 exploreBtn.addEventListener('click', (e)=>{
     e.preventDefault();
-    window.scrollTo(.0,aboutMePage.offsetTop);
+    main.scrollTo(0,aboutMePage.offsetTop);
 })
 
 
 // #cover 넘어가면서 header 배경 생기기
 const header = document.querySelector('#header')
-const aboutMePage = document.querySelector('#about_me')
 const headerBgChangePoint = aboutMePage.offsetTop;
 console.log(header, aboutMePage, headerBgChangePoint)
 
 function handleScroll(){
-    const currentScrollY = window.scrollY;
+    const currentScrollY = main.scrollTop;
 
     if(currentScrollY >= headerBgChangePoint) {
         header.style.backgroundColor = "rgba(255,255,255,0.4)"
     }else {header.style.backgroundColor = 'transparent'};
     
 }
-window.addEventListener('scroll', handleScroll);
+main.addEventListener('scroll', handleScroll);
 handleScroll(); 
 
+// <iframe width="560" height="315" src="https://www.youtube.com/embed/7ps_rc0Gm_w?si=RCbd-dIiWW7tApQ9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-
+//조회수 top 5 기준 랜덤함수 돌리기
 
