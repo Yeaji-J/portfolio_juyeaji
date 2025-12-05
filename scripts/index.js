@@ -23,7 +23,6 @@ animate();
 
 // #cover explore 버튼 클릭 시 페이지 이동, 부드럽게
 const exploreBtn = document.querySelector('.scroll_btn > a')
-const aboutMePage = document.querySelector('#about_me')
 console.log ('exploreBtn')
 
 exploreBtn.addEventListener('click', (e)=>{
@@ -34,16 +33,21 @@ exploreBtn.addEventListener('click', (e)=>{
 
 // #cover 넘어가면서 header 배경 생기기
 const header = document.querySelector('#header')
+const aboutMePage = document.querySelector('#about_me')
 const headerBgChangePoint = aboutMePage.offsetTop;
+console.log(header, aboutMePage, headerBgChangePoint)
 
 function handleScroll(){
     const currentScrollY = window.scrollY;
 
     if(currentScrollY >= headerBgChangePoint) {
-        header.style.backgroundColor = "rgba(255,255,255,0.3"
+        header.style.backgroundColor = "rgba(255,255,255,0.4)"
     }else {header.style.backgroundColor = 'transparent'};
-    handleScroll();
     
 }
+window.addEventListener('scroll', handleScroll);
+handleScroll(); 
+
+
 
 
