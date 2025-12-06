@@ -52,3 +52,17 @@ handleScroll();
 
 //조회수 top 5 기준 랜덤함수 돌리기
 
+//graphics 클릭 시 크게 보이게
+/* const designPoster = document.querySelectorAll('#design_swiper .poster_design')
+const designSwiperSlide = document.querySelector('#design_swiper .swiper-slide')
+const graphicsSection = document.querySelector('#graphics')
+console.log(designPoster, designSwiperSlide, graphicsSection);
+
+designPoster.forEach(poster => {
+    poster.addEventListener('click', e => {
+        e.preventDefault();
+        designSwiperSlide.style.width = "500px";
+    designSwiperSlide.style.height = "800px";
+        graphicsSection.style.backgroundColor = "rgba(0,0,0,0.4)"
+    })
+}) */
