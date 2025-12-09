@@ -1,6 +1,3 @@
-
-
-
 // #cover 타원 애니메이션
 const dot = document.querySelector('#ellipse_container .dot')
 const container = document.querySelector('#ellipse_container .ellipse_wrap')
@@ -53,8 +50,7 @@ handleScroll();
 //조회수 top 5 기준 랜덤함수 돌리기
 
 //graphics 클릭 시 크게 보이게
-/* const designPoster = document.querySelectorAll('#design_swiper .poster_design')
-const designSwiperSlide = document.querySelector('#design_swiper .swiper-slide')
+/* 
 const graphicsSection = document.querySelector('#graphics')
 console.log(designPoster, designSwiperSlide, graphicsSection);
 

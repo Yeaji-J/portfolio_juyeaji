@@ -243,7 +243,6 @@ body main section#about_me {
   border-bottom: 1px solid #222;
 }
 body main section#about_me h2 {
-  height: 220px;
   text-align: center;
   flex-shrink: 0;
   border-bottom: 1px solid #222;
@@ -285,8 +284,8 @@ body main section#about_me .contents .photo_section .shape_effect img {
 }
 body main section#about_me .contents .photo_section .shape_effect_copy {
   position: absolute;
-  top: -25%;
-  right: -30%;
+  top: -20%;
+  right: -40%;
   z-index: 999;
   width: 40px;
   height: 60px;
@@ -381,7 +380,7 @@ body main section#about_me .contents .desc_section .skills h3 {
 }
 body main section#about_me .contents .desc_section .skills .skills_wrap {
   flex-grow: 1;
-  padding: 20px 0;
+  padding: 40px 0;
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
@@ -428,6 +427,9 @@ body main section#media {
 }
 body main section#media #media_swiper {
   height: 100vh;
+}
+body main section#media #media_swiper .swiper-wrapper {
+  width: auto !important;
 }
 body main section#media #media_swiper .swiper-wrapper .swiper-slide {
   height: 100%;
@@ -609,9 +611,10 @@ body main section#media #media_swiper .swiper-wrapper .swiper-slide .mockup_sect
   } */
 }
 body main section#media #media_swiper .swiper-wrapper .swiper-slide .mockup_section .small_thumbnails.instagram {
+  width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
 }
 body main section#media #media_swiper .swiper-wrapper .swiper-slide .mockup_section .small_thumbnails.instagram a img {
   width: 100%;
@@ -916,7 +919,7 @@ body main section.project_section .desc_section .project_title .project_num {
   font-weight: weight;
   font-style: normal;
   position: absolute;
-  top: 5%;
+  top: 0;
   left: -2%;
   z-index: 990;
 }
@@ -928,6 +931,9 @@ body main section.project_section .desc_section .project_title .project_name {
   font-weight: weight;
   font-style: normal;
   z-index: 995;
+}
+body main section.project_section .desc_section .project_title .project_page_type {
+  z-index: 999;
 }
 body main section.project_section .desc_section .project_desc {
   padding-top: 40px;
@@ -973,8 +979,8 @@ body main section.project_section .desc_section .project_desc .project_tools .to
   gap: 20px;
 }
 body main section.project_section .desc_section .project_desc .project_tools .tool_icon_sets li {
-  width: 50px;
-  height: 50px;
+  width: 36px;
+  height: 36px;
 }
 body main section.project_section .desc_section .project_desc .project_tools .tool_icon_sets li img {
   width: 100%;
@@ -1109,11 +1115,25 @@ body main #project_02_alternativestereo .project_desc > p em {
 body main #project_02_alternativestereo .project_desc > .project_hashtag {
   color: #C70612;
 }
+body main #project_02_alternativestereo .project_desc > .git_code {
+  text-align: center;
+  border-radius: 20px;
+  border: 1px solid #C70612;
+  color: #C70612;
+  padding: 6px 8px;
+}
+body main #project_02_alternativestereo .git_code:hover {
+  background: #C70612;
+  color: rgb(245, 243, 228);
+}
 body main #project_02_alternativestereo .project_name, body main #project_02_alternativestereo .project_page_type, body main #project_02_alternativestereo .mockup_section > .projects_index > li > a > span, body main #project_02_alternativestereo .project_tools > p {
   color: #C70612;
 }
 body main #project_02_alternativestereo .projects_index > li > a > .project_name_index.current, body main #project_02_alternativestereo .projects_index > li > a > .project_num_index.current {
   color: rgba(0, 0, 0, 0.2);
+}
+body main #project_02_alternativestereo .project_hashtag {
+  background: rgb(245, 243, 228);
 }
 body main #project_02_alternativestereo .mockup_section .mockup {
   background: url(../images/mockup_002.png) -120px center/cover no-repeat;
@@ -1171,7 +1191,7 @@ body main #project_04_marithe .mockup_section .mockup {
 body main section#graphics {
   background: url(../images/portfolio_source.png) center/cover no-repeat;
   border-bottom: 1px solid #222;
-  padding: 0 120px;
+  padding: 40px 0 120px;
   display: flex;
   flex-flow: column nowrap;
   gap: 120px;
@@ -1180,15 +1200,21 @@ body main section#graphics {
 }
 body main section#graphics #design_swiper {
   width: 100%;
+  overflow: hidden;
+  padding: 0 20px;
 }
 body main section#graphics #design_swiper .swiper-wrapper .swiper-slide {
-  width: 250px;
-  height: 450px;
+  width: 270px;
+  height: 384px;
 }
 body main section#graphics #design_swiper .swiper-wrapper .swiper-slide img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+body main section#graphics::before {
+  content: "";
+  background: rgba(0, 0, 0, 0.4);
 }
 body main section#contact {
   padding: 120px 0;

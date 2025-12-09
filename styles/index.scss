@@ -112,7 +112,7 @@ body {
             background:url(../images/portfolio_source.png) center/cover no-repeat;
             @include flex-col;
             border-bottom:$border;
-            h2 {height:220px; text-align:center; flex-shrink:0; border-bottom:$border; margin-top:60px;}
+            h2 {text-align:center; flex-shrink:0; border-bottom:$border; margin-top:60px;}
             .contents {
                 width:100%; height:auto;
                 @include flex-row; align-items:stretch; flex-grow:1;
@@ -128,7 +128,7 @@ body {
                                 animation: float-left-right 2.5s ease-in-out infinite alternate;}
                     }
                     .shape_effect_copy {
-                            position:absolute; top:-25%; right:-30%; z-index:999;
+                            position:absolute; top:-20%; right:-40%; z-index:999;
                             width:40px; height:60px;
                             img {
                                 widtH:100%; height:100%;
@@ -168,7 +168,7 @@ body {
                             border-bottom:$border; text-align:center; @include flex-col; justify-content:center;
                         }
                         .skills_wrap { 
-                            flex-grow:1; padding:20px 0;
+                            flex-grow:1; padding:40px 0;
                             @include flex-row; align-items:center; justify-content:center;
                             .skill_set {
                                 padding:0 40px; @include flex-col; gap:24px;
@@ -195,7 +195,7 @@ body {
             position:relative;
             #media_swiper {
                 height:100vh;
-                .swiper-wrapper {
+                .swiper-wrapper {width:auto !important;
                     .swiper-slide {height:100%;
                         @include flex-row; flex-grow:1; align-items:stretch;
                         .txt_section {
@@ -268,7 +268,8 @@ body {
                                 a:hover a::before{background:rgba(0,0,0,0.3);}
                             } */
                             .small_thumbnails.instagram {
-                                display:grid; grid-template-columns:1fr 1fr 1fr 1fr; grid-template-rows:1fr 1fr;
+                                width:100%;
+                                display:grid; grid-template-columns:1fr 1fr 1fr 1fr; grid-template-rows:1fr 1fr 1fr;
                                 a {
                                     img {width:100%; height:100%; object-fit:cover;}
                                     border-right:$border;
@@ -427,11 +428,12 @@ body {
                     @include flex-col; gap:16px;
                     .project_num {
                         color:$color-gray-low-opacity; font-size:$font-size-h-200; @include en-font-point;
-                        position:absolute; top:5%; left:-2%; z-index:990;
+                        position:absolute; top:0; left:-2%; z-index:990;
                     }
                     .project_name {
                         font-size:$font-size-h1-56; font-weight:$font-weight-med; @include en-font; z-index:995;
                     }
+                    .project_page_type {z-index:999;}
                 }
                 .project_desc {
                     padding-top:40px; border-top:$border;
@@ -453,7 +455,7 @@ body {
                         .tool_icon_sets {
                             @include flex-row; gap:20px;
                             li {
-                                width:50px; height:50px;
+                                width:36px; height:36px;
                                 img {width:100%; height:100%;}
                             }
                         }
@@ -537,8 +539,11 @@ body {
             .project_desc {border-top:1px solid $color-alter-point;}
             .project_desc > p {color:$color-alter-point; em{font-weight:500;};}
             .project_desc > .project_hashtag {color:$color-alter-point;}
+            .project_desc > .git_code {text-align:center; border-radius:20px; border:1px solid $color-alter-point; color:$color-alter-point; padding:6px 8px;}
+            .git_code:hover {background:$color-alter-point; color:$color-samick-point;}
             .project_name, .project_page_type, .mockup_section>.projects_index>li>a>span, .project_tools > p{color:$color-alter-point;}
             .projects_index>li>a>.project_name_index.current, .projects_index>li>a>.project_num_index.current {color:$color-gray-low-opacity;}
+            .project_hashtag {background:$color-samick-point;}
             .mockup_section {
                 .mockup {
                     background:url(../images/mockup_002.png) -120px center /cover no-repeat;
@@ -573,16 +578,19 @@ body {
         }
         section#graphics {
             background:url(../images/portfolio_source.png) center/cover no-repeat;
-            border-bottom:$border; padding:0 120px;
+            border-bottom:$border; padding:40px 0 120px;
             @include flex-col; gap:120px; justify-content:center; align-items: center;
-            #design_swiper { width:100%;
+            #design_swiper { width:100%; overflow:hidden; padding:0 20px;
                 .swiper-wrapper {
-                    .swiper-slide { width:250px; height:450px;
+                    .swiper-slide { width:270px; height:384px;
                             img {width:100%; height:100%; object-fit:cover;}
-                        
                     }
                 }
             }
+        }
+        section#graphics::before {
+            content:"";
+            background:rgba(0,0,0,0.4);
         }
         section#contact {
             padding:120px 0;
