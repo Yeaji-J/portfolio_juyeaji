@@ -62,3 +62,34 @@ designPoster.forEach(poster => {
         graphicsSection.style.backgroundColor = "rgba(0,0,0,0.4)"
     })
 }) */
+
+const thumbnailA = document.querySelectorAll('#graphics .poster_design') //작은 포스터 썸네일 - a 태그
+const grayBg = document.querySelector('.gray_bg')
+const modalContent = document.querySelector('.modal_content')
+
+console.log(thumbnailA, modalContent);
+console.log(grayBg)
+thumbnailA.forEach(poster => {
+    poster.addEventListener('click',(e)=>{
+        e.preventDefault();
+        designSwiper.autoplay.stop();
+        grayBg.style.display = 'flex';
+
+        const clickedImg = poster.querySelector('img');
+        const imgSrc = clickedImg.getAttribute('src');
+
+        const newImg = document.createElement('img');
+        newImg.src = imgSrc;
+        newImg.alt = clickedImg.alt;
+
+        modalContent.innerHTML = "";
+        modalContent.appendChild(newImg);
+        
+    })
+})
+grayBg.addEventListener('click',(e)=>{
+    if (e.target === grayBg) {
+        grayBg.style.display = 'none';
+        designSwiper.autoplay.start();
+    }
+})
