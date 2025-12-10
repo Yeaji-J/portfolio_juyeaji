@@ -497,6 +497,26 @@ body {
                             @include flex-col; justify-content:center; align-items:center;
                         }
                     }
+                    .figma_btn {
+                        @include flex-col; gap:16px;
+                        .prototype_figma_set {
+                            display:none;
+                        }
+                    }
+                    .figma_btn:hover > .prototype_figma_set {
+                        @include flex-col; gap:6px; align-items:center; justify-content:flex-start;
+                        .small_project_btn {
+                            a {
+                                display:block; font-size:$font-size-p-14;
+                            }
+                            &:hover {
+                                a {text-decoration:underline;}
+                            }
+                        }
+                        .small_project_btn {
+
+                        }
+                    }
                     .project_btn:hover {animation: gradient 2s ease infinite alternate;}
                     @keyframes gradient {
                         0% {

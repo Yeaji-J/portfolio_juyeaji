@@ -1064,6 +1064,28 @@ body main section.project_section .mockup_section .project_button_sets .project_
   justify-content: center;
   align-items: center;
 }
+body main section.project_section .mockup_section .project_button_sets .figma_btn {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 16px;
+}
+body main section.project_section .mockup_section .project_button_sets .figma_btn .prototype_figma_set {
+  display: none;
+}
+body main section.project_section .mockup_section .project_button_sets .figma_btn:hover > .prototype_figma_set {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 6px;
+  align-items: center;
+  justify-content: flex-start;
+}
+body main section.project_section .mockup_section .project_button_sets .figma_btn:hover > .prototype_figma_set .small_project_btn a {
+  display: block;
+  font-size: 0.875rem;
+}
+body main section.project_section .mockup_section .project_button_sets .figma_btn:hover > .prototype_figma_set .small_project_btn:hover a {
+  text-decoration: underline;
+}
 body main section.project_section .mockup_section .project_button_sets .project_btn:hover {
   animation: gradient 2s ease infinite alternate;
 }

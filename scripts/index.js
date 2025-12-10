@@ -45,23 +45,7 @@ function handleScroll(){
 main.addEventListener('scroll', handleScroll);
 handleScroll(); 
 
-// <iframe width="560" height="315" src="https://www.youtube.com/embed/7ps_rc0Gm_w?si=RCbd-dIiWW7tApQ9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-//조회수 top 5 기준 랜덤함수 돌리기
-
 //graphics 클릭 시 크게 보이게
-/* 
-const graphicsSection = document.querySelector('#graphics')
-console.log(designPoster, designSwiperSlide, graphicsSection);
-
-designPoster.forEach(poster => {
-    poster.addEventListener('click', e => {
-        e.preventDefault();
-        designSwiperSlide.style.width = "500px";
-    designSwiperSlide.style.height = "800px";
-        graphicsSection.style.backgroundColor = "rgba(0,0,0,0.4)"
-    })
-}) */
 
 const thumbnailA = document.querySelectorAll('#graphics .poster_design') //작은 포스터 썸네일 - a 태그
 const grayBg = document.querySelector('.gray_bg')
@@ -93,3 +77,12 @@ grayBg.addEventListener('click',(e)=>{
         designSwiper.autoplay.start();
     }
 })
+
+//반응형 피그마 주소
+/* const figmaBtn = document.querySelectorAll('.figma_btn > a')
+const figmaSet = document.querySelectorAll('.prototype_figma_set')
+figmaBtn.forEach(button => {
+    button.addEventListener('click', ()=>{
+
+    })
+}) */
