@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="주예지-포트폴리오">
+    <meta property="og:description" content="작은 디테일에도 따뜻함을 담아내는 웹디자이너 예지입니다.">
+    <meta property="og:image" content="https://Yeaji-J.github.io/images/thumbnail.png">
     <title>Portfolio_juyeaji</title>
     <link rel="shortcut icon" href="./images/hamster.png" type="image/x-icon">
     <link rel="stylesheet" href="./styles/reset.css">
@@ -30,699 +33,701 @@
             <a href="#contact">Contact</a>
         </nav>
     </header>
-    <main>
-        <section id="cover">
-            <div id="ellipse_container">
-                <div class="ellipse_wrap">
-                    <div class="ellipse_outline"></div>
-                    <div class="dot"></div>
-                </div>
-            </div>
-            <div class="main_contents">
-                <ul id="sns"> <!-- about me 까지만 fixed되게, offset 이나 scrollTrigger 사용 -->
-                    <li><a href="https://www.youtube.com/@jiu3" target="_blank">youtube</li>
-                    <li><a href="https://www.instagram.com/jiu__diary/" target="_blank">instagram</a></li>
-                </ul>
-                <div class="main_txt">
-                    <h1>Portfolio</h1>
-                    <div class="desc1">
-                        <p class="desc"><em>감각적인 디자인과<br>사용성 중심</em>의<br>웹 UI를 만듭니다.</p>
-                        <p class="desc">실무 맞춤형<br>퍼블리싱이 가능한<br>웹디자이너 <em>예지</em>입니다.</p>
+    <main class="swiper">
+        <div class="swiper-wrapper">
+            <section id="cover" class="swiper-slide">
+                <div id="ellipse_container">
+                    <div class="ellipse_wrap">
+                        <div class="ellipse_outline"></div>
+                        <div class="dot"></div>
                     </div>
-                    <div class="desc2">
-                        <p class="job_desc">Web Designer<br>& Fronted Publisher</p>
-                        <div class="scroll_btn">
-                            <span>Explore</span>
-                            <a href="#about_me"><img src="./images/arrow_icon.png" alt="자동 스크롤"></a>
+                </div>
+                <div class="main_contents">
+                    <ul id="sns"> <!-- about me 까지만 fixed되게, offset 이나 scrollTrigger 사용 -->
+                        <li><a href="https://www.youtube.com/@jiu3" target="_blank">youtube</li>
+                        <li><a href="https://www.instagram.com/jiu__diary/" target="_blank">instagram</a></li>
+                    </ul>
+                    <div class="main_txt">
+                        <h1>Portfolio</h1>
+                        <div class="desc1">
+                            <p class="desc"><em>감각적인 디자인과<br>사용성 중심</em>의<br>웹 UI를 만듭니다.</p>
+                            <p class="desc">실무 맞춤형<br>퍼블리싱이 가능한<br>웹디자이너 <em>예지</em>입니다.</p>
+                        </div>
+                        <div class="desc2">
+                            <p class="job_desc">Web Designer<br>& Fronted Publisher</p>
+                            <div class="scroll_btn">
+                                <span>Explore</span>
+                                <a href="#about_me"><img src="./images/arrow_icon.png" alt="자동 스크롤"></a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="shape_effect">
-                <img src="./images/shape_001.png" alt="">
-            </div>
-        </section>
-        <section id="about_me"> <!--100VH 에서 offset. header 높이만큼 제외 , 100vw에서 sns 너비만큼 제외-->
-            <h2>About Me</h2>
-            <div class="contents">
-                <div class="photo_section">
-                    <div class="shape_effect">
-                        <img src="./images/shape_002.png" alt="">
+                <div class="shape_effect">
+                    <img src="./images/shape_001.png" alt="">
+                </div>
+            </section>
+            <section id="about_me" class="swiper-slide"> <!--100VH 에서 offset. header 높이만큼 제외 , 100vw에서 sns 너비만큼 제외-->
+                <h2>About Me</h2>
+                <div class="contents">
+                    <div class="photo_section">
+                        <div class="shape_effect">
+                            <img src="./images/shape_002.png" alt="">
+                        </div>
+                        <div class="shape_effect_copy">
+                            <img src="./images/shape_003.png" alt="">
+                        </div>
+                        <img src="./images/photo.jpg" alt="증명사진">
+                        <div class="profile">
+                            <h3>주예지<span>/ Ju Yeaji</span></h3>
+                            <p class="about_me_desc">안녕하세요!<br>작은 디테일에도 따뜻함을 담아내는<br>웹디자이너 예지입니다.</p>
+                        </div>
                     </div>
-                    <div class="shape_effect_copy">
-                        <img src="./images/shape_003.png" alt="">
-                    </div>
-                    <img src="./images/photo.jpg" alt="증명사진">
-                    <div class="profile">
-                        <h3>주예지<span>/ Ju Yeaji</span></h3>
-                        <p class="about_me_desc">안녕하세요!<br>작은 디테일에도 따뜻함을 담아내는<br>웹디자이너 예지입니다.</p>
+                    <div class="desc_section">
+                        <div class="personal_info">
+                            <div class="about_me_area">
+                                <h3>Introduce</h3>
+                                <p class="about_me_desc">1998.12.02</p>
+                                <p class="about_me_desc">010-2475-2692</p>
+                                <address ><a href="mailto:jjuglish@gmail.com" class="about_me_desc">jjuglish@gmail.com</a></address>
+                            </div>
+                            <div class="about_me_area">
+                                <h3>Education / Experience</h3>
+                                <p class="about_me_desc">2018.03 - 2022.08 인하대학교 영어교육과</p>
+                                <p class="about_me_desc">2023.04 - 2025.03 인하대학교 프런티어학부대학 행정사무</p>
+                                <p class="about_me_desc">2025.07 - 2025.12 UI/UX 프론트엔드 반응형 웹디자인&웹퍼블리셔 (웹,앱,피그마) 개발 양성과정 C</p>
+                            </div>
+                            <div class="about_me_area">
+                                <h3>Certificate</h3>
+                                <p class="about_me_desc">2022.01 토익 880점</p>
+                                <p class="about_me_desc">2025.03 컴퓨터활용능력 2급</p>
+                            </div>
+                        </div>
+                        <div class="skills">
+                            <h3>skills</h3>
+                            <div class="skills_wrap">
+                                <ul class="skill_set">
+                                    <li class="each_skill">
+                                        <div class="icon">
+                                            <img src="./images/html_icon.png" alt="html:5">
+                                            <span>html:5</span>
+                                        </div>
+                                        <ul class="desc">
+                                            <li>웹 표준 마크업 준수</li>
+                                            <li>SEO 최적화 설계</li>
+                                            <li>협업 및 유지보수 고려</li>
+                                        </ul>
+                                    </li>
+                                    <li class="each_skill">
+                                        <div class="icon">
+                                            <img src="./images/css_icon.png" alt="css:3">
+                                            <span>css:3</span>
+                                        </div>
+                                        <ul class="desc">
+                                            <li>반응형 웹 구현 (미디어 쿼리)</li>
+                                            <li>기본 애니메이션 구현</li>
+                                            <li>SCSS @use/@import 및 Mixin으로 스타일 구조화</li>
+                                        </ul>
+                                    </li>
+                                    <li class="each_skill">
+                                        <div class="icon">
+                                            <img src="./images/js_icon.png" alt="자바스크립트">
+                                            <span>javascript</span>
+                                        </div>
+                                        <ul class="desc">
+                                            <li>Swiper, Scroll-Trigger 활용</li>
+                                            <li>DOM 조작을 통한 동적 기능 구현</li>
+                                            <li>배열, 객체 활용한 데이터 구조화</li>
+                                        </ul>
+                                    </li> 
+                                </ul>
+                                <ul class="skill_set">
+                                    <li class="each_skill">
+                                        <div class="icon">
+                                            <img src="./images/photoshop_icon.png" alt="포토샵">
+                                            <span>photoshop</span>
+                                        </div>
+                                        <ul class="desc">
+                                            <li>배너/상세페이지 디자인 제작 가능</li>
+                                            <li>이미지 최적화 및 사진 편집 가능</li>
+                                            <li>UI/UX 디자인 및 시네마 그래프 제작</li>
+                                        </ul>
+                                    </li>
+                                    <li class="each_skill">
+                                        <div class="icon">
+                                            <img src="./images/illustrator_icon.png" alt="일러스트레이터">
+                                            <span>illustrator</span>
+                                        </div>
+                                        <ul class="desc">
+                                            <li>로고/아이콘 등 벡터 기반 디자인 제작</li>
+                                            <li>아이콘 및 SVG 파일 제작</li>
+                                        </ul>
+                                    </li>
+                                    <li class="each_skill">
+                                        <div class="icon">
+                                            <img src="./images/premiere_icon.png" alt="프리미어프로">
+                                            <span>premiere pro</span>
+                                        </div>
+                                        <ul class="desc">
+                                            <li>컷편집 및 장면 전환 효과 적용</li>
+                                            <li>자막 및 오디오 편집 가능</li>
+                                            <li>영상 포맷 최적화 및 인코딩 작업</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <ul class="skill_set">
+                                    <li class="each_skill">
+                                        <div class="icon">
+                                            <img src="./images/notion.png" alt="노션">
+                                            <span>notion</span>
+                                        </div>
+                                        <ul class="desc">
+                                            <li>협업을 위한 문서 및 작업 기록 관리</li>
+                                            <li>개인 학습/지식 관리 노트 활용</li>
+                                        </ul>
+                                    </li>
+                                    <li class="each_skill">
+                                        <div class="icon">
+                                            <img src="./images/figma_icon.png" alt="피그마">
+                                            <span>figma</span>
+                                        </div>
+                                        <ul class="desc">
+                                            <li>오토 레이아웃 활용 및 컴포넌트 관리</li>
+                                            <li>프로토타입 및 상호작용 구현</li>
+                                            <li>사용자 흐름·정보 구조(IA) 기반 설계</li>
+                                        </ul>
+                                    </li>
+                                    <li class="each_skill">
+                                        <div class="icon">
+                                            <img src="./images/github.png" alt="깃허브">
+                                            <span>github</span>
+                                        </div>
+                                        <ul class="desc">
+                                            <li>Git 기반 형상 관리 (버전 관리)</li>
+                                            <li>협업 및 코드 리뷰를 위한 저장소 활용</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
+            </section>
+            <section id="media" class="swiper-slide">
+                <div class="swiper" id="media_swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide youtube">
+                            <div class="txt_section">
+                                <h2>Media</h2>
+                                <div class="sns_profile">
+                                    <div class="channel_info">
+                                        <a href="https://www.youtube.com/@jiu3" target="_blank"><img src="./images/channel_profile.jpg" alt="유튜브 프로필"></a>
+                                        <div class="channel_txt">
+                                            <a href="https://www.youtube.com/@jiu3" target="_blank" class="channel_name">지우 Jiu</a>
+                                            <a href="https://www.youtube.com/@jiu3" target="_blank" class="channel_subscribers">구독자 4.0천명</a>
+                                        </div>
+                                    </div>
+                                    <a href="https://www.youtube.com/@jiu3" target="_blank" class="explore_more"><img src="./images/right.png" alt="바로가기"></a>
+                                </div>
+                                <div class="channel_desc">
+                                    <ul class="channel_intro_hashtag">
+                                        <li># 임용고시 브이로그</li>
+                                        <li># 자취 브이로그</li>
+                                        <li># 제품 리뷰 · 언박싱</li>
+                                        <li># 자기계발 콘텐츠</li>
+                                    </ul>
+                                    <p>개인 브이로그 채널을 기획·촬영·편집까지 직접 운영하며, 사용자 피드백을 기반으로 콘텐츠를 개선한 경험이 있습니다.<br>임용고시 브이로그를 중심으로 주 1회 업로드를 유지해 1년 만에 구독자 4,000명을 달성했으며, 반응 데이터를 분석해 영상 구조·톤·자막 스타일을 지속적으로 개선했습니다.<br>콘텐츠 제작 과정 전반을 경험하며 사용자 중심 사고와 콘텐츠 미감에 대한 감각을 키웠습니다.</p>
+                                </div>
+                                <div class="accomplishment_tools">
+                                    <ul class="accomplishment">
+                                        <li class="accom_title">채널 운영 성과</li>
+                                        <li>1년 만에 구독자 4,000명 달성</li>
+                                        <li>주 1회 정기 업로드 유지</li>
+                                        <li>협찬·브랜디드 콘텐츠 제작 경험</li>
+                                        <li>사용자 피드백 중심 콘텐츠 개선 사이클 구축</li>
+                                    </ul>
+                                    <ul class="tools"> 
+                                        <li class="tools_title">툴 역량 (Tools)</li>
+                                        <li>Adobe Premiere Pro - 능숙</li>
+                                        <li>Vllo 모바일 편집 - 능숙</li>
+                                        <li>오디오 클린업 · 색보정 · 컷 편집 · 자막 스타일링</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="mockup_section">
+                                <!-- <div class="small_thumbnails">
+                                    <a href="https://youtu.be/lytlj6n7-T4?si=rAxhIL32yo1pxIN9" target="_blank"><img src="./images/youtube_thumbnail_002.jpg" alt="유튜브 보러가기"></a>
+                                    <a href="https://youtu.be/ALleOtBqlgg?si=85j1dMNAxvpXtem_" target="_blank"><img src="./images/youtube_thumbnail_003.jpg" alt="유튜브 보러가기"></a>
+                                </div> -->
+                                <div class="video_container">
+                                    <iframe width="1000px" height="564px" src="https://www.youtube.com/embed/Ej3-wIG6gKE?si=xGWgr9MslyjcpJbq&amp;controls=0&autoplay=0&mute=1&playlist=Ej3-wIG6gKE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                </div>
+                                <div class="more_info">
+                                    <p>Youtube</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide instagram">
+                            <div class="txt_section">
+                                <h2>Media</h2>
+                                <div class="sns_profile">
+                                    <div class="channel_info">
+                                        <a href="https://www.instagram.com/jiu__diary/" target="_blank"><img src="./images/insta_profile.jpg" alt="인스타그램 프로필"></a>
+                                        <div class="channel_txt">
+                                            <a href="https://www.instagram.com/jiu__diary/" target="_blank" class="channel_name">jiu_diary</a>
+                                            <a href="https://www.instagram.com/jiu__diary/" target="_blank" class="channel_subscribers">팔로워 6.5천명</a>
+                                        </div>
+                                    </div>
+                                    <a href="https://www.instagram.com/jiu__diary/" target="_blank" class="explore_more"><img src="./images/right.png" alt="바로가기"></a>
+                                </div>
+                                <div class="channel_desc">
+                                    <ul class="channel_intro_hashtag">
+                                        <li># 공스타그램(필기 노트·공부 기록)</li>
+                                        <li># 집 인테리어 & 데일리 홈 스타일링</li>
+                                        <li># 문구류 협찬</li>
+                                        <li># 자기계발 콘텐츠</li>
+                                    </ul>
+                                    <p>공부·일상·집 인테리어 중심의 감성 피드를 운영하며,<br>색감 통일·콘텐츠 배열·사용자 선호 분석 등을 통해 미적 피드 구성 역량을 쌓았습니다.<br>떡메모지·문구류 브랜드와의 협찬 콘텐츠를 제작하며,<br>제품 특성이 잘 드러나도록 피드 기획 → 촬영 → 편집 → 업로드 구성까지 직접 진행했습니다.<br> 좋아요 5천+를 기록한 게시물도 있는 등 지속적인 관심을 얻고 있습니다.</p>
+                                </div>
+                                <div class="accomplishment_tools">
+                                    <ul class="accomplishment">
+                                        <li class="accom_title">채널 운영 성과</li>
+                                        <li>팔로워 6,970명</li>
+                                        <li>게시물 152개 업로드</li>
+                                        <li>11월 한 달 조회수 4,900+</li>
+                                        <li>최다 좋아요 5,000+ 기록 게시물 보유</li>
+                                    </ul>
+                                    <ul class="tools">
+                                        <li class="tools_title">툴 역량 (Tools)</li>
+                                        <li>Lightroom(선택적 사용) - 톤 조정</li>
+                                        <li>Instagram Pro Dashboard - 조회수·반응 분석</li>
+                                        <li>포토샵 툴 - 밝기,대비,구도 조정</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="mockup_section">
+                                <div class="small_thumbnails instagram">
+                                    <a href="https://www.instagram.com/jiu__diary/" target="_blank"><img src="./images/insta_001.jpg" alt="인스타그램 보러가기"></a>
+                                    <a href="https://www.instagram.com/jiu__diary/" target="_blank"><img src="./images/insta_002.jpg" alt="인스타그램 보러가기"></a>
+                                    <a href="https://www.instagram.com/jiu__diary/" target="_blank"><img src="./images/insta_003.jpg" alt="인스타그램 보러가기"></a>
+                                    <a href="https://www.instagram.com/jiu__diary/" target="_blank"><img src="./images/insta_004.jpg" alt="인스타그램 보러가기"></a>
+                                    <a href="https://www.instagram.com/jiu__diary/" target="_blank"><img src="./images/insta_005.jpg" alt="인스타그램 보러가기"></a>
+                                    <a href="https://www.instagram.com/jiu__diary/" target="_blank"><img src="./images/insta_006.jpg" alt="인스타그램 보러가기"></a>
+                                    <a href="https://www.instagram.com/jiu__diary/" target="_blank"><img src="./images/insta_007.jpg" alt="인스타그램 보러가기"></a>
+                                    <a href="https://www.instagram.com/jiu__diary/" target="_blank"><img src="./images/insta_008.jpg" alt="인스타그램 보러가기"></a>
+                                    <a href="https://www.instagram.com/jiu__diary/" target="_blank"><img src="./images/insta_009.jpg" alt="인스타그램 보러가기"></a>
+                                    <a href="https://www.instagram.com/jiu__diary/" target="_blank"><img src="./images/insta_010.jpg" alt="인스타그램 보러가기"></a>
+                                    <a href="https://www.instagram.com/jiu__diary/" target="_blank"><img src="./images/insta_011.jpg" alt="인스타그램 보러가기"></a>
+                                    <a href="https://www.instagram.com/jiu__diary/" target="_blank"><img src="./images/insta_012.jpg" alt="인스타그램 보러가기"></a>
+                                </div>
+                                <div class="more_info">
+                                    <p>Instagram</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-controls-group">
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </section>
+            <!-- project 목차 부분 -->
+            <section id="projects" class="swiper-slide">
+                <h2>Projects</h2>
+                <div class="project_card card1">
+                    <a href="#project_01_esther" class="project_card_wrapper">
+                        <p class="project_num">01</p>
+                        <p class="project_name">Esther Formula</p>
+                        <div class="hashtag_more">
+                            <div class="hashtag_section">
+                                <p class="hashtag">#반응형</p>
+                                <p class="hashtag">#메인페이지</p>
+                            </div>
+                            <img src="./images/arrow_right.png" alt="project1_에스더몰 바로가기" class="move_to_projects_btn">
+                        </div>
+                    </a>
+                </div>
+                <div class="project_card card2">
+                    <a href="#project_02_alternativestereo" class="project_card_wrapper">
+                        <p class="project_num">02</p>
+                        <p class="project_name">Alternativestereo</p>
+                        <div class="hashtag_more">
+                            <div class="hashtag_section">
+                                <p class="hashtag">#탭메뉴활용  #데이터관리</p>
+                                <p class="hashtag">#반응형  #메인페이지</p>
+                            </div>
+                            <img src="./images/arrow_right.png" class="move_to_projects_btn" alt="project2_얼터너티브스테레오 바로가기">
+                        </div>
+                    </a>
+                </div>
+                <div class="project_card card3">
+                    <a href="#project_03_samick" class="project_card_wrapper">
+                        <p class="project_num">03</p>
+                        <p class="project_name">Samick Furniture</p>
+                        <div class="hashtag_more">
+                            <div class="hashtag_section">
+                                <p class="hashtag">#메인페이지</p>
+                                <p class="hashtag">#서브페이지 (상품목록, 상세)</p>
+                            </div>
+                            <img src="./images/arrow_right.png" class="move_to_projects_btn" lt="project3_삼익가구 바로가기">
+                        </div>
+                    </a>
+                </div>
+                <div class="project_card card4">
+                    <a href="#project_04_marithe" class="project_card_wrapper">
+                        <p class="project_num">04</p>
+                        <p class="project_name">MARITHÉ</p>
+                        <div class="hashtag_more">
+                            <div class="hashtag_section">
+                                <p class="hashtag">#카페24</p>
+                                <p class="hashtag">#메인페이지</p>
+                            </div>
+                            <img src="./images/arrow_right.png" class="move_to_projects_btn" alt="project4_마리떼프랑소와저버 바로가기">
+                        </div>
+                    </a>
+                </div>
+            </section>
+            <!-- 메인 프로젝트 설명 시작 01 에스더몰 -->
+            <section id="project_01_esther" class="swiper-slide project_section">
                 <div class="desc_section">
-                    <div class="personal_info">
-                        <div class="about_me_area">
-                            <h3>Introduce</h3>
-                            <p class="about_me_desc">1998.12.02</p>
-                            <p class="about_me_desc">010-2475-2692</p>
-                            <address ><a href="mailto:jjuglish@gmail.com" class="about_me_desc">jjuglish@gmail.com</a></address>
-                        </div>
-                        <div class="about_me_area">
-                            <h3>Education / Experience</h3>
-                            <p class="about_me_desc">2018.03 - 2022.08 인하대학교 영어교육과</p>
-                            <p class="about_me_desc">2023.04 - 2025.03 인하대학교 프런티어학부대학 행정사무</p>
-                            <p class="about_me_desc">2025.07 - 2025.12 UI/UX 프론트엔드 반응형 웹디자인&웹퍼블리셔 (웹,앱,피그마) 개발 양성과정 C</p>
-                        </div>
-                        <div class="about_me_area">
-                            <h3>Certificate</h3>
-                            <p class="about_me_desc">2022.01 토익 880점</p>
-                            <p class="about_me_desc">2025.03 컴퓨터활용능력 2급</p>
-                        </div>
+                    <div class="project_title">
+                        <span class="project_num">01</span>
+                        <span class="project_name">Esther Formula</span>
+                        <p class="project_page_type">에스더포뮬러 | 건강기능식품 E-Commerce Renewal</p>
                     </div>
-                    <div class="skills">
-                        <h3>skills</h3>
-                        <div class="skills_wrap">
-                            <ul class="skill_set">
-                                <li class="each_skill">
-                                    <div class="icon">
-                                        <img src="./images/html_icon.png" alt="html:5">
-                                        <span>html:5</span>
-                                    </div>
-                                    <ul class="desc">
-                                        <li>웹 표준 마크업 준수</li>
-                                        <li>SEO 최적화 설계</li>
-                                        <li>협업 및 유지보수 고려</li>
-                                    </ul>
-                                </li>
-                                <li class="each_skill">
-                                    <div class="icon">
-                                        <img src="./images/css_icon.png" alt="css:3">
-                                        <span>css:3</span>
-                                    </div>
-                                    <ul class="desc">
-                                        <li>반응형 웹 구현 (미디어 쿼리)</li>
-                                        <li>기본 애니메이션 구현</li>
-                                        <li>SCSS @use/@import 및 Mixin으로 스타일 구조화</li>
-                                    </ul>
-                                </li>
-                                <li class="each_skill">
-                                    <div class="icon">
-                                        <img src="./images/js_icon.png" alt="자바스크립트">
-                                        <span>javascript</span>
-                                    </div>
-                                    <ul class="desc">
-                                        <li>Swiper, Scroll-Trigger 활용</li>
-                                        <li>DOM 조작을 통한 동적 기능 구현</li>
-                                        <li>배열, 객체 활용한 데이터 구조화</li>
-                                    </ul>
-                                </li> 
-                            </ul>
-                            <ul class="skill_set">
-                                <li class="each_skill">
-                                    <div class="icon">
-                                        <img src="./images/photoshop_icon.png" alt="포토샵">
-                                        <span>photoshop</span>
-                                    </div>
-                                    <ul class="desc">
-                                        <li>배너/상세페이지 디자인 제작 가능</li>
-                                        <li>이미지 최적화 및 사진 편집 가능</li>
-                                        <li>UI/UX 디자인 및 시네마 그래프 제작</li>
-                                    </ul>
-                                </li>
-                                <li class="each_skill">
-                                    <div class="icon">
-                                        <img src="./images/illustrator_icon.png" alt="일러스트레이터">
-                                        <span>illustrator</span>
-                                    </div>
-                                    <ul class="desc">
-                                        <li>로고/아이콘 등 벡터 기반 디자인 제작</li>
-                                        <li>아이콘 및 SVG 파일 제작</li>
-                                    </ul>
-                                </li>
-                                <li class="each_skill">
-                                    <div class="icon">
-                                        <img src="./images/premiere_icon.png" alt="프리미어프로">
-                                        <span>premiere pro</span>
-                                    </div>
-                                    <ul class="desc">
-                                        <li>컷편집 및 장면 전환 효과 적용</li>
-                                        <li>자막 및 오디오 편집 가능</li>
-                                        <li>영상 포맷 최적화 및 인코딩 작업</li>
-                                    </ul>
-                                </li>
-                            </ul>
-                            <ul class="skill_set">
-                                <li class="each_skill">
-                                    <div class="icon">
-                                        <img src="./images/notion.png" alt="노션">
-                                        <span>notion</span>
-                                    </div>
-                                    <ul class="desc">
-                                        <li>협업을 위한 문서 및 작업 기록 관리</li>
-                                        <li>개인 학습/지식 관리 노트 활용</li>
-                                    </ul>
-                                </li>
-                                <li class="each_skill">
-                                    <div class="icon">
-                                        <img src="./images/figma_icon.png" alt="피그마">
-                                        <span>figma</span>
-                                    </div>
-                                    <ul class="desc">
-                                        <li>오토 레이아웃 활용 및 컴포넌트 관리</li>
-                                        <li>프로토타입 및 상호작용 구현</li>
-                                        <li>사용자 흐름·정보 구조(IA) 기반 설계</li>
-                                    </ul>
-                                </li>
-                                <li class="each_skill">
-                                    <div class="icon">
-                                        <img src="./images/github.png" alt="깃허브">
-                                        <span>github</span>
-                                    </div>
-                                    <ul class="desc">
-                                        <li>Git 기반 형상 관리 (버전 관리)</li>
-                                        <li>협업 및 코드 리뷰를 위한 저장소 활용</li>
-                                    </ul>
-                                </li>
+                    <div class="project_desc">
+                        <p><em>브랜드 이미지를 강화</em>하는 방향으로 리디자인한 프로젝트입니다.<br>과도하게 많은 카테고리로 인한 사용자 혼란을 줄이기 위해 <em>아이콘 활용 및 구조 재분류</em>를 적용해 탐색 편의성을 높였습니다.<br>또한 베스트·신상품·기획전 등 주요 섹션을 카테고리별 탭 메뉴로 구분하여 <em>스크롤 길이를 줄이고 핵심 제품군을 빠르게 접근</em>할 수 있도록 개선했습니다.<br>알록달록했던 기존의 색감을 베이지 톤으로 정돈해 브랜드의 <em>고급스러운 무드</em>를 강화했습니다.
+                        </p>
+                        <p class="project_hashtag">#반응형  #메인페이지</p>
+                        <div class="project_tools">
+                            <p> Tools</p>
+                            <ul class="tool_icon_sets">
+                                <li><img src="./images/photoshop_icon.png" alt="포토샵"></li>
+                                <li><img src="./images/figma_icon.png" alt="피그마"></li>
+                                <li><img src="./images/html_icon.png" alt="html"></li>
+                                <li><img src="./images/css_icon.png" alt="css"></li>
+                                <li><img src="./images/js_icon.png" alt="자바스크립트"></li>
                             </ul>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-        <section id="media">
-            <div class="swiper" id="media_swiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide youtube">
-                        <div class="txt_section">
-                            <h2>Media</h2>
-                            <div class="sns_profile">
-                                <div class="channel_info">
-                                    <a href="https://www.youtube.com/@jiu3" target="_blank"><img src="./images/channel_profile.jpg" alt="유튜브 프로필"></a>
-                                    <div class="channel_txt">
-                                        <a href="https://www.youtube.com/@jiu3" target="_blank" class="channel_name">지우 Jiu</a>
-                                        <a href="https://www.youtube.com/@jiu3" target="_blank" class="channel_subscribers">구독자 4.0천명</a>
-                                    </div>
+                <div class="mockup_section">
+                    <ul class="projects_index">
+                        <li>
+                            <a href="#project_01_esther">
+                                <span class="project_num_index current">01</span>
+                                <span class="project_name_index current">Esther Formula</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#project_02_alternativestereo">
+                                <span class="project_num_index">02</span>
+                                <span class="project_name_index">AlternativeStereo</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#project_03_samick">
+                                <span class="project_num_index">03</span>
+                                <span class="project_name_index">Samick Furniture</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#project_04_marithe">
+                                <span class="project_num_index">04</span>
+                                <span class="project_name_index">MARITHÉ</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="mockup">
+                    </div>
+                    <div class="project_button_sets">
+                        <div class="project_btn" id="prototype_btn">
+                            <a href="https://yeaji-j.github.io/project_esther/" target="_blank">Prototype<br>(github)</a>
+                        </div>
+                        <div class="figma_btn">
+                            <div class="project_btn">
+                                <a href="#">Prototype<br>(Figma)</a>
+                            </div>
+                            <div class="prototype_figma_set">
+                                <div class="small_project_btn" id="planning_btn">
+                                    <a href="https://www.figma.com/proto/Si8iR7lcw11IsjxgeuFQwM/Project_esthermall?node-id=99-487&t=XtLjJP8YRHitjlxd-1&scaling=min-zoom&content-scaling=fixed&page-id=99%3A486" target="_blank">데스크톱 ver.</a>
                                 </div>
-                                <a href="https://www.youtube.com/@jiu3" target="_blank" class="explore_more"><img src="./images/right.png" alt="바로가기"></a>
-                            </div>
-                            <div class="channel_desc">
-                                <ul class="channel_intro_hashtag">
-                                    <li># 임용고시 브이로그</li>
-                                    <li># 자취 브이로그</li>
-                                    <li># 제품 리뷰 · 언박싱</li>
-                                    <li># 자기계발 콘텐츠</li>
-                                </ul>
-                                <p>개인 브이로그 채널을 기획·촬영·편집까지 직접 운영하며, 사용자 피드백을 기반으로 콘텐츠를 개선한 경험이 있습니다.<br>임용고시 브이로그를 중심으로 주 1회 업로드를 유지해 1년 만에 구독자 4,000명을 달성했으며, 반응 데이터를 분석해 영상 구조·톤·자막 스타일을 지속적으로 개선했습니다.<br>콘텐츠 제작 과정 전반을 경험하며 사용자 중심 사고와 콘텐츠 미감에 대한 감각을 키웠습니다.</p>
-                            </div>
-                            <div class="accomplishment_tools">
-                                <ul class="accomplishment">
-                                    <li class="accom_title">채널 운영 성과</li>
-                                    <li>1년 만에 구독자 4,000명 달성</li>
-                                    <li>주 1회 정기 업로드 유지</li>
-                                    <li>협찬·브랜디드 콘텐츠 제작 경험</li>
-                                    <li>사용자 피드백 중심 콘텐츠 개선 사이클 구축</li>
-                                </ul>
-                                <ul class="tools"> 
-                                    <li class="tools_title">툴 역량 (Tools)</li>
-                                    <li>Adobe Premiere Pro - 능숙</li>
-                                    <li>Vllo 모바일 편집 - 능숙</li>
-                                    <li>오디오 클린업 · 색보정 · 컷 편집 · 자막 스타일링</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="mockup_section">
-                            <!-- <div class="small_thumbnails">
-                                <a href="https://youtu.be/lytlj6n7-T4?si=rAxhIL32yo1pxIN9" target="_blank"><img src="./images/youtube_thumbnail_002.jpg" alt="유튜브 보러가기"></a>
-                                <a href="https://youtu.be/ALleOtBqlgg?si=85j1dMNAxvpXtem_" target="_blank"><img src="./images/youtube_thumbnail_003.jpg" alt="유튜브 보러가기"></a>
-                            </div> -->
-                            <div class="video_container">
-                                <iframe width="1000px" height="564px" src="https://www.youtube.com/embed/Ej3-wIG6gKE?si=xGWgr9MslyjcpJbq&amp;controls=0&autoplay=0&mute=1&playlist=Ej3-wIG6gKE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                            </div>
-                            <div class="more_info">
-                                <p>Youtube</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide instagram">
-                        <div class="txt_section">
-                            <h2>Media</h2>
-                            <div class="sns_profile">
-                                <div class="channel_info">
-                                    <a href="https://www.instagram.com/jiu__diary/" target="_blank"><img src="./images/insta_profile.jpg" alt="인스타그램 프로필"></a>
-                                    <div class="channel_txt">
-                                        <a href="https://www.instagram.com/jiu__diary/" target="_blank" class="channel_name">jiu_diary</a>
-                                        <a href="https://www.instagram.com/jiu__diary/" target="_blank" class="channel_subscribers">팔로워 6.5천명</a>
-                                    </div>
+                                <div class="small_project_btn" id="planning_btn">
+                                    <a href="#" target="_blank">태블릿 ver.</a>
                                 </div>
-                                <a href="https://www.instagram.com/jiu__diary/" target="_blank" class="explore_more"><img src="./images/right.png" alt="바로가기"></a>
-                            </div>
-                            <div class="channel_desc">
-                                <ul class="channel_intro_hashtag">
-                                    <li># 공스타그램(필기 노트·공부 기록)</li>
-                                    <li># 집 인테리어 & 데일리 홈 스타일링</li>
-                                    <li># 문구류 협찬</li>
-                                    <li># 자기계발 콘텐츠</li>
-                                </ul>
-                                <p>공부·일상·집 인테리어 중심의 감성 피드를 운영하며,<br>색감 통일·콘텐츠 배열·사용자 선호 분석 등을 통해 미적 피드 구성 역량을 쌓았습니다.<br>떡메모지·문구류 브랜드와의 협찬 콘텐츠를 제작하며,<br>제품 특성이 잘 드러나도록 피드 기획 → 촬영 → 편집 → 업로드 구성까지 직접 진행했습니다.<br> 좋아요 5천+를 기록한 게시물도 있는 등 지속적인 관심을 얻고 있습니다.</p>
-                            </div>
-                            <div class="accomplishment_tools">
-                                <ul class="accomplishment">
-                                    <li class="accom_title">채널 운영 성과</li>
-                                    <li>팔로워 6,970명</li>
-                                    <li>게시물 152개 업로드</li>
-                                    <li>11월 한 달 조회수 4,900+</li>
-                                    <li>최다 좋아요 5,000+ 기록 게시물 보유</li>
-                                </ul>
-                                <ul class="tools">
-                                    <li class="tools_title">툴 역량 (Tools)</li>
-                                    <li>Lightroom(선택적 사용) - 톤 조정</li>
-                                    <li>Instagram Pro Dashboard - 조회수·반응 분석</li>
-                                    <li>포토샵 툴 - 밝기,대비,구도 조정</li>
-                                </ul>
+                                <div class="small_project_btn" id="planning_btn">
+                                    <a href="#" target="_blank">모바일 ver.</a>
+                                </div>
                             </div>
                         </div>
-                        <div class="mockup_section">
-                            <div class="small_thumbnails instagram">
-                                <a href="https://www.instagram.com/jiu__diary/" target="_blank"><img src="./images/insta_001.jpg" alt="인스타그램 보러가기"></a>
-                                <a href="https://www.instagram.com/jiu__diary/" target="_blank"><img src="./images/insta_002.jpg" alt="인스타그램 보러가기"></a>
-                                <a href="https://www.instagram.com/jiu__diary/" target="_blank"><img src="./images/insta_003.jpg" alt="인스타그램 보러가기"></a>
-                                <a href="https://www.instagram.com/jiu__diary/" target="_blank"><img src="./images/insta_004.jpg" alt="인스타그램 보러가기"></a>
-                                <a href="https://www.instagram.com/jiu__diary/" target="_blank"><img src="./images/insta_005.jpg" alt="인스타그램 보러가기"></a>
-                                <a href="https://www.instagram.com/jiu__diary/" target="_blank"><img src="./images/insta_006.jpg" alt="인스타그램 보러가기"></a>
-                                <a href="https://www.instagram.com/jiu__diary/" target="_blank"><img src="./images/insta_007.jpg" alt="인스타그램 보러가기"></a>
-                                <a href="https://www.instagram.com/jiu__diary/" target="_blank"><img src="./images/insta_008.jpg" alt="인스타그램 보러가기"></a>
-                                <a href="https://www.instagram.com/jiu__diary/" target="_blank"><img src="./images/insta_009.jpg" alt="인스타그램 보러가기"></a>
-                                <a href="https://www.instagram.com/jiu__diary/" target="_blank"><img src="./images/insta_010.jpg" alt="인스타그램 보러가기"></a>
-                                <a href="https://www.instagram.com/jiu__diary/" target="_blank"><img src="./images/insta_011.jpg" alt="인스타그램 보러가기"></a>
-                                <a href="https://www.instagram.com/jiu__diary/" target="_blank"><img src="./images/insta_012.jpg" alt="인스타그램 보러가기"></a>
-                            </div>
-                            <div class="more_info">
-                                <p>Instagram</p>
-                            </div>
+                        <div class="project_btn" id="original_web_btn">
+                            <a href="https://www.esthermall.co.kr/?utm_source=google_sa&utm_medium=cpc&utm_campaign=brand&utm_content=ALL&utm_term=00_%EB%B8%8C%EB%9E%9C%EB%93%9C_%EC%9D%BC%EC%B9%98_PC-00___%EB%B8%8C%EB%9E%9C%EB%93%9C-%EC%97%90%EC%8A%A4%EB%8D%94%EB%AA%B0&gad_source=1&gad_campaignid=13835841994&gbraid=0AAAAADZNKj9-WGPozuvOO_Gvon2EhNa8Z&gclid=CjwKCAiA86_JBhAIEiwA4i9Juy1O612TNz9NvRPA1YFsraCdS0zH2H3qFo0ENezEw2b9IbTIdYJIshoCnTAQAvD_BwE" target="_blank">Original<br>Website</a>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="swiper-controls-group">
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-pagination"></div>
-                <div class="swiper-button-next"></div>
-            </div>
-        </section>
-        <!-- project 목차 부분 -->
-        <section id="projects">
-            <h2>Projects</h2>
-            <div class="project_card card1">
-                <a href="#project_01_esther" class="project_card_wrapper">
-                    <p class="project_num">01</p>
-                    <p class="project_name">Esther Formula</p>
-                    <div class="hashtag_more">
-                        <div class="hashtag_section">
-                            <p class="hashtag">#반응형</p>
-                            <p class="hashtag">#메인페이지</p>
-                        </div>
-                        <img src="./images/arrow_right.png" alt="project1_에스더몰 바로가기" class="move_to_projects_btn">
+            </section>
+            <!-- 프로젝트 02 얼터 -->
+            <section id="project_02_alternativestereo" class="swiper-slide project_section">
+                <div class="desc_section">
+                    <div class="project_title">
+                        <span class="project_num">02</span>
+                        <span class="project_name">Alternativestereo</span>
+                        <p class="project_page_type">얼터너티브스테레오 | Cosmetic Brand Renewal</p>
                     </div>
-                </a>
-            </div>
-            <div class="project_card card2">
-                <a href="#project_02_alternativestereo" class="project_card_wrapper">
-                    <p class="project_num">02</p>
-                    <p class="project_name">Alternativestereo</p>
-                    <div class="hashtag_more">
-                        <div class="hashtag_section">
-                            <p class="hashtag">#탭메뉴활용  #데이터관리</p>
-                            <p class="hashtag">#반응형  #메인페이지</p>
+                    <div class="project_desc">
+                        <p>제품 탐색을 방해하던 프로모션 화면을 제거하고 <em>제품 중심의 레이아웃</em>으로 재구성했습니다.<br>신생 브랜드 특성상 제품 수가 많지 않은 점을 고려해, <em>탭 기반의 다층 제품 노출 구조</em>로 전환하여 메인 페이지 안에서 대부분의 제품을 확인할 수 있도록 섹션을 대폭 확장했습니다.<br>또, 실제 사이트 운영처럼 project.js 파일을 별도로 구성하여 제품 데이터를 <em>배열 객체로 관리</em>하도록 설정했습니다.<br>이를 통해 유지보수와 확장성이 용이하며, 제품 관리와 UI 렌더링을 효율적으로 결합한 웹 구조를 구현했습니다.
+                        </p>
+                        <a href="https://github.com/Yeaji-J/project_alternativestereo.git" target="_blank" class="git_code">#깃허브 코드보기</a>
+                        <p class="project_hashtag">#탭메뉴활용  #데이터관리   #반응형   #메인페이지</p>
+                        <div class="project_tools">
+                            <p> Tools</p>
+                            <ul class="tool_icon_sets">
+                                <li><img src="./images/photoshop_icon.png" alt="포토샵"></li>
+                                <li><img src="./images/figma_icon.png" alt="피그마"></li>
+                                <li><img src="./images/html_icon.png" alt="html"></li>
+                                <li><img src="./images/css_icon.png" alt="css"></li>
+                                <li><img src="./images/js_icon.png" alt="자바스크립트"></li>
+                            </ul>
                         </div>
-                        <img src="./images/arrow_right.png" class="move_to_projects_btn" alt="project2_얼터너티브스테레오 바로가기">
-                    </div>
-                </a>
-            </div>
-            <div class="project_card card3">
-                <a href="#project_03_samick" class="project_card_wrapper">
-                    <p class="project_num">03</p>
-                    <p class="project_name">Samick Furniture</p>
-                    <div class="hashtag_more">
-                        <div class="hashtag_section">
-                            <p class="hashtag">#메인페이지</p>
-                            <p class="hashtag">#서브페이지 (상품목록, 상세)</p>
-                        </div>
-                        <img src="./images/arrow_right.png" class="move_to_projects_btn" lt="project3_삼익가구 바로가기">
-                    </div>
-                </a>
-            </div>
-            <div class="project_card card4">
-                <a href="#project_04_marithe" class="project_card_wrapper">
-                    <p class="project_num">04</p>
-                    <p class="project_name">MARITHÉ</p>
-                    <div class="hashtag_more">
-                        <div class="hashtag_section">
-                            <p class="hashtag">#카페24</p>
-                            <p class="hashtag">#메인페이지</p>
-                        </div>
-                        <img src="./images/arrow_right.png" class="move_to_projects_btn" alt="project4_마리떼프랑소와저버 바로가기">
-                    </div>
-                </a>
-            </div>
-        </section>
-        <!-- 메인 프로젝트 설명 시작 01 에스더몰 -->
-        <section id="project_01_esther" class="project_section">
-            <div class="desc_section">
-                <div class="project_title">
-                    <span class="project_num">01</span>
-                    <span class="project_name">Esther Formula</span>
-                    <p class="project_page_type">에스더포뮬러 | 건강기능식품 E-Commerce Renewal</p>
-                </div>
-                <div class="project_desc">
-                    <p><em>브랜드 이미지를 강화</em>하는 방향으로 리디자인한 프로젝트입니다.<br>과도하게 많은 카테고리로 인한 사용자 혼란을 줄이기 위해 <em>아이콘 활용 및 구조 재분류</em>를 적용해 탐색 편의성을 높였습니다.<br>또한 베스트·신상품·기획전 등 주요 섹션을 카테고리별 탭 메뉴로 구분하여 <em>스크롤 길이를 줄이고 핵심 제품군을 빠르게 접근</em>할 수 있도록 개선했습니다.<br>알록달록했던 기존의 색감을 베이지 톤으로 정돈해 브랜드의 <em>고급스러운 무드</em>를 강화했습니다.
-                    </p>
-                    <p class="project_hashtag">#반응형  #메인페이지</p>
-                    <div class="project_tools">
-                        <p> Tools</p>
-                        <ul class="tool_icon_sets">
-                            <li><img src="./images/photoshop_icon.png" alt="포토샵"></li>
-                            <li><img src="./images/figma_icon.png" alt="피그마"></li>
-                            <li><img src="./images/html_icon.png" alt="html"></li>
-                            <li><img src="./images/css_icon.png" alt="css"></li>
-                            <li><img src="./images/js_icon.png" alt="자바스크립트"></li>
-                        </ul>
                     </div>
                 </div>
-            </div>
-            <div class="mockup_section">
-                <ul class="projects_index">
-                    <li>
-                        <a href="#project_01_esther">
-                            <span class="project_num_index current">01</span>
-                            <span class="project_name_index current">Esther Formula</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#project_02_alternativestereo">
-                            <span class="project_num_index">02</span>
-                            <span class="project_name_index">AlternativeStereo</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#project_03_samick">
-                            <span class="project_num_index">03</span>
-                            <span class="project_name_index">Samick Furniture</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#project_04_marithe">
-                            <span class="project_num_index">04</span>
-                            <span class="project_name_index">MARITHÉ</span>
-                        </a>
-                    </li>
-                </ul>
-                <div class="mockup">
-                </div>
-                <div class="project_button_sets">
-                    <div class="project_btn" id="prototype_btn">
-                        <a href="https://yeaji-j.github.io/project_esther/" target="_blank">Prototype<br>(github)</a>
+                <div class="mockup_section">
+                    <ul class="projects_index">
+                        <li>
+                            <a href="#project_01_esther">
+                                <span class="project_num_index">01</span>
+                                <span class="project_name_index">Esther Formula</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#project_02_alternativestereo">
+                                <span class="project_num_index current">02</span>
+                                <span class="project_name_index current">AlternativeStereo</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#project_03_samick">
+                                <span class="project_num_index">03</span>
+                                <span class="project_name_index">Samick Furniture</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#project_04_marithe">
+                                <span class="project_num_index">04</span>
+                                <span class="project_name_index">MARITHÉ</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="mockup">
                     </div>
-                    <div class="figma_btn">
-                        <div class="project_btn">
-                            <a href="#">Prototype<br>(Figma)</a>
+                    <div class="project_button_sets">
+                        <div class="project_btn" id="prototype_btn">
+                            <a href="https://yeaji-j.github.io/project_alternativestereo/" target="_blank">Prototype<br>(github)</a>
                         </div>
-                        <div class="prototype_figma_set">
-                            <div class="small_project_btn" id="planning_btn">
-                                <a href="https://www.figma.com/proto/Si8iR7lcw11IsjxgeuFQwM/Project_esthermall?node-id=99-487&t=XtLjJP8YRHitjlxd-1&scaling=min-zoom&content-scaling=fixed&page-id=99%3A486" target="_blank">데스크톱 ver.</a>
+                        <div class="figma_btn">
+                            <div class="project_btn">
+                                <a href="#">Prototype<br>(Figma)</a>
                             </div>
-                            <div class="small_project_btn" id="planning_btn">
-                                <a href="#" target="_blank">태블릿 ver.</a>
-                            </div>
-                            <div class="small_project_btn" id="planning_btn">
-                                <a href="#" target="_blank">모바일 ver.</a>
+                            <div class="prototype_figma_set">
+                                <div class="small_project_btn" id="planning_btn">
+                                    <a href="https://www.figma.com/proto/3FO5n1LCAe8sc1cWagkBcn/Project_alternativestereo?node-id=61-17&p=f&t=ifEbAaI2IVEsjcUf-8&scaling=min-zoom&content-scaling=fixed&page-id=61%3A16&disable-default-keyboard-nav=1&hide-ui=1" target="_blank">데스크톱 ver.</a>
+                                </div>
+                                <div class="small_project_btn" id="planning_btn">
+                                    <a href="#" target="_blank">태블릿 ver.</a>
+                                </div>
+                                <div class="small_project_btn" id="planning_btn">
+                                    <a href="#" target="_blank">모바일 ver.</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="project_btn" id="original_web_btn">
-                        <a href="https://www.esthermall.co.kr/?utm_source=google_sa&utm_medium=cpc&utm_campaign=brand&utm_content=ALL&utm_term=00_%EB%B8%8C%EB%9E%9C%EB%93%9C_%EC%9D%BC%EC%B9%98_PC-00___%EB%B8%8C%EB%9E%9C%EB%93%9C-%EC%97%90%EC%8A%A4%EB%8D%94%EB%AA%B0&gad_source=1&gad_campaignid=13835841994&gbraid=0AAAAADZNKj9-WGPozuvOO_Gvon2EhNa8Z&gclid=CjwKCAiA86_JBhAIEiwA4i9Juy1O612TNz9NvRPA1YFsraCdS0zH2H3qFo0ENezEw2b9IbTIdYJIshoCnTAQAvD_BwE" target="_blank">Original<br>Website</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- 프로젝트 02 얼터 -->
-        <section id="project_02_alternativestereo" class="project_section">
-            <div class="desc_section">
-                <div class="project_title">
-                    <span class="project_num">02</span>
-                    <span class="project_name">Alternativestereo</span>
-                    <p class="project_page_type">얼터너티브스테레오 | Cosmetic Brand Renewal</p>
-                </div>
-                <div class="project_desc">
-                    <p>제품 탐색을 방해하던 프로모션 화면을 제거하고 <em>제품 중심의 레이아웃</em>으로 재구성했습니다.<br>신생 브랜드 특성상 제품 수가 많지 않은 점을 고려해, <em>탭 기반의 다층 제품 노출 구조</em>로 전환하여 메인 페이지 안에서 대부분의 제품을 확인할 수 있도록 섹션을 대폭 확장했습니다.<br>또, 실제 사이트 운영처럼 project.js 파일을 별도로 구성하여 제품 데이터를 <em>배열 객체로 관리</em>하도록 설정했습니다.<br>이를 통해 유지보수와 확장성이 용이하며, 제품 관리와 UI 렌더링을 효율적으로 결합한 웹 구조를 구현했습니다.
-                    </p>
-                    <a href="https://github.com/Yeaji-J/project_alternativestereo.git" target="_blank" class="git_code">#깃허브 코드보기</a>
-                    <p class="project_hashtag">#탭메뉴활용  #데이터관리   #반응형   #메인페이지</p>
-                    <div class="project_tools">
-                        <p> Tools</p>
-                        <ul class="tool_icon_sets">
-                            <li><img src="./images/photoshop_icon.png" alt="포토샵"></li>
-                            <li><img src="./images/figma_icon.png" alt="피그마"></li>
-                            <li><img src="./images/html_icon.png" alt="html"></li>
-                            <li><img src="./images/css_icon.png" alt="css"></li>
-                            <li><img src="./images/js_icon.png" alt="자바스크립트"></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="mockup_section">
-                <ul class="projects_index">
-                    <li>
-                        <a href="#project_01_esther">
-                            <span class="project_num_index">01</span>
-                            <span class="project_name_index">Esther Formula</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#project_02_alternativestereo">
-                            <span class="project_num_index current">02</span>
-                            <span class="project_name_index current">AlternativeStereo</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#project_03_samick">
-                            <span class="project_num_index">03</span>
-                            <span class="project_name_index">Samick Furniture</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#project_04_marithe">
-                            <span class="project_num_index">04</span>
-                            <span class="project_name_index">MARITHÉ</span>
-                        </a>
-                    </li>
-                </ul>
-                <div class="mockup">
-                </div>
-                <div class="project_button_sets">
-                    <div class="project_btn" id="prototype_btn">
-                        <a href="https://yeaji-j.github.io/project_alternativestereo/" target="_blank">Prototype<br>(github)</a>
-                    </div>
-                    <div class="figma_btn">
-                        <div class="project_btn">
-                            <a href="#">Prototype<br>(Figma)</a>
-                        </div>
-                        <div class="prototype_figma_set">
-                            <div class="small_project_btn" id="planning_btn">
-                                <a href="https://www.figma.com/proto/3FO5n1LCAe8sc1cWagkBcn/Project_alternativestereo?node-id=61-17&p=f&t=ifEbAaI2IVEsjcUf-8&scaling=min-zoom&content-scaling=fixed&page-id=61%3A16&disable-default-keyboard-nav=1&hide-ui=1" target="_blank">데스크톱 ver.</a>
-                            </div>
-                            <div class="small_project_btn" id="planning_btn">
-                                <a href="#" target="_blank">태블릿 ver.</a>
-                            </div>
-                            <div class="small_project_btn" id="planning_btn">
-                                <a href="#" target="_blank">모바일 ver.</a>
-                            </div>
+                        <div class="project_btn" id="original_web_btn">
+                            <a href="https://alternativestereo.com/" target="_blank">Original<br>Website</a>
                         </div>
                     </div>
-                    <div class="project_btn" id="original_web_btn">
-                        <a href="https://alternativestereo.com/" target="_blank">Original<br>Website</a>
+                </div>
+            </section>
+            <!-- 프로젝트 03 삼익 -->
+            <section id="project_03_samick" class="swiper-slide project_section">
+                <div class="desc_section">
+                    <div class="project_title">
+                        <span class="project_num">03</span>
+                        <span class="project_name">Samick Furniture</span>
+                        <p class="project_page_type">삼익 가구 | Furniture E-Commerce Renewal</p>
+                    </div>
+                    <div class="project_desc">
+                        <p>브랜드 규모에 비해 커머스 요소가 과도해 고급스러운 브랜드 이미지가 전달되지 않던 기존 구조를 개선했습니다.<br>커머스 중심에서 벗어나 <em>브랜드 스토리와 무드가 강조</em>되는 방향으로 디자인 톤을 정리했으며, 제품 종류가 많은 특성을 고려해 <em>탭 메뉴로 카테고리를 직관적으로 재구성</em>했습니다.<br>또한 기존 사이트는 하이앤드 제품군을 별도 사이트로 운영해 사용자 인지도가 낮았던 문제를 해결하기 위해,<br>리디자인에서는 전국 매장 안내 섹션을 추가해 고급 제품군을 실제 매장에서 체험하고 구매할 수 있다는 <em>브랜드 메시지를 명확히 전달</em>했습니다.
+                        </p>
+                        <p class="project_hashtag">#메인페이지  #서브페이지 (상품목록, 상세)</p>
+                        <div class="project_tools">
+                            <p> Tools</p>
+                            <ul class="tool_icon_sets">
+                                <li><img src="./images/photoshop_icon.png" alt="포토샵"></li>
+                                <li><img src="./images/figma_icon.png" alt="피그마"></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
-        <!-- 프로젝트 03 삼익 -->
-        <section id="project_03_samick" class="project_section">
-            <div class="desc_section">
-                <div class="project_title">
-                    <span class="project_num">03</span>
-                    <span class="project_name">Samick Furniture</span>
-                    <p class="project_page_type">삼익 가구 | Furniture E-Commerce Renewal</p>
-                </div>
-                <div class="project_desc">
-                    <p>브랜드 규모에 비해 커머스 요소가 과도해 고급스러운 브랜드 이미지가 전달되지 않던 기존 구조를 개선했습니다.<br>커머스 중심에서 벗어나 <em>브랜드 스토리와 무드가 강조</em>되는 방향으로 디자인 톤을 정리했으며, 제품 종류가 많은 특성을 고려해 <em>탭 메뉴로 카테고리를 직관적으로 재구성</em>했습니다.<br>또한 기존 사이트는 하이앤드 제품군을 별도 사이트로 운영해 사용자 인지도가 낮았던 문제를 해결하기 위해,<br>리디자인에서는 전국 매장 안내 섹션을 추가해 고급 제품군을 실제 매장에서 체험하고 구매할 수 있다는 <em>브랜드 메시지를 명확히 전달</em>했습니다.
-                    </p>
-                    <p class="project_hashtag">#메인페이지  #서브페이지 (상품목록, 상세)</p>
-                    <div class="project_tools">
-                        <p> Tools</p>
-                        <ul class="tool_icon_sets">
-                            <li><img src="./images/photoshop_icon.png" alt="포토샵"></li>
-                            <li><img src="./images/figma_icon.png" alt="피그마"></li>
-                        </ul>
+                <div class="mockup_section">
+                    <ul class="projects_index">
+                        <li>
+                            <a href="#project_01_esther">
+                                <span class="project_num_index">01</span>
+                                <span class="project_name_index">Esther Formula</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#project_02_alternativestereo">
+                                <span class="project_num_index">02</span>
+                                <span class="project_name_index">AlternativeStereo</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#project_03_samick">
+                                <span class="project_num_index current">03</span>
+                                <span class="project_name_index current">Samick Furniture</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#project_04_marithe">
+                                <span class="project_num_index">04</span>
+                                <span class="project_name_index">MARITHÉ</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="mockup">
+                    </div>
+                    <div class="project_button_sets">
+                        <div class="project_btn" id="prototype_btn">
+                            <a href="https://www.figma.com/proto/Fostc8PNluXikzDGgWabro/Project_Samick?node-id=122-64&t=wEEmHn0U48hhJsZc-1&scaling=min-zoom&content-scaling=fixed&page-id=1%3A3&starting-point-node-id=122%3A64" target="_blank">Prototype<br>(Figma)</a>
+                        </div>
+                        <div class="project_btn" id="original_web_btn">
+                            <a href="https://www.samickmall.com/?srsltid=AfmBOoo3XJXL5by8mWMbgPpqdQHWZwpkR3b92Nq-58dWk4Vj-hULKrls" target="_blank">Original<br>Website</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="mockup_section">
-                <ul class="projects_index">
-                    <li>
-                        <a href="#project_01_esther">
-                            <span class="project_num_index">01</span>
-                            <span class="project_name_index">Esther Formula</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#project_02_alternativestereo">
-                            <span class="project_num_index">02</span>
-                            <span class="project_name_index">AlternativeStereo</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#project_03_samick">
-                            <span class="project_num_index current">03</span>
-                            <span class="project_name_index current">Samick Furniture</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#project_04_marithe">
-                            <span class="project_num_index">04</span>
-                            <span class="project_name_index">MARITHÉ</span>
-                        </a>
-                    </li>
-                </ul>
-                <div class="mockup">
-                </div>
-                <div class="project_button_sets">
-                    <div class="project_btn" id="prototype_btn">
-                        <a href="https://www.figma.com/proto/Fostc8PNluXikzDGgWabro/Project_Samick?node-id=122-64&t=wEEmHn0U48hhJsZc-1&scaling=min-zoom&content-scaling=fixed&page-id=1%3A3&starting-point-node-id=122%3A64" target="_blank">Prototype<br>(Figma)</a>
+            </section>
+            <!-- 프로젝트 04 마리떼 -->
+            <section id="project_04_marithe" class="swiper-slide project_section">
+                <div class="desc_section">
+                    <div class="project_title">
+                        <span class="project_num">04</span> <!-- position:absol -->
+                        <span class="project_name">MARITHÉ FRANÇOIS GIRBAUD</span>
+                        <p class="project_page_type">마리떼프랑소와저버 | Fashion Brand Renewal</p>
                     </div>
-                    <div class="project_btn" id="original_web_btn">
-                        <a href="https://www.samickmall.com/?srsltid=AfmBOoo3XJXL5by8mWMbgPpqdQHWZwpkR3b92Nq-58dWk4Vj-hULKrls" target="_blank">Original<br>Website</a>
+                    <div class="project_desc">
+                        <p>고윤정·차은우·김나영 등 다양한 셀럽을 모델로 활용하고 있음에도 메인 배너에서만 노출되는 점을 보완하여 <em>셀럽 실착용 컷을 다수 배치한 섹션들을 추가</em> 기획했습니다.<br>이를 통해 사용자는 제품을 더 리얼하게 확인할 수 있으며, 셀럽 기반 구매 동기를 유도하는 <em>브랜딩 + 전환 강화 전략</em>을 반영했습니다.<br>기존 메인페이지는 카테고리만 크게 노출되어 제품 정보를 얻기 위해 반드시 내부 페이지로 들어가야 했지만,<br>리디자인 페이지에서는 베스트·신상품·기획전·컬렉션 섹션을 메인에 직접 배치해 사용자가 메인 페이지에서도<em>다양한 제품군을 능동적으로 탐색</em>할 수 있도록 구성했습니다.
+                        </p>
+                        <p class="project_hashtag">#카페24   #메인페이지</p>
+                        <div class="project_tools">
+                            <p> Tools</p>
+                            <ul class="tool_icon_sets">
+                                <li><img src="./images/photoshop_icon.png" alt="포토샵"></li>
+                                <li><img src="./images/figma_icon.png" alt="피그마"></li>
+                                <li><img src="./images/19201.png" alt="카페24"></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
-        <!-- 프로젝트 04 마리떼 -->
-        <section id="project_04_marithe" class="project_section">
-            <div class="desc_section">
-                <div class="project_title">
-                    <span class="project_num">04</span> <!-- position:absol -->
-                    <span class="project_name">MARITHÉ FRANÇOIS GIRBAUD</span>
-                    <p class="project_page_type">마리떼프랑소와저버 | Fashion Brand Renewal</p>
-                </div>
-                <div class="project_desc">
-                    <p>고윤정·차은우·김나영 등 다양한 셀럽을 모델로 활용하고 있음에도 메인 배너에서만 노출되는 점을 보완하여 <em>셀럽 실착용 컷을 다수 배치한 섹션들을 추가</em> 기획했습니다.<br>이를 통해 사용자는 제품을 더 리얼하게 확인할 수 있으며, 셀럽 기반 구매 동기를 유도하는 <em>브랜딩 + 전환 강화 전략</em>을 반영했습니다.<br>기존 메인페이지는 카테고리만 크게 노출되어 제품 정보를 얻기 위해 반드시 내부 페이지로 들어가야 했지만,<br>리디자인 페이지에서는 베스트·신상품·기획전·컬렉션 섹션을 메인에 직접 배치해 사용자가 메인 페이지에서도<em>다양한 제품군을 능동적으로 탐색</em>할 수 있도록 구성했습니다.
-                    </p>
-                    <p class="project_hashtag">#카페24   #메인페이지</p>
-                    <div class="project_tools">
-                        <p> Tools</p>
-                        <ul class="tool_icon_sets">
-                            <li><img src="./images/photoshop_icon.png" alt="포토샵"></li>
-                            <li><img src="./images/figma_icon.png" alt="피그마"></li>
-                            <li><img src="./images/19201.png" alt="카페24"></li>
-                        </ul>
+                <div class="mockup_section">
+                    <ul class="projects_index">
+                        <li>
+                            <a href="#project_01_esther">
+                                <span class="project_num_index">01</span>
+                                <span class="project_name_index">Esther Formula</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#project_02_alternativestereo">
+                                <span class="project_num_index">02</span>
+                                <span class="project_name_index">AlternativeStereo</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#project_03_samick">
+                                <span class="project_num_index">03</span>
+                                <span class="project_name_index">Samick Furniture</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#project_04_marithe">
+                                <span class="project_num_index current">04</span>
+                                <span class="project_name_index current">MARITHÉ</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="mockup">
+                    </div>
+                    <div class="project_button_sets">
+                        <div class="project_btn" id="prototype_btn">
+                            <a href="https://yeaji007.cafe24.com/" target="_blank">cafe24</a>
+                        </div>
+                        <div class="project_btn" id="planning_btn">
+                            <a href="https://www.figma.com/proto/BJtM6YdV0n4xR9c1Y8mNgV/Project_marithe?node-id=57-5&starting-point-node-id=57%3A5&t=icFHaTbcL3S49H7D-1" target="_blank">Prototype<br>(Figma)</a>
+                        </div>
+                        <div class="project_btn" id="original_web_btn">
+                            <a href="https://marithe-official.com/?srsltid=AfmBOoqgF4nSTy01RrwQnlSVO-3nC7zR_LqBezRzpNhTuQ-ZaloVpMGL" target="_blank">Original<br>Website</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="mockup_section">
-                <ul class="projects_index">
-                    <li>
-                        <a href="#project_01_esther">
-                            <span class="project_num_index">01</span>
-                            <span class="project_name_index">Esther Formula</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#project_02_alternativestereo">
-                            <span class="project_num_index">02</span>
-                            <span class="project_name_index">AlternativeStereo</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#project_03_samick">
-                            <span class="project_num_index">03</span>
-                            <span class="project_name_index">Samick Furniture</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#project_04_marithe">
-                            <span class="project_num_index current">04</span>
-                            <span class="project_name_index current">MARITHÉ</span>
-                        </a>
-                    </li>
-                </ul>
-                <div class="mockup">
-                </div>
-                <div class="project_button_sets">
-                    <div class="project_btn" id="prototype_btn">
-                        <a href="https://yeaji007.cafe24.com/" target="_blank">cafe24</a>
-                    </div>
-                    <div class="project_btn" id="planning_btn">
-                        <a href="https://www.figma.com/proto/BJtM6YdV0n4xR9c1Y8mNgV/Project_marithe?node-id=57-5&starting-point-node-id=57%3A5&t=icFHaTbcL3S49H7D-1" target="_blank">Prototype<br>(Figma)</a>
-                    </div>
-                    <div class="project_btn" id="original_web_btn">
-                        <a href="https://marithe-official.com/?srsltid=AfmBOoqgF4nSTy01RrwQnlSVO-3nC7zR_LqBezRzpNhTuQ-ZaloVpMGL" target="_blank">Original<br>Website</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section id="graphics">
-            <h2>Graphic Design</h2>
-            <div class="swiper" id="design_swiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <a href="#" class="poster_design"><img src="./images/poster_001.png" alt="디자인"></a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="#" class="poster_design"><img src="./images/poster_002.png" alt="디자인"></a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="#" class="poster_design"><img src="./images/poster_003.png" alt="디자인"></a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="#" class="poster_design"><img src="./images/poster_004.png" alt="디자인"></a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="#" class="poster_design"><img src="./images/poster_005.jpg" alt="디자인"></a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="#" class="poster_design"><img src="./images/poster_006.jpg" alt="디자인"></a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="#" class="poster_design"><img src="./images/poster_001.png" alt="디자인"></a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="#" class="poster_design"><img src="./images/poster_002.png" alt="디자인"></a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="#" class="poster_design"><img src="./images/poster_003.png" alt="디자인"></a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="#" class="poster_design"><img src="./images/poster_004.png" alt="디자인"></a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="#" class="poster_design"><img src="./images/poster_005.jpg" alt="디자인"></a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="#" class="poster_design"><img src="./images/poster_006.jpg" alt="디자인"></a>
+            </section>
+            <section id="graphics" class="swiper-slide">
+                <h2>Graphic Design</h2>
+                <div class="swiper" id="design_swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="#" class="poster_design"><img src="./images/poster_001.png" alt="디자인"></a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#" class="poster_design"><img src="./images/poster_002.png" alt="디자인"></a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#" class="poster_design"><img src="./images/poster_003.png" alt="디자인"></a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#" class="poster_design"><img src="./images/poster_004.png" alt="디자인"></a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#" class="poster_design"><img src="./images/poster_005.jpg" alt="디자인"></a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#" class="poster_design"><img src="./images/poster_006.jpg" alt="디자인"></a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#" class="poster_design"><img src="./images/poster_001.png" alt="디자인"></a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#" class="poster_design"><img src="./images/poster_002.png" alt="디자인"></a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#" class="poster_design"><img src="./images/poster_003.png" alt="디자인"></a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#" class="poster_design"><img src="./images/poster_004.png" alt="디자인"></a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#" class="poster_design"><img src="./images/poster_005.jpg" alt="디자인"></a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#" class="poster_design"><img src="./images/poster_006.jpg" alt="디자인"></a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="gray_bg">
-                <div class="modal_content">
+                <div class="gray_bg">
+                    <div class="modal_content">
+                    </div>
                 </div>
-            </div>
-        </section>
-        <section id="contact">
-            <h3>Let's Work Together !</h3>
-            <address><a href="mailto:jjuglish@gmail.com">jjuglish@gmail.com</a></address>
-            <img src="./images/kakao_qr.jpg" alt="카카오톡 QR 코드">
-            <p>제 포트폴리오와 프로젝트를 봐주셔서 감사합니다!</p>
-            <div class="buttons">
-                <a href="https://github.com/Yeaji-J" id="github_id" target="_blank">GitHub @yeaji-J</a>
-            </div>
-        </section>
+            </section>
+            <section id="contact" class="swiper-slide">
+                <h3>Let's Work Together !</h3>
+                <address><a href="mailto:jjuglish@gmail.com">jjuglish@gmail.com</a></address>
+                <img src="./images/kakao_qr.jpg" alt="카카오톡 QR 코드">
+                <p>제 포트폴리오와 프로젝트를 봐주셔서 감사합니다!</p>
+                <div class="buttons">
+                    <a href="https://github.com/Yeaji-J" id="github_id" target="_blank">GitHub @yeaji-J</a>
+                </div>
+            </section>
+        </div>
     </main>
     <script>
         const mediaSwiper = new Swiper ('#media_swiper',{
@@ -744,6 +749,16 @@
                 disableOnInteraction: false,
             },
             loop:true,
+        })
+        const totalWrapSwiper = new Swiper('main',{
+            direction: 'vertical',
+            slidesPerView: 1,
+            mousewheel: true,
+            speed: 800,
+            keyboard: {
+                enabled: true,
+                onlyInViewport: false,
+            },
         })
     </script>
 </body>
