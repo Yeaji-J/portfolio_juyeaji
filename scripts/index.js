@@ -29,22 +29,6 @@ exploreBtn.addEventListener('click', (e)=>{
 })
 
 
-// #cover 넘어가면서 header 배경 생기기
-const header = document.querySelector('#header')
-const headerBgChangePoint = aboutMePage.offsetTop;
-console.log(header, aboutMePage, headerBgChangePoint)
-
-function handleScroll(){
-    const currentScrollY = main.scrollTop;
-
-    if(currentScrollY >= headerBgChangePoint) {
-        header.style.backgroundColor = "rgba(255,255,255,0.4)"
-    }else {header.style.backgroundColor = 'transparent'};
-    
-}
-main.addEventListener('scroll', handleScroll);
-handleScroll(); 
-
 //graphics 클릭 시 크게 보이게
 
 const thumbnailA = document.querySelectorAll('#graphics .poster_design') //작은 포스터 썸네일 - a 태그
