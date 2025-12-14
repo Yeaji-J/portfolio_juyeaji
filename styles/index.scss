@@ -18,11 +18,14 @@ body {
         border-bottom:$border;
         a {font-size:$font-size-p-16; font-weight:$font-weight-med; @include basic_txt;}
         nav {
-            @include flex-row; gap:40px; align-items:center;
+            @include flex-row; gap:40px; align-items:center; z-index:999;
             a {font-weight:400;}
         }
     }
-    main {
+    /* header.scrolled {
+        background-color:rgba(255,255,255,0.4);
+    } */
+    main {z-index:90;
         overflow-y:scroll; height:100%;
         padding-top:60px;
         /* section 공통 */
@@ -311,7 +314,10 @@ body {
                     .swiper-pagination-total {font-size:$font-size-h3-32;}
                     .swiper-pagination-current {color:$color-black;}
                 }
-                .swiper-button-next {
+                .media-btn-prev {
+                    width:32px; height:32px;
+                }
+                .media-btn-next {
                     width:32px; height:32px;
                     color:$color-black;
                 }
