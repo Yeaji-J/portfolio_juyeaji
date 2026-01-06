@@ -1,0 +1,373 @@
+@use "./common.scss" as*;
+
+body {
+    min-width:320px;
+}
+@media screen and (max-width:1840px) {
+    body {
+        /* 공통 */
+        h2 { font-size:$font-size-h-80;
+        }
+        /* 개별 */
+        main {
+            section#cover {
+                #ellipse_container {
+                    /* width:1200px; height:750px; */
+                        .ellipse_wrap {
+                            .ellipse_outline { /* background:yellow;
+                                width:800px; height:400px; */
+                            }
+                            .dot {}
+                        }
+                }
+                .main_contents {
+                    #sns {
+                    }
+                    .main_txt {
+                        h1 {font-size:$font-size-h-150;}
+                    }
+                }
+            }
+            section#about_me {
+                .contents {
+                    .desc_section {
+                        .personal_info {
+                            padding:30px 60px; gap:40px;
+                            .about_me_area {
+                                gap:12px;
+                                .about_me_desc {
+                                    font-size:$font-size-p-14;
+                                }
+                            }
+                        }
+                        .skills {
+                            .skills_wrap {
+                                padding:40px 20px;
+                                .skill_set {
+                                    padding:0 20px;
+                                    .each_skill {
+                                        .desc {
+                                            li {
+                                                font-size:$font-size-p-12;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            section#media {
+                #media_swiper {
+                .swiper-wrapper {
+                    .swiper-slide {
+                        .txt_section {
+                            .sns_profile {
+                                .channel_info {
+                                    a > img {width:60px; height:60px;}
+                                }
+                            }
+                            .channel_desc {padding:50px;
+                                ul {
+                                    li {font-size:$font-size-p-16;}
+                                }
+                                p {font-size:$font-size-p-16;}
+                            }
+                            .accomplishment_tools {
+                                .accomplishment {
+                                    
+                                    li {font-size:$font-size-p-16;}
+                                    li.accom_title {
+                                        font-size:$font-size-p-18; font-weight:$font-weight-med; @include basic_txt; margin-bottom:16px;
+                                    }
+                                }
+                                .tools {
+                                    li {font-size:$font-size-p-16; @include basic_wide_txt;}
+                                    li.tools_title {
+                                        font-size:$font-size-p-18; font-weight:$font-weight-med; @include basic_txt;  margin-bottom:16px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                }
+                .swiper-controls-group {
+                    bottom:5%;
+                }
+            }
+            section#projects {
+                .project_card {
+                    .project_card_wrapper {
+                        .hashtag_more {
+                            .hashtag_section {
+                                .hashtag {font-size:$font-size-p-20;}
+                            }
+                        }
+                    }
+                }
+            }
+            section.project_section {
+                .desc_section {
+                    .project_desc {
+                        p {font-size:$font-size-p-16;}
+                    }
+                }
+                .mockup_section {
+                    .projects_index {
+                        li {
+                            a {
+                                .project_num_index {
+                                    font-size:$font-size-p-30;
+                                }
+                                .project_name_index {
+                                    font-size:$font-size-h2-28;
+                                }
+                            }
+                        }
+                    }
+                    .project_button_sets {
+                        right:8%; top:60%; transform:translate(8%, -60%);
+                    }
+                }
+            }
+            section#graphics {
+                h2 {font-size:$font-size-h1-64;}
+                p {font-size:$font-size-p-16;}
+            }
+        }
+    }
+}
+@media screen and (max-width:1500px) {
+body {
+    main {
+        section#media {
+                #media_swiper {
+                .swiper-wrapper {
+                    .swiper-slide {
+                        .txt_section {
+                            .channel_desc {
+                                ul {gap:12px; padding:0 8px;
+                                }
+                                p {font-size:$font-size-p-14;}
+                            }
+                            .accomplishment_tools {
+                                .accomplishment {
+                                    li {font-size:$font-size-p-14;}
+                                    li.accom_title {
+                                        font-size:$font-size-p-16;
+                                    }
+                                }
+                                .tools {
+                                    li {font-size:$font-size-p-14;}
+                                    li.tools_title {
+                                        font-size:$font-size-p-16;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        section#projects {
+            .project_card {
+                .project_card_wrapper {
+                    .project_num {}
+                    .project_name {font-size:$font-size-p-40;}
+                    .hashtag_more {
+                            .hashtag_section {
+                                .hashtag {font-size:$font-size-p-18;}
+                            }
+                        }
+                }
+            }
+        }
+        section.project_section {
+            .desc_section {
+                width:35%;
+                .project_desc {
+                    .project_hashtag {font-size:$font-size-p-16;}
+                }
+            }
+            .mockup_section {
+                .projects_index {
+                    padding:80px 0 60px; gap:40px;
+                }
+            }
+        }
+        #project_01_esther, #project_02_alternativestereo, #project_03_samick, #project_04_marithe {
+            .mockup_section {
+                .mockup {background-position:-250px;}
+            }
+        }
+    }
+}
+}
+@media screen and (max-width:1250px) {
+    body {
+        width:100%; height:auto; overflow-y:visible;
+        h2 {font-size:$font-size-h1-64;}
+        /* 개별 */
+        header {
+            background:rgba(255,255,255,0.5); height:52px;
+            a {font-size:$font-size-p-14;}
+        }
+        main {
+            overflow:visible; height:auto;
+            padding-top:0;
+            section {
+                display:block; width:100%; height:auto !important;}
+            section#cover {
+                height:100vh;
+                .main_contents {
+                    #sns {
+                        li {
+                            a {
+                                font-size:$font-size-p-14;
+                            }
+                        }
+                    }
+                    .main_txt { padding:120px 100px 80px;
+                        h1 {font-size:$font-size-h-128;}
+                        .desc1 {
+                            .desc {font-size:$font-size-p-20;}
+                        }
+                        .desc2 {
+                            .job_desc {
+                                font-size:$font-size-h3-32;
+                            }
+                            .scroll_btn {gap:8px;
+                                span {font-size:$font-size-p-20;}
+                                a {img {width:70px; height:70px;}}
+                            }
+                        }
+                    }
+                }
+                .shape_effect {
+                    width:180px; height:80px;
+                }
+            }
+            section#about_me {
+                h2 {padding:40px; margin-top:0; border-bottom:0;}
+                .contents {
+                    @include flex-col;
+                    .photo_section {
+                        width:100%; border-right:0; border-bottom:$border;
+                        padding-bottom:40px; @include flex-row; gap:40px; justify-content:center;
+                        .shape_effect {
+                            top:0; left:18%;
+                            width:50px; height:70px;
+                        }
+                        .shape_effect_copy {
+                            top:20%; right:18%;
+                            width:70px; height:100px;
+                        }
+                        img {width:150px;}
+                    }
+                    .desc_section {
+                        width:100%; gap:40px;
+                        .personal_info {
+                            padding:30px 60px; justify-content:space-between;
+                            .about_me_area {
+                                gap:20px;
+                            }
+                        }
+                        .skills {
+                            h3 {border-bottom:0; padding:0;}
+                            .skills_wrap {
+                                .skill_set {
+                                    padding:0 10px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            section#media {
+                #media_swiper {height:auto; overflow:visible;
+                    .swiper-wrapper {
+                        .swiper-slide {
+                            @include flex-col;
+                            .txt_section {width:100%; border-bottom:$border;
+                                h2 {padding-bottom:20px;}
+                                .sns_profile {height:auto; padding:40px 0 20px; border-bottom:0;}
+                                .channel_desc {
+                                    padding:40px; gap:24px;
+                                    ul { 
+                                        li {font-size:$font-size-p-16;}
+                                    }
+                                    p {display:none;}
+                                }
+                                .accomplishment_tools {
+                                    flex-grow:1;
+                                    .accomplishment, .tools {align-items:center;}
+                                }
+                            }
+                            .mockup_section {
+                                padding-top:0;
+                                width:100%; height:auto; align-items:center;
+                                margin:0 auto;
+                                .video_container {width:100%;
+                                    iframe {
+                                        width:800px; height:450px;
+                                    }
+                                }
+                                .more_info {height:auto;}
+                            }
+                        }
+                    }
+                }
+            }
+            section#projects {
+                .project_card {
+                    .project_card_wrapper {
+                        .hashtag_more {
+                            .hashtag_section {
+                                gap:8px;
+                                .hashtag {font-size:$font-size-p-16;}
+                            }
+                            .move_to_projects_btn {
+                                width:40px; height:auto;
+                            }
+                        }
+                    }
+                }
+            }
+            section.project_section {
+                @include flex-col; height:auto;
+                .desc_section {
+                    width:100%; @include flex-row; padding:0; gap:0;
+                    border-bottom:$border;
+                    .project_title {
+                        border-right:$border; padding:140px 40px 100px;
+                        .project_page_type {@include basic_wide_txt;}
+                    }
+                    .project_desc {
+                        border-top:0; padding:52px 40px;
+                        gap:20px;
+                        p {font-size:$font-size-p-16;}
+                    }
+                }
+                .mockup_section {
+                    width:100%; height:auto;
+                    .projects_index {padding:40px;}
+                    .mockup {}
+                }
+            }
+            #project_01_esther, #project_02_alternativestereo, #project_03_samick, #project_04_marithe {
+            .mockup_section {
+                width:100%; height:auto;
+                .mockup {background-position:center;}
+            }
+        }
+        }
+    }
+    
+}
+@media screen and (max-width:850px) {
+    body {
+        background:yellow;
+    }
+}
