@@ -316,10 +316,14 @@ body {
                 }
                 .media-btn-prev {
                     width:32px; height:32px;
+                    position:absolute; left:20%; top:38%; transform:translate(-20%, -38%);
+                    transform:rotate(-90deg);
                 }
                 .media-btn-next {
                     width:32px; height:32px;
                     color:$color-black;
+                    position:absolute; left:90%; top:35%; transform:translate(-90%, -35%);
+                    transform:rotate(-90deg);
                 }
             }
         }

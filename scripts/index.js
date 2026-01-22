@@ -2,20 +2,40 @@
 const dot = document.querySelector('#ellipse_container .dot')
 const container = document.querySelector('#ellipse_container .ellipse_wrap')
 console.log(dot, container);
-
-const cx = container.clientWidth / 2;
-const cy = container.clientHeight / 2;
-const a = 500; // 타원 가로 반지름
-const b = 250; // 타원 세로 반지름
 let theta = 0;
+
 function animate() {
-theta += 0.008; //속도
-const x = cx + a * Math.cos(theta) - dot.clientWidth / 2;
-const y = cy + b * Math.sin(theta) - dot.clientHeight / 2;
-dot.style.left = x + "px";
-dot.style.top = y + "px";
-requestAnimationFrame(animate);
+    theta += 0.008;
+    const cx = container.clientWidth / 2;
+    const cy = container.clientHeight / 2;
+    let a, b; // 타원 가로, 세로 반지름
+
+    const winWidth = window.innerWidth;
+    if (winWidth > 1250) {
+        // PC
+        a = 500; // 1000px의 절반
+        b = 250; // 500px의 절반
+    } else if (winWidth > 950) {
+        // 태블릿
+        a = 400;
+        b = 200;
+    } else if (winWidth > 840) {
+        // 작은 태블릿
+        a = 350;
+        b = 160;
+    } else {
+        // 모바일
+        a = 250;
+        b = 125;
+    }
+    const x = cx + a * Math.cos(theta) - dot.clientWidth / 2;
+    const y = cy + b * Math.sin(theta) - dot.clientHeight / 2;
+    dot.style.left = x + "px";
+    dot.style.top = y + "px";
+
+    requestAnimationFrame(animate);
 }
+
 animate();
 
 // #cover explore 버튼 클릭 시 페이지 이동, 부드럽게
