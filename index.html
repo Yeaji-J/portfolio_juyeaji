@@ -94,7 +94,7 @@
                                 <h3>Education / Experience</h3>
                                 <p class="about_me_desc">2018.03 - 2022.08 인하대학교 영어교육과</p>
                                 <p class="about_me_desc">2023.04 - 2025.03 인하대학교 프런티어학부대학 행정사무</p>
-                                <p class="about_me_desc">2025.07 - 2025.12 UI/UX 프론트엔드 반응형 웹디자인&웹퍼블리셔 (웹,앱,피그마) 개발 양성과정 C</p>
+                                <p class="about_me_desc academy">2025.07 - 2025.12 UI/UX 프론트엔드 반응형 웹디자인&웹퍼블리셔 (웹,앱,피그마) 개발 양성과정 C</p>
                             </div>
                             <div class="about_me_area">
                                 <h3>Certificate</h3>
@@ -281,8 +281,8 @@
                                 </div>
                                 <div class="channel_desc">
                                     <ul class="channel_intro_hashtag">
-                                        <li># 공스타그램(필기 노트·공부 기록)</li>
-                                        <li># 집 인테리어 & 데일리 홈 스타일링</li>
+                                        <li># 공스타그램</li>
+                                        <li># 집 인테리어</li>
                                         <li># 문구류 협찬</li>
                                         <li># 자기계발 콘텐츠</li>
                                     </ul>
@@ -760,6 +760,18 @@
             loop:true,
             breakpoints:{
                 0:{
+                    slidesPerView:2,
+                    spaceBetween:20,
+                },
+                501: {
+                    slidesPerView:2,
+                    spaceBetween:24,
+                },
+                621: {
+                    slidesPerView:2,
+                    spaceBetween:32,
+                },
+                951: {
                     slidesPerView:4,
                     spaceBetween:32,
                 },
@@ -789,12 +801,16 @@
             breakpoints: {
                 0 : {
                     enabled:false,
+                    allowTouchMove: true,
+                    slidesPerView: 'auto',
                 },
                 1251: {
                     enabled:true,
                     direction:'vertical',
                 }
-            }
+            },
+            observer: true,
+            observeParents: true,
         })
     </script>
 </body>

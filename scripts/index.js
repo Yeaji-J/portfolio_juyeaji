@@ -19,14 +19,22 @@ function animate() {
         // 태블릿
         a = 400;
         b = 200;
-    } else if (winWidth > 840) {
+    } else if (winWidth > 800) {
         // 작은 태블릿
         a = 350;
         b = 160;
+    } else if (winWidth > 700) {
+        // 큰 모바일
+        a = 300;
+        b = 140;
+    } else if (winWidth > 500) {
+        // 작은 모바일
+        a = 220;
+        b = 110;
     } else {
         // 모바일
-        a = 250;
-        b = 125;
+        a = 180;
+        b = 90;
     }
     const x = cx + a * Math.cos(theta) - dot.clientWidth / 2;
     const y = cy + b * Math.sin(theta) - dot.clientHeight / 2;

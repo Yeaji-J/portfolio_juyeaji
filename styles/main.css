@@ -1336,6 +1336,10 @@ body main section#contact .buttons #github_id {
   border-radius: 10px;
   font-size: 1rem;
 }
+body main section#contact .buttons #github_id:hover {
+  background-color: #000;
+  color: #fff;
+}
 
 body {
   min-width: 320px;
@@ -1495,7 +1499,7 @@ body {
     height: 52px;
   }
   body header a {
-    font-size: 0.875rem;
+    font-size: 1rem;
   }
   body main {
     overflow: visible;
@@ -1762,22 +1766,23 @@ body {
   }
   body main section#projects {
     height: auto;
+    padding: 0;
     display: flex;
     flex-flow: column nowrap;
     align-items: stretch;
     border-right: 0;
     border-bottom: 1px solid #222;
-    justify-content: center;
-    background: url(../images/portfolio_bg8.png) center/cover no-repeat;
+    justify-content: flex-start;
   }
   body main section#projects h2 {
     color: #000;
     font-size: 3.125rem;
   }
   body main section#projects .project_card {
-    height: 200px;
+    height: 180px;
     width: 100%;
     border-bottom: 1px solid #222;
+    flex: 1;
   }
   body main section#projects .project_card .project_card_wrapper {
     top: 0;
@@ -1819,8 +1824,54 @@ body {
   body main section#projects .project_card .project_card_wrapper .hashtag_more .move_to_projects_btn {
     display: none;
   }
-  body main section#projects .card1 {
-    border-top: 1px solid #222;
+  body main section#projects .card1::before, body main section#projects .card2::before, body main section#projects .card3::before, body main section#projects .card4::before {
+    background-size: 40%;
+    background-position: right;
+    bottom: 0;
+    display: inline-block;
+    opacity: 1;
+  }
+  body main section.project_section .desc_section .project_title {
+    padding: 120px 32px 80px;
+  }
+  body main section.project_section .desc_section .project_title .project_num {
+    font-size: 9.375rem;
+  }
+  body main section.project_section .desc_section .project_title .project_name {
+    font-size: 3.125rem;
+  }
+  body main section.project_section .desc_section .project_title .project_page_type {
+    line-height: 160%;
+    letter-spacing: -2%;
+  }
+  body main section.project_section .desc_section .project_desc {
+    border-top: 0;
+    padding: 60px;
+    gap: 20px;
+  }
+  body main section.project_section .desc_section .project_desc p {
+    font-size: 0.875rem;
+  }
+  body main section.project_section .mockup_section .projects_index li a .project_num_index {
+    font-size: 1.875rem;
+  }
+  body main section.project_section .mockup_section .projects_index li a .project_name_index {
+    font-size: 1.5rem;
+  }
+  body main section.project_section .mockup_section .project_button_sets .project_btn {
+    width: 100px;
+    height: 100px;
+  }
+  body main section.project_section .mockup_section .project_button_sets .project_btn a {
+    font-size: 0.875rem;
+  }
+  body main #project_01_esther .mockup_section, body main #project_02_alternativestereo .mockup_section, body main #project_03_samick .mockup_section, body main #project_04_marithe .mockup_section {
+    width: 100%;
+    height: 700px;
+  }
+  body main #project_01_esther .mockup_section .mockup, body main #project_02_alternativestereo .mockup_section .mockup, body main #project_03_samick .mockup_section .mockup, body main #project_04_marithe .mockup_section .mockup {
+    background-position: bottom;
+    background-size: 120%;
   }
 }
 @media screen and (max-width: 850px) {
@@ -1852,15 +1903,54 @@ body {
   body main section#media #media_swiper .swiper-wrapper .swiper-slide .mockup_section .more_info p {
     font-size: 2.5rem;
   }
+  body main section.project_section .desc_section .project_title {
+    padding: 120px 32px 80px;
+  }
+  body main section.project_section .desc_section .project_title .project_num {
+    font-size: 9.375rem;
+  }
+  body main section.project_section .desc_section .project_title .project_name {
+    font-size: 3.125rem;
+  }
+  body main section.project_section .desc_section .project_title .project_page_type {
+    line-height: 160%;
+    letter-spacing: -2%;
+  }
+  body main section.project_section .desc_section .project_desc {
+    border-top: 0;
+    padding: 60px;
+    gap: 20px;
+  }
+  body main section.project_section .desc_section .project_desc p {
+    font-size: 0.875rem;
+  }
+  body main section.project_section .mockup_section .projects_index li a .project_num_index {
+    font-size: 1.75rem;
+  }
+  body main section.project_section .mockup_section .projects_index li a .project_name_index {
+    font-size: 1.25rem;
+  }
+  body main #project_01_esther .mockup_section, body main #project_02_alternativestereo .mockup_section, body main #project_03_samick .mockup_section, body main #project_04_marithe .mockup_section {
+    width: 100%;
+    height: 600px;
+  }
+  body main #project_01_esther .mockup_section .mockup, body main #project_02_alternativestereo .mockup_section .mockup, body main #project_03_samick .mockup_section .mockup, body main #project_04_marithe .mockup_section .mockup {
+    background-position: bottom;
+    background-size: 110%;
+  }
 }
 @media screen and (max-width: 800px) {
+  body header a {
+    font-size: 0.875rem;
+  }
   body main section#cover #ellipse_container {
     width: 1200px;
-    height: 750px;
+    height: 360px;
+    overflow: hidden;
   }
   body main section#cover #ellipse_container .ellipse_wrap .ellipse_outline {
-    width: 500px;
-    height: 250px;
+    width: 600px;
+    height: 280px;
   }
   body main section#cover #ellipse_container .ellipse_wrap .dot {
     width: 12px;
@@ -1872,21 +1962,511 @@ body {
   body main section#cover .shape_effect {
     width: 160px;
     height: 70px;
+    top: 30%;
+  }
+  body main section#about_me .contents .photo_section .profile .about_me_desc {
+    line-height: 200%;
+    letter-spacing: -2%;
   }
   body main section#about_me .contents .desc_section .personal_info {
-    padding: 40px;
-    display: flex;
-    flex-flow: column nowrap;
+    padding: 60px 44px;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
   }
   body main section#about_me .contents .desc_section .personal_info .about_me_area {
-    gap: 12px;
-    align-items: center;
+    width: auto;
+  }
+  body main section#about_me .contents .desc_section .personal_info .about_me_area .academy {
+    width: 90%;
+  }
+  body main section#about_me .contents .desc_section .skills .skills_wrap .skills_wrap {
+    padding: 16px 0;
+  }
+  body main section#about_me .contents .desc_section .skills .skills_wrap .skills_wrap .skill_set {
+    gap: 16px;
+  }
+  body main section.project_section .desc_section .project_title .project_num {
+    font-size: 8rem;
+    top: 0;
+  }
+  body main section.project_section .desc_section .project_title .project_name {
+    font-size: 2.5rem;
+  }
+  body main section.project_section .mockup_section .projects_index li a .project_num_index {
+    font-size: 1.75rem;
+  }
+  body main section.project_section .mockup_section .projects_index li a .project_name_index {
+    font-size: 1.25rem;
+  }
+  body main section.project_section .mockup_section .project_button_sets .project_btn {
+    width: 80px;
+    height: 80px;
+  }
+  body main section.project_section .mockup_section .project_button_sets .project_btn a {
+    font-size: 0.75rem;
+  }
+  body main #project_01_esther .mockup_section, body main #project_02_alternativestereo .mockup_section, body main #project_03_samick .mockup_section, body main #project_04_marithe .mockup_section {
+    width: 100%;
+    height: 540px;
+  }
+  body main #project_04_marithe .desc_section .project_title .project_name {
+    font-size: 1.875rem;
+  }
+}
+@media screen and (max-width: 700px) {
+  body header {
+    padding: 0 40px 0 80px;
+  }
+  body main h2 {
+    font-size: 3.125rem;
+  }
+  body main section#cover #ellipse_container {
+    width: 1000px;
+    height: 500px;
+    top: 45%;
+  }
+  body main section#cover #ellipse_container .ellipse_wrap .ellipse_outline {
+    width: 440px;
+    height: 220px;
+  }
+  body main section#cover .main_contents .main_txt h1 {
+    font-size: 5rem;
+  }
+  body main section#cover .main_contents .main_txt .desc1 {
+    gap: 80px;
+  }
+  body main section#cover .main_contents .main_txt .desc1 .desc {
+    font-size: 1.125rem;
+  }
+  body main section#cover .main_contents .main_txt .desc2 .job_desc {
+    font-size: 1.75rem;
+    line-height: 140%;
+  }
+  body main section#cover .shape_effect {
+    width: 140px;
+    height: 60px;
+  }
+  body main section#about_me .contents .photo_section .shape_effect {
+    top: 0;
+    left: 12%;
+    width: 30px;
+    height: 50px;
+  }
+  body main section#about_me .contents .photo_section .shape_effect_copy {
+    top: 10%;
+    right: 12%;
+    width: 50px;
+    height: 80px;
+  }
+  body main section#about_me .contents .photo_section img {
+    width: 140px;
+  }
+  body main section#about_me .contents .desc_section .personal_info {
+    gap: 20px;
+  }
+  body main section#about_me .contents .desc_section .personal_info .about_me_area .academy {
+    width: 82%;
+    display: flex;
+    flex-flow: row wrap;
   }
   body main section#about_me .contents .desc_section .skills .skills_wrap {
+    padding: 16px 0 24px;
+  }
+  body main section#about_me .contents .desc_section .skills .skills_wrap .skill_set {
+    gap: 16px;
+  }
+}
+@media screen and (max-width: 670px) {
+  body {
+    overflow-x: hidden;
+    width: 100%;
+  }
+  body header {
+    padding: 0 40px 0 80px;
+  }
+  body main section#about_me .contents .photo_section .shape_effect {
+    top: 0;
+    left: 12%;
+    width: 30px;
+    height: 50px;
+  }
+  body main section#about_me .contents .photo_section .shape_effect_copy {
+    top: 10%;
+    right: 10%;
+    width: 40px;
+    height: 70px;
+  }
+  body main section#about_me .contents .photo_section img {
+    width: 140px;
+  }
+  body main section#about_me .contents .desc_section .personal_info {
     display: flex;
     flex-flow: column nowrap;
+    padding: 40px 60px;
+  }
+  body main section#about_me .contents .desc_section .personal_info .about_me_area {
+    gap: 6px;
+    align-items: flex-start;
+    width: 100%;
+  }
+  body main section#about_me .contents .desc_section .personal_info .about_me_area .academy {
+    width: 100%;
+  }
+  body main section#about_me .contents .desc_section .skills .skills_wrap {
+    padding: 16px 0 32px;
+    gap: 0;
+  }
+  body main section#about_me .contents .desc_section .skills .skills_wrap .skill_set {
+    gap: 4px;
+    padding: 0 8px;
+  }
+  body main section#about_me .contents .desc_section .skills .skills_wrap .skill_set .each_skill .icon img {
+    width: 36px;
+    height: 36px;
+  }
+  body main section#media #media_swiper {
+    min-width: 0;
+  }
+  body main section#media #media_swiper .swiper-wrapper .swiper-slide .txt_section .channel_desc {
+    padding: 0 0 20px;
+    gap: 16px;
+  }
+  body main section#media #media_swiper .swiper-wrapper .swiper-slide .txt_section .channel_desc ul li {
+    font-size: 0.875rem;
+  }
+  body main section#media #media_swiper .swiper-wrapper .swiper-slide .txt_section .channel_desc p {
+    font-size: 0.875rem;
+  }
+  body main section#media #media_swiper .swiper-wrapper .swiper-slide .txt_section .accomplishment_tools .accomplishment {
+    padding: 20px;
+  }
+  body main section#media #media_swiper .swiper-wrapper .swiper-slide .txt_section .accomplishment_tools .accomplishment li {
+    font-size: 0.75rem;
+  }
+  body main section#media #media_swiper .swiper-wrapper .swiper-slide .txt_section .accomplishment_tools .accomplishment li.accom_title {
+    font-size: 0.875rem;
+  }
+  body main section#media #media_swiper .swiper-wrapper .swiper-slide .txt_section .accomplishment_tools .tools {
+    padding: 20px;
+  }
+  body main section#media #media_swiper .swiper-wrapper .swiper-slide .txt_section .accomplishment_tools .tools li {
+    font-size: 0.75rem;
+  }
+  body main section#media #media_swiper .swiper-wrapper .swiper-slide .txt_section .accomplishment_tools .tools li.tools_title {
+    font-size: 0.875rem;
+  }
+  body main section#media #media_swiper .swiper-wrapper .swiper-slide .mockup_section .small_thumbnails.instagram {
+    height: 350px;
+  }
+  body main section#media #media_swiper .swiper-wrapper .swiper-slide .mockup_section .video_container {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    padding: 40px 0;
+  }
+  body main section#media #media_swiper .swiper-wrapper .swiper-slide .mockup_section .video_container iframe {
+    width: 600px;
+    height: 300px;
+  }
+  body main section#media #media_swiper .swiper-wrapper .swiper-slide .mockup_section .more_info {
+    padding: 16px 20px;
+  }
+  body main section#media #media_swiper .swiper-wrapper .swiper-slide .mockup_section .more_info p {
+    font-size: 1.875rem;
+  }
+  body main section#media .swiper-controls-group {
+    width: 120px;
+    height: 80px;
+    bottom: 0;
+  }
+  body main section#media .swiper-controls-group .swiper-pagination .swiper-pagination-current, body main section#media .swiper-controls-group .swiper-pagination .swiper-pagination-total {
+    font-size: 1.5rem;
+  }
+  body main section#media .swiper-controls-group .media-btn-prev, body main section#media .swiper-controls-group .media-btn-next {
+    width: 20px;
+    height: 20px;
+  }
+  body main section#media .swiper-controls-group .media-btn-next {
+    left: 100%;
+  }
+  body main section#projects .project_card {
+    height: 160px;
+  }
+  body main section#projects .project_card .project_card_wrapper {
+    gap: 8px;
+    padding: 20px 40px;
+  }
+  body main section#projects .project_card .project_card_wrapper .project_num {
+    font-size: 4rem;
+  }
+  body main section#projects .project_card .project_card_wrapper .project_name {
+    font-size: 1.75rem;
+  }
+  body main section#projects .project_card .project_card_wrapper .hashtag_more .hashtag_section {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 6px;
+  }
+  body main section#projects .project_card .project_card_wrapper .hashtag_more .hashtag_section .hashtag {
+    font-size: 0.875rem;
+  }
+  body main section#projects .project_card .project_card_wrapper .hashtag_more .move_to_projects_btn {
+    display: block;
+  }
+  body main section#projects .card1::before, body main section#projects .card2::before, body main section#projects .card3::before, body main section#projects .card4::before {
+    background-size: 50%;
+    background-position: right;
+  }
+  body main section.project_section .desc_section {
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 60px 40px 20px;
+    gap: 16px;
+  }
+  body main section.project_section .desc_section .project_title {
+    border-right: 0;
+    padding: 0;
+    gap: 12px;
+  }
+  body main section.project_section .desc_section .project_title .project_num {
+    font-size: 6.25rem;
+    top: 0;
+  }
+  body main section.project_section .desc_section .project_title .project_name {
+    font-size: 2.5rem;
+  }
+  body main section.project_section .desc_section .project_title .project_page_type {
+    font-size: 1rem;
+  }
+  body main section.project_section .desc_section .project_desc {
+    padding: 20px 0;
+  }
+  body main section.project_section .desc_section .project_desc p {
+    line-height: 180%;
+  }
+  body main section.project_section .desc_section .project_desc p strong, body main section.project_section .desc_section .project_desc p em {
+    font-weight: 500;
+  }
+  body main section.project_section .desc_section .project_desc .project_hashtag {
+    font-size: 0.875rem;
+  }
+  body main section.project_section .desc_section .project_desc .project_tools {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 20px;
+    align-items: center;
+  }
+  body main section.project_section .desc_section .project_desc .project_tools .tool_icon_sets li {
+    width: 24px;
+    height: 24px;
+  }
+  body main section.project_section .mockup_section .projects_index {
+    gap: 24px;
+  }
+  body main section.project_section .mockup_section .projects_index li a .project_num_index {
+    font-size: 1.75rem;
+  }
+  body main section.project_section .mockup_section .projects_index li a .project_name_index {
+    font-size: 1.25rem;
+  }
+  body main section.project_section .mockup_section .project_button_sets {
+    gap: 30px;
+  }
+  body main section.project_section .mockup_section .project_button_sets .project_btn {
+    width: 80px;
+    height: 80px;
+  }
+  body main section.project_section .mockup_section .project_button_sets .project_btn a {
+    font-size: 0.75rem;
+  }
+  body main #project_02_alternativestereo .desc_section .project_desc .git_code {
+    font-size: 0.875rem;
+  }
+  body main #project_01_esther .mockup_section, body main #project_02_alternativestereo .mockup_section, body main #project_03_samick .mockup_section, body main #project_04_marithe .mockup_section {
+    width: 100%;
+    height: 500px;
+  }
+  body main #project_01_esther .mockup_section .mockup, body main #project_02_alternativestereo .mockup_section .mockup, body main #project_03_samick .mockup_section .mockup, body main #project_04_marithe .mockup_section .mockup {
+    background-size: 120%;
+  }
+}
+@media screen and (max-width: 620px) {
+  body h2 {
+    font-size: 3rem;
+  }
+  body header nav a:nth-child(1) {
+    display: none;
+  }
+  body main section#cover .main_contents .main_txt {
+    padding: 100px 60px 60px;
+    align-items: right;
+  }
+  body main section#cover .main_contents .main_txt .desc1 {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 20px;
+    align-items: flex-end;
+  }
+  body main section#cover .main_contents .main_txt .desc1 .desc:first-child {
+    display: none;
+  }
+  body main section#cover .main_contents .main_txt .desc1 .desc {
+    font-size: 1.125rem;
+    text-align: right;
+  }
+  body main section#cover .main_contents .main_txt .desc2 {
+    font: size 1.25rem;
+  }
+  body main section#cover .shape_effect {
+    width: 160px;
+    height: 70px;
+    top: 20%;
+  }
+  body main section#about_me .contents .photo_section .shape_effect {
+    top: 0;
+    left: 12%;
+    width: 30px;
+    height: 50px;
+  }
+  body main section#about_me .contents .photo_section .shape_effect_copy {
+    top: 10%;
+    right: 10%;
+    width: 40px;
+    height: 70px;
+  }
+  body main section#about_me .contents .photo_section img {
+    width: 140px;
+  }
+  body main section#about_me .contents .desc_section .personal_info {
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 40px 60px;
+  }
+  body main section#about_me .contents .desc_section .personal_info .about_me_area {
+    gap: 8px;
+    align-items: center;
+    width: 100%;
+  }
+  body main section#about_me .contents .desc_section .personal_info .about_me_area .about_me_desc {
+    text-align: center;
+  }
+  body main section#about_me .contents .desc_section .personal_info .about_me_area .academy {
+    width: 100%;
+  }
+  body main section#about_me .contents .desc_section .skills .skills_wrap {
+    padding: 16px 0 24px;
+    display: flex;
+    flex-flow: column nowrap;
+  }
+  body main section#about_me .contents .desc_section .skills .skills_wrap .skill_set {
+    gap: 24px;
+  }
+  body main section#about_me .contents .desc_section .skills .skills_wrap .skill_set .each_skill .icon img {
+    width: 40px;
+    height: 40px;
+  }
+  body main section#media {
+    height: 100vh !important;
+  }
+  body main section#media #media_swiper .swiper-wrapper .swiper-slide .mockup_section .small_thumbnails.instagram {
+    height: 240px;
+  }
+  body main section#media #media_swiper .swiper-wrapper .swiper-slide .mockup_section .video_container {
+    padding: 20px;
+  }
+  body main section#media #media_swiper .swiper-wrapper .swiper-slide .mockup_section .video_container iframe {
+    width: 480px;
+    height: 240px;
+  }
+  body main section#projects {
+    height: 100vh !important;
+  }
+  body main section#projects .project_card .project_card_wrapper {
+    gap: 8px;
+    padding: 0 40px;
+    justify-content: center;
+  }
+  body main section#projects .project_card .project_card_wrapper .project_num {
+    font-size: 4rem;
+  }
+  body main section#projects .project_card .project_card_wrapper .project_name {
+    font-size: 1.75rem;
+  }
+  body main section#projects .project_card .project_card_wrapper .hashtag_more .hashtag_section {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 6px;
+  }
+  body main section#projects .project_card .project_card_wrapper .hashtag_more .hashtag_section .hashtag {
+    font-size: 0.875rem;
+  }
+  body main section#projects .project_card .project_card_wrapper .hashtag_more .move_to_projects_btn {
+    display: block;
+  }
+  body main section#projects .card1::before, body main section#projects .card2::before, body main section#projects .card3::before, body main section#projects .card4::before {
+    display: none;
+  }
+  body main section.project_section {
+    height: 100vh;
+    display: flex;
+    flex-flow: column nowrap;
+  }
+  body main section.project_section .desc_section {
+    padding: 80px 40px 60px;
+  }
+  body main section.project_section .desc_section .project_desc p:first-child {
+    display: none;
+  }
+  body main section.project_section .desc_section .project_desc .project_tools {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 8px;
+    align-items: flex-start;
+  }
+  body main section.project_section .desc_section .project_desc .project_tools p {
+    display: block;
+  }
+  body main section.project_section .mockup_section {
+    height: 100%;
+    flex-grow: 1;
+  }
+  body main #project_01_esther .mockup_section, body main #project_02_alternativestereo .mockup_section, body main #project_03_samick .mockup_section, body main #project_04_marithe .mockup_section {
+    width: 100%;
+    height: 500px;
+  }
+  body main #project_01_esther .mockup_section .mockup, body main #project_02_alternativestereo .mockup_section .mockup, body main #project_03_samick .mockup_section .mockup, body main #project_04_marithe .mockup_section .mockup {
+    background-size: 130%;
+  }
+  body main section#graphics {
+    padding: 40px 20px 120px;
+  }
+}
+@media screen and (max-width: 500px) {
+  body header {
+    padding: 0 40px;
+  }
+  body main section#cover #ellipse_container {
+    width: 400px;
+    height: 200px;
+  }
+  body main section#cover #ellipse_container .ellipse_wrap .ellipse_outline { /* 타원 윤곽선 */
+    width: 360px;
+    height: 180px;
+    border: 1px solid #222;
+    border-radius: 50%;
+  }
+  body main section#cover #ellipse_container .ellipse_wrap .dot { /* 움직이는 점 */
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background: black;
+    border-radius: 50%;
+  }
+}
+@media screen and (max-width: 440px) {
+  body header {
+    padding: 0 40px;
   }
 }
 

@@ -204,7 +204,7 @@ body {
         /* 개별 */
         header {
             background:rgba(255,255,255,0.5); height:52px;
-            a {font-size:$font-size-p-14;}
+            a {font-size:$font-size-p-16;}
         }
         main {
             overflow:visible; height:auto;
@@ -394,7 +394,6 @@ body {
             }
         }
     }
-    
 }
 @media screen and (max-width:950px) {
     body {
@@ -429,28 +428,72 @@ body {
                 }
             }
             section#projects {
-                height:auto;
-                @include flex-col; align-items:stretch; border-right:0; border-bottom:$border; justify-content:center;
-                background:url(../images/portfolio_bg8.png) center/cover no-repeat;
+                height:auto; padding:0;
+                @include flex-col; align-items:stretch; border-right:0; border-bottom:$border; justify-content:flex-start;
                 h2 {color:$color-black; font-size:$font-size-h1-50;}
                 .project_card {
-                    height:200px; width:100%; border-bottom:$border;
+                    height:180px; width:100%; border-bottom:$border;
+                    flex:1;
                     .project_card_wrapper {
-                    top:0; left:0; padding:0 40px; gap:8px;
-                    .project_num {font-size:$font-size-h-80; font-weight:$font-weight-sbold; @include en-font-point;}
-                    .project_name {font-size:$font-size-h3-32; font-weight:$font-weight-med; @include en-font;}
-                    .hashtag_more {
-                        width:100%;
-                        @include flex-row; justify-content:space-between; align-items:flex-end;
-                        .hashtag_section {
-                            @include flex-col; gap:10px;
-                            .hashtag {font-size:$font-size-p-16;}
+                        top:0; left:0; padding:0 40px; gap:8px;
+                        .project_num {font-size:$font-size-h-80; font-weight:$font-weight-sbold; @include en-font-point;}
+                        .project_name {font-size:$font-size-h3-32; font-weight:$font-weight-med; @include en-font;}
+                        .hashtag_more {
+                            width:100%;
+                            @include flex-row; justify-content:space-between; align-items:flex-end;
+                            .hashtag_section {
+                                @include flex-col; gap:10px;
+                                .hashtag {font-size:$font-size-p-16;}
+                            }
+                            .move_to_projects_btn {display:none;}
                         }
-                        .move_to_projects_btn {display:none;}
                     }
                 }
+                .card1::before, .card2::before, .card3::before, .card4::before {
+                    background-size:40%; background-position:right; bottom:0; display:inline-block; opacity:1;
                 }
-                .card1 {border-top:$border;}
+            }
+            section.project_section {
+                .desc_section {
+                    .project_title {padding:120px 32px 80px;
+                        .project_num {font-size:$font-size-h-150;}
+                        .project_name {font-size:$font-size-h1-50;}
+                        .project_page_type {@include basic_txt;}
+                    }
+                    .project_desc {
+                        border-top:0; padding:60px;
+                        gap:20px;
+                        p {font-size:$font-size-p-14;}
+                    }
+                }
+                .mockup_section {
+                    .projects_index {
+                        li {
+                            a {
+                                .project_num_index {
+                                    font-size:$font-size-p-30;
+                                }
+                                .project_name_index {
+                                    font-size:$font-size-p-24;
+                                }
+                            }
+                        }
+                    }
+                    .project_button_sets {
+                        .project_btn {
+                            width:100px; height:100px;
+                            a {
+                                font-size:$font-size-p-14;
+                            }
+                        }
+                    }
+                }
+            }
+            #project_01_esther, #project_02_alternativestereo, #project_03_samick, #project_04_marithe {
+                .mockup_section {
+                    width:100%; height:700px;
+                    .mockup {background-position:bottom; background-size:120%;}
+                }
             }
         }
     }
@@ -502,21 +545,56 @@ body {
                     }
                 }
             }
-            section#projects {
-                
+            section.project_section {
+                .desc_section {
+                    .project_title {padding:120px 32px 80px;
+                        .project_num {font-size:$font-size-h-150;}
+                        .project_name {font-size:$font-size-h1-50;}
+                        .project_page_type {@include basic_txt;}
+                    }
+                    .project_desc {
+                        border-top:0; padding:60px;
+                        gap:20px;
+                        p {font-size:$font-size-p-14;}
+                    }
+                }
+                .mockup_section {
+                    .projects_index {
+                        li {
+                            a {
+                                .project_num_index {
+                                    font-size:$font-size-h2-28;
+                                }
+                                .project_name_index {
+                                    font-size:$font-size-p-20;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            #project_01_esther, #project_02_alternativestereo, #project_03_samick, #project_04_marithe {
+                .mockup_section {
+                    width:100%; height:600px;
+                    .mockup {background-position:bottom; background-size:110%;}
+                }
             }
         }
     }
 }
 @media screen and (max-width:800px) {
     body {
+        header {
+            a {font-size:$font-size-p-14;}
+        }
         main {
             section#cover {
                 #ellipse_container {
-                    width:1200px; height:750px;
+                    width:1200px; height:360px;
+                    overflow:hidden;
                         .ellipse_wrap {
                             .ellipse_outline {
-                                width:500px; height:250px;
+                                width:600px; height:280px;
                             }
                             .dot {width:12px; height:12px;}
                         }
@@ -528,20 +606,151 @@ body {
                 }
                 .shape_effect {
                     width:160px; height:70px;
+                    top:30%;
                 }
             }
             section#about_me {
                 .contents {
+                    .photo_section {
+                        .profile {
+                            .about_me_desc {
+                                @include basic_wide_txt;
+                            }
+                        }
+                    }
                     .desc_section {
                         .personal_info {
-                            padding:40px; @include flex-col; justify-content:center; align-items:center;
-                            .about_me_area {
-                                gap:12px; align-items:center;
+                            padding:60px 44px; justify-content:center; align-items:flex-start;
+                            .about_me_area { width:auto;
+                                .academy {
+                                    width:90%;
+                                }
                             }
                         }
                         .skills {
                             .skills_wrap {
-                                @include flex-col;
+                                .skills_wrap {
+                                    padding:16px 0;
+                                    .skill_set {
+                                        gap:16px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            section.project_section {
+                .desc_section {
+                    .project_title {
+                        .project_num {font-size:$font-size-h-128; top:0;}
+                        .project_name {font-size:$font-size-p-40;}
+                    }
+                }
+                .mockup_section {
+                    .projects_index {
+                        li {
+                            a {
+                                .project_num_index {
+                                    font-size:$font-size-h2-28;
+                                }
+                                .project_name_index {
+                                    font-size:$font-size-p-20;
+                                }
+                            }
+                        }
+                    }
+                    .project_button_sets {
+                        .project_btn {
+                            width:80px; height:80px;
+                            a {
+                                font-size:$font-size-p-12;
+                            }
+                        }
+                    }
+                }
+            }
+            #project_01_esther, #project_02_alternativestereo, #project_03_samick, #project_04_marithe {
+                .mockup_section {
+                    width:100%; height:540px;
+                }
+            }
+            #project_04_marithe {
+                .desc_section {
+                    .project_title {
+                        .project_name {font-size:$font-size-p-30;}
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:700px) {
+    body {
+        header {
+            padding:0 40px 0 80px;;
+        }
+        main {
+            h2 {font-size:$font-size-h1-50;}
+            section#cover {
+                #ellipse_container {
+                    width:1000px; height:500px;
+                    top:45%;
+                        .ellipse_wrap {
+                            .ellipse_outline {
+                                width:440px; height:220px;
+                            }
+                            .dot {}
+                        }
+                }
+                .main_contents {
+                    .main_txt {
+                        h1 {
+                            font-size:$font-size-h-80;
+                        }
+                        .desc1 {
+                            gap:80px;
+                            .desc {font-size:$font-size-p-18;}
+                        }
+                        .desc2 {
+                            .job_desc {
+                                font-size:$font-size-h2-28; line-height:140%;
+                            }
+                        }
+                    }
+                }
+                .shape_effect {
+                    width:140px; height:60px;
+                }
+            }
+            section#about_me {
+                .contents {
+                    .photo_section {
+                        .shape_effect {
+                            top:0; left:12%;
+                            width:30px; height:50px;
+                        }
+                        .shape_effect_copy {
+                            top:10%; right:12%;
+                            width:50px; height:80px;
+                        }
+                        img {width:140px;}
+                    }
+                    .desc_section {
+                        .personal_info {
+                            gap:20px;
+                            .about_me_area {
+                                .academy {
+                                    width:82%; display:flex; flex-flow:row wrap;
+                                }
+                            }
+                        }
+                        .skills {
+                            .skills_wrap {
+                                padding:16px 0 24px;
+                                .skill_set {
+                                    gap:16px;
+                                }
                             }
                         }
                     }
@@ -550,8 +759,360 @@ body {
         }
     }
 }
+@media screen and (max-width:670px) {
+    body {
+        overflow-x: hidden; 
+        width: 100%;
+        header {
+            padding:0 40px 0 80px;
+        }
+        main {
+            section#about_me {
+                .contents {
+                    .photo_section {
+                        .shape_effect {
+                            top:0; left:12%;
+                            width:30px; height:50px;
+                        }
+                        .shape_effect_copy {
+                            top:10%; right:10%;
+                            width:40px; height:70px;
+                        }
+                        img {width:140px;}
+                    }
+                    .desc_section {
+                        .personal_info {
+                            @include flex-col; padding:40px 60px;
+                            .about_me_area {gap:6px; align-items:flex-start; width:100%;
+                                .about_me_desc {}
+                                .academy {
+                                    width:100%;
+                                }
+                            }
+                        }
+                        .skills {
+                            .skills_wrap {
+                                padding:16px 0 32px; gap:0;
+                                .skill_set {
+                                    gap:4px; padding:0 8px;
+                                    .each_skill {
+                                        .icon {
+                                            img {width:36px; height:36px;}
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            section#media {
+                #media_swiper {
+                    min-width: 0;
+                    .swiper-wrapper {
+                        .swiper-slide {
+                            .txt_section {
+                                .channel_desc {
+                                    padding:0 0 20px; gap:16px;
+                                    ul { 
+                                        li {font-size:$font-size-p-14;}
+                                    }
+                                    p {font-size:$font-size-p-14;}
+                                }
+                                .accomplishment_tools {
+                                    .accomplishment { padding:20px;
+                                        li {font-size:$font-size-p-12;}
+                                        li.accom_title {
+                                            font-size:$font-size-p-14;
+                                        }
+                                    }
+                                    .tools { padding:20px;
+                                        li {font-size:$font-size-p-12;}
+                                        li.tools_title {
+                                            font-size:$font-size-p-14;
+                                        }
+                                    }
+                                }
+                            }
+                            .mockup_section {
+                                .small_thumbnails.instagram {
+                                    height:350px;
+                                }
+                                .video_container {
+                                    width:100%; @include flex-row; justify-content:center;
+                                    padding:40px 0;
+                                    iframe {
+                                        width:600px; height:300px;
+                                    }
+                                }
+                                .more_info {
+                                    padding:16px 20px;
+                                    p {font-size:$font-size-p-30;}
+                                }
+                            }
+                        }
+                    }
+                }
+                .swiper-controls-group {
+                    width:120px; height:80px;
+                    bottom:0;
+                    .swiper-pagination {
+                        .swiper-pagination-current, .swiper-pagination-total {
+                            font-size:$font-size-p-24;
+                        }
+                    }
+                    .media-btn-prev, .media-btn-next {
+                        width:20px; height:20px;
+                    }
+                    .media-btn-next {left:100%;}
+                    
+                }
+            }
+            section#projects {
+                .project_card {
+                    height:160px;
+                    .project_card_wrapper {gap:8px; padding:20px 40px;
+                        .project_num {font-size:$font-size-h1-64;}
+                        .project_name {font-size:$font-size-h2-28;}
+                        .hashtag_more {
+                            .hashtag_section {
+                                @include flex-col; gap:6px;
+                                .hashtag {font-size:$font-size-p-14;}
+                            }
+                            .move_to_projects_btn {display:block;}
+                        }
+                    }
+                }
+                .card1::before, .card2::before, .card3::before, .card4::before {
+                    background-size:50%; background-position:right;
+                }
+            }
+            section.project_section {
+                .desc_section {@include flex-col; padding:60px 40px 20px; gap:16px;
+                    .project_title {border-right:0; padding:0; gap:12px;
+                        .project_num {font-size:$font-size-h-100; top:0;}
+                        .project_name {font-size:$font-size-p-40;}
+                        .project_page_type {font-size:$font-size-p-16;}
+                    }
+                    .project_desc {
+                        padding:20px 0;
+                        p {line-height:180%;
+                            strong, em {font-weight:$font-weight-med;}
+                        }
+                        .project_hashtag {font-size:$font-size-p-14;}
+                        .project_tools { @include flex-row; gap:20px; align-items:center;
+                            .tool_icon_sets {
+                                li {
+                                    width:24px; height:24px;
+                                }
+                            }
+                        }
+                    }
+                }
+                .mockup_section {
+                    .projects_index {gap:24px;
+                        li {
+                            a {
+                                .project_num_index {
+                                    font-size:$font-size-h2-28;
+                                }
+                                .project_name_index {
+                                    font-size:$font-size-p-20;
+                                }
+                            }
+                        }
+                    }
+                    .project_button_sets { gap:30px;
+                        .project_btn {
+                            width:80px; height:80px;
+                            a {
+                                font-size:$font-size-p-12;
+                            }
+                        }
+                    }
+                }
+            }
+            #project_02_alternativestereo {
+                .desc_section {
+                    .project_desc {
+                        .git_code {font-size:$font-size-p-14;}
+                    }
+                }
+            }
+            #project_01_esther, #project_02_alternativestereo, #project_03_samick, #project_04_marithe {
+                .mockup_section {
+                    width:100%; height:500px;
+                    .mockup {background-size:120%;}
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:620px) {
+    body {
+        h2 {font-size:$font-size-h-48;}
+        header {
+            nav {
+                a:nth-child(1) {display:none;}
+            }
+        }
+        main {
+            section#cover {
+                .main_contents {
+                    .main_txt {
+                        padding:100px 60px 60px; align-items:right;
+                        .desc1 {
+                            @include flex-col; gap:20px; align-items:flex-end;
+                            .desc:first-child {display:none;}
+                            .desc {font-size:$font-size-p-18; text-align:right;}
+                        }
+                        .desc2 {
+                            font: size $font-size-p-20;
+                        }
+                    }
+                }
+                .shape_effect {
+                    width:160px; height:70px;
+                    top:20%;
+                }
+            }
+            section#about_me {
+                .contents {
+                    .photo_section {
+                        .shape_effect {
+                            top:0; left:12%;
+                            width:30px; height:50px;
+                        }
+                        .shape_effect_copy {
+                            top:10%; right:10%;
+                            width:40px; height:70px;
+                        }
+                        img {width:140px;}
+                    }
+                    .desc_section {
+                        .personal_info {
+                            @include flex-col; padding:40px 60px;
+                            .about_me_area {gap:8px; align-items:center; width:100%;
+                                .about_me_desc {text-align:center;}
+                                .academy {
+                                    width:100%;
+                                }
+                            }
+                        }
+                        .skills {
+                            .skills_wrap {
+                                padding:16px 0 24px; @include flex-col;
+                                .skill_set {
+                                    gap:24px;
+                                    .each_skill {
+                                        .icon {
+                                            img {width:40px; height:40px;}
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            section#media {
+                height:100vh !important;
+                #media_swiper {
+                    .swiper-wrapper {
+                        .swiper-slide {
+                            .mockup_section {
+                                .small_thumbnails.instagram {
+                                    height:240px;
+                                }
+                                .video_container {
+                                    padding:20px;
+                                    iframe {
+                                        width:480px; height:240px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            section#projects { height:100vh !important;
+                .project_card {
+                    .project_card_wrapper {gap:8px; padding:0 40px; justify-content:center;
+                        .project_num {font-size:$font-size-h1-64;}
+                        .project_name {font-size:$font-size-h2-28;}
+                        .hashtag_more {
+                            .hashtag_section {
+                                @include flex-col; gap:6px;
+                                .hashtag {font-size:$font-size-p-14;}
+                            }
+                            .move_to_projects_btn {display:block;}
+                        }
+                    }
+                }
+                .card1::before, .card2::before, .card3::before, .card4::before {
+                    display:none;
+                }
+            }
+            section.project_section {
+                height:100vh; @include flex-col;
+                .desc_section {
+                    padding:80px 40px 60px;
+                    .project_title {
+                    }
+                    .project_desc {
+                        p:first-child {display:none;}
+                        .project_tools {
+                            @include flex-col; gap:8px; align-items:flex-start;
+                            p {display:block;}
+                        }
+                    }
+                }
+                .mockup_section {
+                    height:100%; flex-grow:1;
+                }
+            }
+            #project_01_esther, #project_02_alternativestereo, #project_03_samick, #project_04_marithe {
+                .mockup_section {
+                    width:100%; height:500px;
+                    .mockup {background-size:130%;}
+                }
+            }
+            section#graphics {
+                padding:40px 20px 120px;
+            }
+        }
+    }
+}
+@media screen and (max-width:500px) {
+    body {
+        header {
+            padding:0 40px;
+        }
+        main {
+            section#cover {
+                #ellipse_container {
+                width:400px; height:200px;
+                .ellipse_wrap {
+                    .ellipse_outline { /* 타원 윤곽선 */
+                        width:360px; height:180px;
+                        border:$border; border-radius:50%;
+                    }
+                    .dot {/* 움직이는 점 */
+                        position:absolute; width:16px; height:16px;
+                        background:black; border-radius:50%;
+                    }
+                }
+            }
+            }
+            
+        }
+    }
+}
 @media screen and (max-width:440px) {
     body {
+        header {
+            padding:0 40px;
+        }
         main {
             
         }
