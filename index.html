@@ -791,24 +791,18 @@
         })
         const totalWrapSwiper = new Swiper('main',{
             direction: 'vertical',
-            slidesPerView: 1,
             mousewheel: true,
-            speed: 800,
+            speed: 700,
             keyboard: {
                 enabled: true,
                 onlyInViewport: false,
             },
             breakpoints: {
                 0 : {
-                    enabled:true,
-                    direction:'vertical',
-                    mousewheel:true,
-                    freeMode:true,
-                    slidesPerView: 'auto',
+                    enabled: false,
                 },
                 1251: {
                     enabled:true,
-                    direction:'vertical',
                     freeMode:false,
                     slidesPerView:1,
                 }
