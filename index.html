@@ -800,13 +800,17 @@
             },
             breakpoints: {
                 0 : {
-                    enabled:false,
-                    allowTouchMove: true,
+                    enabled:true,
+                    direction:'vertical',
+                    mousewheel:true,
+                    freeMode:true,
                     slidesPerView: 'auto',
                 },
                 1251: {
                     enabled:true,
                     direction:'vertical',
+                    freeMode:false,
+                    slidesPerView:1,
                 }
             },
             observer: true,
