@@ -2077,10 +2077,6 @@ body {
   }
 }
 @media screen and (max-width: 670px) {
-  body {
-    overflow-x: hidden;
-    width: 100%;
-  }
   body header {
     padding: 0 40px 0 80px;
   }
@@ -2124,13 +2120,9 @@ body {
     width: 36px;
     height: 36px;
   }
-  body main section#media #media_swiper {
-    min-width: 0;
-  }
   body main section#media #media_swiper .swiper-wrapper .swiper-slide .txt_section {
     flex: 1;
     min-width: 0;
-    width: 50%;
   }
   body main section#media #media_swiper .swiper-wrapper .swiper-slide .txt_section .channel_desc {
     padding: 0 0 20px;
