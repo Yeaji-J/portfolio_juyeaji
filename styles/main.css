@@ -1743,8 +1743,8 @@ body {
     font-size: 3.5rem;
   }
   body main section#cover #ellipse_container {
-    width: 1200px;
-    height: 750px;
+    width: 900px;
+    height: 380px;
   }
   body main section#cover #ellipse_container .ellipse_wrap .ellipse_outline {
     width: 700px;
@@ -1944,8 +1944,8 @@ body {
     font-size: 0.875rem;
   }
   body main section#cover #ellipse_container {
-    width: 1200px;
-    height: 360px;
+    width: 600px;
+    height: 280px;
     overflow: hidden;
   }
   body main section#cover #ellipse_container .ellipse_wrap .ellipse_outline {
@@ -2021,8 +2021,8 @@ body {
     font-size: 3.125rem;
   }
   body main section#cover #ellipse_container {
-    width: 1000px;
-    height: 500px;
+    width: 440px;
+    height: 220px;
     top: 45%;
   }
   body main section#cover #ellipse_container .ellipse_wrap .ellipse_outline {
@@ -2422,6 +2422,7 @@ body {
     align-items: flex-start;
   }
   body main section.project_section .desc_section .project_desc .project_tools p {
+    font-size: 1rem;
     display: block;
   }
   body main section.project_section .mockup_section {
@@ -2443,9 +2444,12 @@ body {
   body header {
     padding: 0 40px;
   }
+  body main * section {
+    overflow: hidden;
+  }
   body main section#cover #ellipse_container {
-    width: 400px;
-    height: 200px;
+    width: 360px;
+    height: 180px;
   }
   body main section#cover #ellipse_container .ellipse_wrap .ellipse_outline { /* 타원 윤곽선 */
     width: 360px;
@@ -2460,10 +2464,25 @@ body {
     background: black;
     border-radius: 50%;
   }
+  body main section#media {
+    height: 100vh !important;
+  }
+  body main section#media #media_swiper .swiper-wrapper .swiper-slide .mockup_section .small_thumbnails.instagram {
+    height: 200px;
+    overflow: hidden;
+  }
+  body main section#media #media_swiper .swiper-wrapper .swiper-slide .mockup_section .video_container {
+    padding: 20px;
+    overflow: hidden;
+  }
+  body main section#media #media_swiper .swiper-wrapper .swiper-slide .mockup_section .video_container iframe {
+    width: 400px;
+    height: 200px;
+  }
 }
 @media screen and (max-width: 440px) {
   body header {
-    padding: 0 40px;
+    padding: 0 32px;
   }
 }
 

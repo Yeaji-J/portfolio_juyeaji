@@ -401,7 +401,7 @@ body {
             h2 {font-size:$font-size-h1-56;}
             section#cover {
                 #ellipse_container {
-                    width:1200px; height:750px;
+                    width:900px; height:380px;
                         .ellipse_wrap {
                             .ellipse_outline {
                                 width:700px; height:320px;
@@ -590,7 +590,7 @@ body {
         main {
             section#cover {
                 #ellipse_container {
-                    width:1200px; height:360px;
+                    width:600px; height:280px;
                     overflow:hidden;
                         .ellipse_wrap {
                             .ellipse_outline {
@@ -694,7 +694,7 @@ body {
             h2 {font-size:$font-size-h1-50;}
             section#cover {
                 #ellipse_container {
-                    width:1000px; height:500px;
+                    width:440px; height:220px;
                     top:45%;
                         .ellipse_wrap {
                             .ellipse_outline {
@@ -1061,7 +1061,7 @@ body {
                         p:first-child {display:none;}
                         .project_tools {
                             @include flex-col; gap:8px; align-items:flex-start;
-                            p {display:block;}
+                            p {font-size:$font-size-p-16; display:block;}
                         }
                     }
                 }
@@ -1087,9 +1087,10 @@ body {
             padding:0 40px;
         }
         main {
+            * section {overflow:hidden;}
             section#cover {
                 #ellipse_container {
-                width:400px; height:200px;
+                width:360px; height:180px;
                 .ellipse_wrap {
                     .ellipse_outline { /* 타원 윤곽선 */
                         width:360px; height:180px;
@@ -1102,14 +1103,35 @@ body {
                 }
             }
             }
-            
+            section#media {
+                height:100vh !important;
+                #media_swiper {
+                    .swiper-wrapper {
+                        .swiper-slide {
+                            .mockup_section {
+                                .small_thumbnails.instagram {
+                                    height:200px;
+                                    overflow:hidden;
+                                }
+                                .video_container {
+                                    padding:20px;
+                                    overflow:hidden;
+                                    iframe {
+                                        width:400px; height:200px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }
 @media screen and (max-width:440px) {
     body {
         header {
-            padding:0 40px;
+            padding:0 32px;
         }
         main {
             
